@@ -69,6 +69,11 @@ jobs:
           MATTN_DIR="$(go list -m -f '{{.Dir}}' github.com/mattn/go-sqlite3)"
           test -f "${MATTN_DIR}/sqlite3-binding.h"
           cp "${MATTN_DIR}/sqlite3-binding.h" "${SQLITE_INC}/sqlite3.h"
+          go mod download github.com/asg017/sqlite-vec-go-bindings
+          VEC_DIR="$(go list -m -f '{{.Dir}}' github.com/asg017/sqlite-vec-go-bindings)"
+          if [ -f "${VEC_DIR}/cgo/sqlite-vec.h" ]; then
+            cp "${VEC_DIR}/cgo/sqlite-vec.h" "${SQLITE_INC}/"
+          fi
           export CGO_CFLAGS="-I${SQLITE_INC} -Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int64_t=uint64_t -Wno-typedef-redefinition -fno-sanitize=undefined"
           STATIC_LDFLAGS="-linkmode external -extldflags '-static'"
           go build -tags netgo -ldflags "$STATIC_LDFLAGS" -o "ech0-linux-${GOARCH}" ./cmd/ech0/main.go
