@@ -73,7 +73,8 @@ jobs:
           VEC_DIR="$(go list -m -f '{{.Dir}}' github.com/asg017/sqlite-vec-go-bindings)"
           test -f "${VEC_DIR}/cgo/sqlite-vec.h"
           cp "${VEC_DIR}/cgo/sqlite-vec.h" "${SQLITE_INC}/"
-          export CGO_CFLAGS="-I${SQLITE_INC} -Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int64_t=uint64_t -Wno-typedef-redefinition -fno-sanitize=undefined"
+          test -f "${VEC_DIR}/cgo/sqlite-vec.c"
+          cp "${VEC_DIR}/cgo/sqlite-vec.c" "${SQLITE_INC}/"
           STATIC_LDFLAGS="-linkmode external -extldflags '-static'"
           go build -tags netgo -ldflags "$STATIC_LDFLAGS" -o "ech0-linux-${GOARCH}" ./cmd/ech0/main.go
 
