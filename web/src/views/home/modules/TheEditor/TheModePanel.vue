@@ -22,13 +22,6 @@
           :tooltip="t('editor.addVideo')"
           @click="handleAddExtension(ExtensionType.VIDEO)"
         />
-        <!-- 添加Github项目 -->
-        <BaseButton
-          :icon="Githubproj"
-          class="w-7 h-7 rounded-xs"
-          :tooltip="t('editor.addGithubProject')"
-          @click="handleAddExtension(ExtensionType.GITHUBPROJ)"
-        />
         <!-- 添加网站链接 -->
         <BaseButton
           :icon="Weblink"
@@ -59,7 +52,6 @@
 import Weblink from '@/components/icons/weblink.vue'
 import Music from '@/components/icons/music.vue'
 import Video from '@/components/icons/video.vue'
-import Githubproj from '@/components/icons/githubproj.vue'
 import MapPin from '@/components/icons/mappin.vue'
 import XBrand from '@/components/icons/tweet.vue'
 import BaseButton from '@/components/common/BaseButton.vue'

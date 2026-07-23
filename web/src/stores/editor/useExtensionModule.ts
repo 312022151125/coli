@@ -180,16 +180,6 @@ export function useExtensionModule({ echoToAdd, t }: ExtensionModuleDeps) {
           payload: { videoId: extension },
         }
         return
-      case ExtensionType.GITHUBPROJ:
-        if (!extension) {
-          echoToAdd.value.extension = null
-          return
-        }
-        echoToAdd.value.extension = {
-          type: ExtensionType.GITHUBPROJ,
-          payload: { repoUrl: extension },
-        }
-        return
       case ExtensionType.WEBSITE: {
         const { title, site } = websiteToAdd.value
         if (!title || !site) {

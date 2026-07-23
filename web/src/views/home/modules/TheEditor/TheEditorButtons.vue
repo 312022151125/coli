@@ -163,7 +163,6 @@ import Info from '@/components/icons/info.vue'
 import Write from '@/components/icons/write.vue'
 import Music from '@/components/icons/music.vue'
 import Video from '@/components/icons/video.vue'
-import GithubProj from '@/components/icons/githubproj.vue'
 import Website from '@/components/icons/website.vue'
 import MapPin from '@/components/icons/mappin.vue'
 import XBrand from '@/components/icons/tweet.vue'
@@ -207,7 +206,6 @@ const infoTooltipLines = computed<TooltipLine[]>(() => {
   const extMap: Record<ExtensionType, { label: string; icon: Component }> = {
     [ExtensionType.MUSIC]: { label: String(t('editor.extMusic')), icon: Music },
     [ExtensionType.VIDEO]: { label: String(t('editor.extVideo')), icon: Video },
-    [ExtensionType.GITHUBPROJ]: { label: String(t('editor.extGithubProject')), icon: GithubProj },
     [ExtensionType.WEBSITE]: { label: String(t('editor.extWebsiteLink')), icon: Website },
     [ExtensionType.LOCATION]: { label: String(t('editor.extLocation')), icon: MapPin },
     [ExtensionType.TWEET]: { label: String(t('editor.extTweet')), icon: XBrand },

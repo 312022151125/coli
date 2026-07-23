@@ -46,19 +46,10 @@ func TestNormalizeEchoExtension_AllTypes(t *testing.T) {
 		require.Error(t, err)
 	})
 
-	t.Run("github project ok", func(t *testing.T) {
-		got, err := normalizeEchoExtension(&model.EchoExtension{
-			Type:    model.Extension_GITHUBPROJ,
-			Payload: map[string]interface{}{"repoUrl": "https://github.com/lin-snow/ech0"},
-		})
-		require.NoError(t, err)
-		assert.NotEmpty(t, got.Payload["repoUrl"])
-	})
-
-	t.Run("github project missing repoUrl", func(t *testing.T) {
+	t.Run("github project rejected", func(t *testing.T) {
 		_, err := normalizeEchoExtension(&model.EchoExtension{
 			Type:    model.Extension_GITHUBPROJ,
-			Payload: map[string]interface{}{},
+			Payload: map[string]interface{}{"repoUrl": "https://github.com/lin-snow/ech0"},
 		})
 		require.Error(t, err)
 	})

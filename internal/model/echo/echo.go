@@ -73,6 +73,7 @@ func (e *EchoExtension) BeforeCreate(_ *gorm.DB) error {
 const (
 	Extension_MUSIC      = "MUSIC"
 	Extension_VIDEO      = "VIDEO"
+	// Retained for historical stored rows; disabled for new creation.
 	Extension_GITHUBPROJ = "GITHUBPROJ"
 	Extension_WEBSITE    = "WEBSITE"
 	Extension_LOCATION   = "LOCATION"

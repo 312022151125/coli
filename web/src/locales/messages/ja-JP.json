@@ -59,8 +59,6 @@
     "videoShare": "動画シェア（Bilibili、YouTube対応）",
     "videoExtractHint": "貼り付けるとIDを自動抽出",
     "videoId": "Video ID",
-    "githubUrlPlaceholder": "https://github.com/username/repo",
-    "githubShare": "GitHubプロジェクトをシェア",
     "tweetShare": "X（旧 Twitter）投稿をシェア",
     "tweetHint": "x.com または twitter.com の投稿 URL を貼り付けてください",
     "tweetUrlPlaceholder": "https://x.com/username/status/1234567890",
@@ -87,7 +85,6 @@
     "extraContent": "追加コンテンツ",
     "addMusic": "音楽を追加",
     "addVideo": "動画を追加",
-    "addGithubProject": "GitHubプロジェクトを追加",
     "addWebsiteLink": "サイトリンクを追加",
     "addLocation": "位置情報を追加",
     "addTweet": "X 投稿を追加",
@@ -119,7 +116,6 @@
     "updateEcho": "Echoを更新",
     "extMusic": "音楽",
     "extVideo": "動画",
-    "extGithubProject": "GitHub プロジェクト",
     "extWebsiteLink": "サイトリンク",
     "extTweet": "X 投稿",
     "extText": "テキスト",
@@ -313,10 +309,6 @@
     "connectedNodes": "接続済みノード",
     "todayEchoCount": "本日の投稿",
     "currentVersion": "現在のバージョン",
-    "updateAvailable": "新しいバージョン {version} が利用可能です",
-    "alreadyLatest": "最新バージョンです",
-    "checkUpdateFailed": "更新の確認に失敗しました",
-    "clickToCheckUpdate": "クリックして更新を確認",
     "activityTitle": "Activity",
     "activityAccent": "Log",
     "visitorTitle": "Visitor",
@@ -992,9 +984,9 @@
   "about": {
     "linkAriaLabel": "この Ech0 インスタンスについて",
     "fieldSource": "ソースコード",
-    "viewSource": "GitHub でソースを見る",
-    "viewSourceAtCommit": "GitHub で commit {'@'} {commit} のソースを見る",
-    "poweredBy": "Powered by Ech0"
+    "viewSource": "ソースコードを見る",
+    "viewSourceAtCommit": "commit {commit} のソースコードを見る",
+    "poweredBy": "自分のサーバーで動作するパーソナルタイムライン—セルフホスト、AGPL-3.0、広告なし、プラットフォームフリー。"
   },
   "echoPage": {
     "loadingDetail": "Echo の詳細を読み込み中..."
@@ -1030,9 +1022,6 @@
     "fullscreen": "全画面",
     "paused": "一時停止中"
   },
-  "githubCard": {
-    "avatarAlt": "アバター"
-  },
   "extensionCard": {
     "music": "音楽",
     "musicPlayer": "音楽プレーヤー",
@@ -1043,7 +1032,6 @@
     "musicCoverAlt": "{title} のカバー",
     "musicUnavailable": "この音楽ソースは一時的に利用できません",
     "musicUnavailableHint": "音楽 URL または Meting API の設定を確認してください",
-    "github": "GitHub",
     "website": "ウェブサイト",
     "location": "位置情報",
     "locationOpenInMaps": "Google マップで開く",

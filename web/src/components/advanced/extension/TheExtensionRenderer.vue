@@ -7,12 +7,6 @@
       v-else-if="echo.extension.type === ExtensionType.VIDEO"
       :video-id="echo.extension.payload.videoId"
     />
-    <GithubCard
-      v-else-if="
-        echo.extension.type === ExtensionType.GITHUBPROJ && echo.extension.payload?.repoUrl
-      "
-      :github-url="echo.extension.payload.repoUrl"
-    />
     <WebsiteCard
       v-else-if="echo.extension.type === ExtensionType.WEBSITE"
       :website="echo.extension.payload"
@@ -33,7 +27,6 @@ import { defineAsyncComponent } from 'vue'
 import { ExtensionType } from '@/enums/enums'
 const MusicPlayerCard = defineAsyncComponent(() => import('./cards/MusicPlayerCard.vue'))
 const VideoCard = defineAsyncComponent(() => import('./cards/VideoCard.vue'))
-const GithubCard = defineAsyncComponent(() => import('./cards/GithubCard.vue'))
 const WebsiteCard = defineAsyncComponent(() => import('./cards/WebsiteCard.vue'))
 const LocationCard = defineAsyncComponent(() => import('./cards/LocationCard.vue'))
 const TweetCard = defineAsyncComponent(() => import('./cards/TweetCard.vue'))

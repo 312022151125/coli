@@ -111,9 +111,6 @@ const fillEditorFromEchoToUpdate = () => {
         extensionToAdd.value.extension = echoToUpdate.value.extension.payload.videoId || ''
         videoURL.value = echoToUpdate.value.extension.payload.videoId || ''
         break
-      case ExtensionType.GITHUBPROJ:
-        extensionToAdd.value.extension = echoToUpdate.value.extension.payload.repoUrl || ''
-        break
       case ExtensionType.WEBSITE:
         websiteToAdd.value.title = echoToUpdate.value.extension.payload.title || ''
         websiteToAdd.value.site = echoToUpdate.value.extension.payload.site || ''

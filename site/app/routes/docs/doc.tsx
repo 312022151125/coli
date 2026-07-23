@@ -80,7 +80,7 @@ export default function DocsPage({ loaderData }: Route.ComponentProps) {
           <div className="mt-7 mb-2 lg:grid lg:grid-cols-[minmax(0,12rem)_minmax(0,30rem)_minmax(0,11rem)] lg:items-start lg:gap-x-8">
             <div className="hidden lg:block" aria-hidden />
             <header className="max-w-[30rem]">
-              <h1 className="font-serif text-[1.2rem] font-semibold leading-snug text-sand-12">
+              <h1 className="font-sans text-[1.2rem] font-semibold leading-snug text-sand-12">
                 {title}
               </h1>
               {description ? (
@@ -93,7 +93,7 @@ export default function DocsPage({ loaderData }: Route.ComponentProps) {
           </div>
         ) : (
           <header className="mx-auto mt-7 mb-2 max-w-[30rem]">
-            <h1 className="font-serif text-[1.2rem] font-semibold leading-snug text-sand-12">
+            <h1 className="font-sans text-[1.2rem] font-semibold leading-snug text-sand-12">
               {title}
             </h1>
             {description ? (

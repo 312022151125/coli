@@ -70,12 +70,12 @@ func (a *Adapter) registerEchoTools(reg *Registry) {
 		"properties": map[string]any{
 			"type": map[string]any{
 				"type":        "string",
-				"enum":        []string{"MUSIC", "VIDEO", "GITHUBPROJ", "WEBSITE"},
+				"enum":        []string{"MUSIC", "VIDEO", "WEBSITE"},
 				"description": "Extension type",
 			},
 			"payload": map[string]any{
 				"type":        "object",
-				"description": "Type-specific data. MUSIC: {url}; VIDEO: {videoId}; GITHUBPROJ: {repoUrl}; WEBSITE: {title, site}",
+				"description": "Type-specific data. MUSIC: {url}; VIDEO: {videoId}; WEBSITE: {title, site}",
 			},
 		},
 	}

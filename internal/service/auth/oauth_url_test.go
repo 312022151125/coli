@@ -24,18 +24,10 @@ import (
 func TestBuildOAuthAuthorizeURL(t *testing.T) {
 	svc := &AuthService{} // 该方法不读取任何 receiver 状态
 
-	t.Run("github carries standard authorize params", func(t *testing.T) {
+	t.Run("github provider returns empty or error", func(t *testing.T) {
 		setting := fullOAuth2Setting(string(commonModel.OAuth2GITHUB))
 		raw := svc.buildOAuthAuthorizeURL(&setting, string(commonModel.OAuth2GITHUB), "state-gh", "")
-		u, err := url.Parse(raw)
-		require.NoError(t, err)
-		assert.Equal(t, "idp.example.com", u.Host)
-		q := u.Query()
-		assert.Equal(t, setting.ClientID, q.Get("client_id"))
-		assert.Equal(t, setting.RedirectURI, q.Get("redirect_uri"))
-		assert.Equal(t, "code", q.Get("response_type"))
-		assert.Equal(t, "state-gh", q.Get("state"))
-		assert.Contains(t, q.Get("scope"), "read:user")
+		assert.Empty(t, raw)
 	})
 
 	t.Run("google forces offline access and consent", func(t *testing.T) {

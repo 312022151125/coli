@@ -3,7 +3,7 @@ title: 常见问题
 description: 与 README 对齐的问答；部署、权限、存储与集成
 ---
 
-以下与仓库根目录 **README.zh.md → 常见问题** 对应，便于官网与仓库说法一致。若这里没有你的情况，可到 [GitHub Discussions](https://github.com/lin-snow/Ech0/discussions) 搜索或提问。
+以下与常见问题对应，便于官网与文档说法一致。
 
 ---
 

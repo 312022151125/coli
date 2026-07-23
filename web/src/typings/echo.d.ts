@@ -5,11 +5,11 @@
 declare namespace App {
   namespace Api {
     namespace Ech0 {
-      type EchoExtensionType = 'MUSIC' | 'VIDEO' | 'GITHUBPROJ' | 'WEBSITE' | 'LOCATION' | 'TWEET'
+      type EchoExtensionType = 'MUSIC' | 'VIDEO' | 'WEBSITE' | 'LOCATION' | 'TWEET'
       type EchoExtension =
         | { type: 'MUSIC'; payload: { url: string } }
         | { type: 'VIDEO'; payload: { videoId: string } }
-        | { type: 'GITHUBPROJ'; payload: { repoUrl: string } }
+        | { type: 'GITHUBPROJ'; payload: { repoUrl?: string } }
         | { type: 'WEBSITE'; payload: { title: string; site: string } }
         | {
             type: 'LOCATION'
@@ -19,13 +19,16 @@ declare namespace App {
             type: 'TWEET'
             payload: { url: string; username: string; statusId: string }
           }
-
-      type ParamsByPagination = {
-        page: number
-        pageSize: number
-        search?: string
+      type HelloInfo = {
+        version: string
+        commit: string
+        build_time: string
+        license: string
+        author: string
+        source_url: string
+        copyright: string
       }
-
+      type ParamsByPagination = EchoQueryParams
       type EchoQueryParams = {
         page: number
         pageSize: number
@@ -160,7 +163,6 @@ declare namespace App {
           avatar_url: string
         }
       }
-
       type HelloEch0 = {
         hello: string
         copyright: string
@@ -169,7 +171,7 @@ declare namespace App {
         build_time: string
         license: string
         author: string
-        repo_url: string
+        source_url: string
       }
 
       type PresignResult = {

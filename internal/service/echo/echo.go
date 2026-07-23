@@ -551,11 +551,7 @@ func normalizeEchoExtension(ext *model.EchoExtension) (*model.EchoExtension, err
 		}
 		ext.Payload = map[string]interface{}{"videoId": videoID}
 	case model.Extension_GITHUBPROJ:
-		repoURL := strings.TrimSpace(getPayloadString(ext.Payload, "repoUrl"))
-		if repoURL == "" {
-			return nil, fmt.Errorf("extension payload.repoUrl is required for GITHUBPROJ")
-		}
-		ext.Payload = map[string]interface{}{"repoUrl": urlUtil.TrimURL(repoURL)}
+		return nil, fmt.Errorf("unsupported extension type: %s", ext.Type)
 	case model.Extension_WEBSITE:
 		title := strings.TrimSpace(getPayloadString(ext.Payload, "title"))
 		site := strings.TrimSpace(getPayloadString(ext.Payload, "site"))

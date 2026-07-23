@@ -59,8 +59,6 @@
     "videoShare": "视频分享（支持Bilibili、YouTube）",
     "videoExtractHint": "粘贴自动提取ID",
     "videoId": "Video ID",
-    "githubUrlPlaceholder": "https://github.com/username/repo",
-    "githubShare": "Github项目分享",
     "tweetShare": "X 推文分享",
     "tweetHint": "粘贴 x.com 或 twitter.com 的推文链接",
     "tweetUrlPlaceholder": "https://x.com/username/status/1234567890",
@@ -87,7 +85,6 @@
     "extraContent": "扩展附加内容",
     "addMusic": "添加音乐",
     "addVideo": "添加视频",
-    "addGithubProject": "添加Github项目",
     "addWebsiteLink": "添加网站链接",
     "addLocation": "添加位置",
     "addTweet": "添加 X 推文",
@@ -119,7 +116,6 @@
     "updateEcho": "更新Echo",
     "extMusic": "音乐",
     "extVideo": "视频",
-    "extGithubProject": "GitHub 项目",
     "extWebsiteLink": "网站链接",
     "extTweet": "X 推文",
     "extText": "文字",
@@ -313,10 +309,6 @@
     "connectedNodes": "已连接节点",
     "todayEchoCount": "今日发布",
     "currentVersion": "当前版本",
-    "updateAvailable": "有新版本 {version} 可用",
-    "alreadyLatest": "已是最新版本",
-    "checkUpdateFailed": "检查更新失败",
-    "clickToCheckUpdate": "点击检查更新",
     "activityTitle": "Activity",
     "activityAccent": "Log",
     "visitorTitle": "Visitor",
@@ -992,9 +984,9 @@
   "about": {
     "linkAriaLabel": "关于本 Ech0 实例",
     "fieldSource": "源码",
-    "viewSource": "在 GitHub 上查看源代码",
-    "viewSourceAtCommit": "在 GitHub 上查看 commit {'@'} {commit} 的源代码",
-    "poweredBy": "Powered by Ech0"
+    "viewSource": "查看源代码",
+    "viewSourceAtCommit": "查看 commit {commit} 的源代码",
+    "poweredBy": "运行在自己服务器上的个人动态时间线——自托管、AGPL-3.0、无广告无平台。"
   },
   "echoPage": {
     "loadingDetail": "正在加载 Echo 详情..."
@@ -1030,9 +1022,6 @@
     "fullscreen": "全屏",
     "paused": "已暂停"
   },
-  "githubCard": {
-    "avatarAlt": "头像"
-  },
   "extensionCard": {
     "music": "音乐",
     "musicPlayer": "音乐播放器",
@@ -1043,7 +1032,6 @@
     "musicCoverAlt": "{title} 的封面",
     "musicUnavailable": "该音乐播放源暂时不可用",
     "musicUnavailableHint": "请检查音乐链接或 Meting API 配置",
-    "github": "GitHub",
     "website": "网站",
     "location": "位置",
     "locationOpenInMaps": "在 Google Maps 打开",

@@ -211,8 +211,8 @@ func (connectService *ConnectService) GetConnect() (model.Connect, error) {
 	trimmedServerURL := strings.TrimRight(setting.ServerURL, "/")
 	logoPath := strings.TrimSpace(setting.ServerLogo)
 
-	if logoPath == "" || logoPath == "Ech0.svg" || logoPath == "/Ech0.svg" {
-		connect.Logo = fmt.Sprintf("%s/Ech0.svg", trimmedServerURL)
+	if logoPath == "" || logoPath == "Ech0.svg" || logoPath == "/Ech0.svg" || logoPath == "timeline-mark.svg" || logoPath == "/timeline-mark.svg" {
+		connect.Logo = fmt.Sprintf("%s/timeline-mark.svg", trimmedServerURL)
 	} else if strings.HasPrefix(logoPath, "http://") || strings.HasPrefix(logoPath, "https://") {
 		connect.Logo = logoPath
 	} else if strings.HasPrefix(logoPath, "/") {

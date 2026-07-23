@@ -25,7 +25,7 @@
           @pointerup="onPointerUp"
           @pointercancel="onPointerUp"
         >
-          <img class="about-sticker__img" src="/Ech0.svg" alt="" draggable="false" />
+          <img class="about-sticker__img" src="/timeline-mark.svg" alt="" draggable="false" />
         </span>
 
         <div class="about-colophon__body">
@@ -48,7 +48,7 @@
 
           <p class="about-colophon__links">
             <a
-              :href="repoURL"
+              :href="sourceURL"
               target="_blank"
               rel="noopener noreferrer"
               class="about-link"
@@ -59,7 +59,7 @@
             </a>
             <span class="about-colophon__sep" aria-hidden="true">·</span>
             <a
-              :href="`${repoURL}/blob/main/LICENSE`"
+              :href="`${sourceURL}#license`"
               target="_blank"
               rel="noopener noreferrer"
               class="about-link"
@@ -130,16 +130,14 @@ const commit = computed(() => settingStore.hello?.commit || '')
 const hasCommit = computed(() => commit.value !== '' && commit.value !== 'unknown')
 const author = computed(() => settingStore.hello?.author || FALLBACK_AUTHOR)
 const license = computed(() => settingStore.hello?.license || FALLBACK_LICENSE)
-const repoURL = computed(() => settingStore.hello?.repo_url || FALLBACK_REPO)
+const sourceURL = computed(() => settingStore.hello?.source_url || 'https://coli.dev/source')
 
 const copyright = computed(
   () =>
     settingStore.hello?.copyright || `Copyright (C) ${new Date().getFullYear()} ${author.value}`,
 )
 
-// AGPL-3.0 §13 anchor: the commit hash links to /tree/<commit> so the source the
-// user browses matches the exact running binary.
-const commitURL = computed(() => `${repoURL.value}/tree/${commit.value}`)
+const commitURL = computed(() => sourceURL.value)
 </script>
 
 <style scoped>

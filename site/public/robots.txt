@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.ech0.app/sitemap.xml
+Sitemap: https://coli.dev/sitemap.xml
+Sitemap: https://coli.dev/hub/sitemap.xml

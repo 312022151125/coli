@@ -162,11 +162,11 @@ export default function Home() {
       <main className="mx-auto w-full max-w-[min(100%,34rem)] px-5 pb-28 pt-10">
         {/* Hero: headline → positioning → CTA */}
         <section className="flex flex-col items-center gap-8 text-center">
-          <h1 className="max-w-[22ch] font-serif text-[1.65rem] font-normal leading-[1.2] tracking-[-0.02em] text-sand-12 sm:text-[1.75rem]">
+          <h1 className="max-w-[22ch] font-sans text-[1.65rem] font-medium leading-[1.2] tracking-[-0.02em] text-sand-12 sm:text-[1.75rem]">
             Let your thoughts flow.
           </h1>
 
-          <p className="max-w-[26ch] font-serif text-[0.9375rem] font-normal leading-[1.45] tracking-[0.01em] text-sand-11">
+          <p className="max-w-[26ch] font-sans text-[0.9375rem] font-normal leading-[1.45] tracking-[0.01em] text-sand-11">
             A personal timeline, hosted on your server.
           </p>
 
@@ -187,10 +187,10 @@ export default function Home() {
 
         {/* Narrative + value (editorial layout below the fold) */}
         <section className={`${dashedSection} text-left`}>
-          <h2 className="font-serif text-[1.2rem] font-semibold leading-snug tracking-[-0.02em] text-sand-12">
+          <h2 className="font-sans text-[1.2rem] font-semibold leading-snug tracking-[-0.02em] text-sand-12">
             Why Ech0?
           </h2>
-          <p className="mt-5 font-serif text-base italic leading-snug text-sand-11">
+          <p className="mt-5 font-sans text-base italic leading-snug text-sand-11">
             One timeline, entirely yours.
           </p>
           <div className="mt-5 space-y-4 font-sans text-[0.9375rem] leading-[1.65] text-sand-11">
@@ -209,10 +209,10 @@ export default function Home() {
         </section>
 
         <section className={dashedSection}>
-          <h2 className="font-serif text-[1.2rem] font-semibold leading-snug tracking-[-0.02em] text-sand-12">
+          <h2 className="font-sans text-[1.2rem] font-semibold leading-snug tracking-[-0.02em] text-sand-12">
             What can Ech0 do for you?
           </h2>
-          <ol className="mt-6 list-decimal space-y-5 pl-[1.35rem] text-[0.9375rem] leading-[1.6] text-sand-11 marker:font-serif marker:text-[0.95rem] marker:text-sand-11 sm:pl-6">
+          <ol className="mt-6 list-decimal space-y-5 pl-[1.35rem] text-[0.9375rem] leading-[1.6] text-sand-11 marker:font-sans marker:text-[0.95rem] marker:text-sand-11 sm:pl-6">
             <li>
               <span className="font-semibold text-sand-12">
                 From idea to life
@@ -248,7 +248,7 @@ export default function Home() {
               you want company—without the noise.
             </li>
           </ol>
-          <p className="mt-8 text-center font-serif text-sm italic text-sand-11">
+          <p className="mt-8 text-center font-sans text-sm italic text-sand-11">
             <Link
               to="/docs"
               prefetch="viewport"

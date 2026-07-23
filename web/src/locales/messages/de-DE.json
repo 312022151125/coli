@@ -59,8 +59,6 @@
     "videoShare": "Video teilen (Bilibili, YouTube)",
     "videoExtractHint": "URL einfügen, um die ID automatisch zu erkennen",
     "videoId": "Video-ID",
-    "githubUrlPlaceholder": "https://github.com/username/repo",
-    "githubShare": "GitHub-Projekt teilen",
     "tweetShare": "X-Beitrag teilen",
     "tweetHint": "Füge eine URL von x.com oder twitter.com ein",
     "tweetUrlPlaceholder": "https://x.com/username/status/1234567890",
@@ -87,7 +85,6 @@
     "extraContent": "Zusätzliche Inhalte",
     "addMusic": "Musik hinzufügen",
     "addVideo": "Video hinzufügen",
-    "addGithubProject": "GitHub-Projekt hinzufügen",
     "addWebsiteLink": "Website-Link hinzufügen",
     "addLocation": "Ort hinzufügen",
     "addTweet": "X-Beitrag hinzufügen",
@@ -119,7 +116,6 @@
     "updateEcho": "Echo aktualisieren",
     "extMusic": "Musik",
     "extVideo": "Video",
-    "extGithubProject": "GitHub-Projekt",
     "extWebsiteLink": "Website-Link",
     "extTweet": "X-Beitrag",
     "extText": "Text",
@@ -313,10 +309,6 @@
     "connectedNodes": "Verbundene Knoten",
     "todayEchoCount": "Echos heute",
     "currentVersion": "Aktuelle Version",
-    "updateAvailable": "Neue Version {version} verfügbar",
-    "alreadyLatest": "Bereits auf dem neuesten Stand",
-    "checkUpdateFailed": "Update-Prüfung fehlgeschlagen",
-    "clickToCheckUpdate": "Klicken, um auf Updates zu prüfen",
     "activityTitle": "Activity",
     "activityAccent": "Log",
     "visitorTitle": "Besucher",
@@ -992,9 +984,9 @@
   "about": {
     "linkAriaLabel": "Über diese Ech0-Instanz",
     "fieldSource": "Quellcode",
-    "viewSource": "Quellcode auf GitHub ansehen",
-    "viewSourceAtCommit": "Quellcode {'@'} {commit} auf GitHub ansehen",
-    "poweredBy": "Powered by Ech0"
+    "viewSource": "Quellcode ansehen",
+    "viewSourceAtCommit": "Quellcode bei Commit {commit} ansehen",
+    "poweredBy": "Eine persönliche Timeline auf Ihrem Server—selbstgehostet, AGPL-3.0, werbefrei und plattformfrei."
   },
   "echoPage": {
     "loadingDetail": "Echo-Details werden geladen…"
@@ -1030,9 +1022,6 @@
     "fullscreen": "Vollbild",
     "paused": "Pausiert"
   },
-  "githubCard": {
-    "avatarAlt": "Avatar"
-  },
   "extensionCard": {
     "music": "Musik",
     "musicPlayer": "Musikplayer",
@@ -1043,7 +1032,6 @@
     "musicCoverAlt": "Cover von {title}",
     "musicUnavailable": "Diese Musikquelle ist vorübergehend nicht verfügbar",
     "musicUnavailableHint": "Musik-URL oder Meting-API-Konfiguration prüfen",
-    "github": "GitHub",
     "website": "Webseite",
     "location": "Ort",
     "locationOpenInMaps": "In Google Maps öffnen",

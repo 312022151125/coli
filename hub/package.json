@@ -7,11 +7,12 @@
   "scripts": {
     "dev": "vite",
     "generate:seo-assets": "node ./scripts/generate-seo-assets.mjs",
-    "prebuild": "pnpm run generate:seo-assets && npm install --prefix ../web",
+    "prebuild": "pnpm run generate:seo-assets",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource-variable/space-grotesk": "^5.3.0",
     "@types/markdown-it": "^14.1.2",
     "@unocss/preset-wind4": "^66.6.8",
     "@vueuse/core": "^14.3.0",

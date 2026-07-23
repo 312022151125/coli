@@ -74,7 +74,7 @@ func TestFormatExtension(t *testing.T) {
 		{"music", ext(echoModel.Extension_MUSIC, map[string]any{"url": "https://song"}), "[音乐分享] https://song"},
 		{"music missing url", ext(echoModel.Extension_MUSIC, map[string]any{}), ""},
 		{"video", ext(echoModel.Extension_VIDEO, map[string]any{"videoId": "abc"}), "[视频分享] 视频ID abc"},
-		{"github", ext(echoModel.Extension_GITHUBPROJ, map[string]any{"repoUrl": "https://gh"}), "[GitHub 项目] https://gh"},
+		{"github", ext(echoModel.Extension_GITHUBPROJ, map[string]any{"repoUrl": "https://gh"}), ""},
 		{"website title+site", ext(echoModel.Extension_WEBSITE, map[string]any{"title": "T", "site": "S"}), "[网站] T S"},
 		{"website site only", ext(echoModel.Extension_WEBSITE, map[string]any{"site": "S"}), "[网站] S"},
 		{"website title only", ext(echoModel.Extension_WEBSITE, map[string]any{"title": "T"}), "[网站] T"},

@@ -3,9 +3,8 @@
 /* Radix Sand–aligned palette (similar to minttr.com) */
 @theme {
   --font-sans:
-    "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif,
+    "Space Grotesk Variable", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-serif: "Source Serif 4", Georgia, "Times New Roman", ui-serif, serif;
   --color-app: #f6f4f0;
   --color-sand-1: #f6f4f0;
   /* Between sand-1 and sand-6 — matches common Radix Sand 2 */

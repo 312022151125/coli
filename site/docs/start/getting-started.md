@@ -101,4 +101,4 @@ docker run -d \
 
 ## 与官方仓库的关系
 
-功能细节、环境变量、排错以 **GitHub 仓库** [`lin-snow/Ech0`](https://github.com/lin-snow/Ech0) 的 `README.zh.md` 与 `docs/` 为准；本站文档侧重**上手路径与功能说明**，与 README 保持方向一致，具体版本差异以你实例界面和 OpenAPI 为准。
+功能细节、环境变量、排错以文档与 `docs/` 为准；本站文档侧重**上手路径与功能说明**，具体版本差异以你实例界面和 OpenAPI 为准。

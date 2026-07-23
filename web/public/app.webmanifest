@@ -1,7 +1,7 @@
 {
-  "name": "Ech0",
-  "short_name": "Ech0",
-  "description": "Ech0 is a new-generation open-source self-hosted platform designed for individual users. It is ultra-lightweight and low-cost, helping you easily publish and share ideas, writings, and links. With a clean, intuitive interface and powerful command-line tools, content management becomes simple and flexible. Your data is fully owned and controlled by you.",
+  "name": "Personal Timeline",
+  "short_name": "Timeline",
+  "description": "A personal timeline on your server—self-hosted, AGPL-3.0, ad-free and platform-free.",
   "start_url": "/",
   "id": "/",
   "scope": "/",

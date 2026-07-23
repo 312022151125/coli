@@ -13,12 +13,9 @@ import (
 	"github.com/gin-gonic/gin"
 	commonModel "github.com/lin-snow/ech0/internal/model/common"
 	service "github.com/lin-snow/ech0/internal/service/dashboard"
-	githubUtil "github.com/lin-snow/ech0/internal/util/github"
 	jwtUtil "github.com/lin-snow/ech0/internal/util/jwt"
-	versionPkg "github.com/lin-snow/ech0/internal/version"
 	"github.com/lin-snow/ech0/internal/visitor"
 	logUtil "github.com/lin-snow/ech0/pkg/log"
-	"golang.org/x/mod/semver"
 )
 
 type DashboardHandler struct {
@@ -32,7 +29,6 @@ func NewDashboardHandler(dashboardService service.Service) *DashboardHandler {
 }
 
 type (
-	CheckUpdateInput   struct{}
 	GetSystemLogsInput struct {
 		Tail    string `query:"tail" doc:"返回最近多少条（默认 200）"`
 		Level   string `query:"level" doc:"日志级别过滤"`
@@ -40,42 +36,13 @@ type (
 	}
 	GetVisitorStatsInput struct{}
 
-	CheckUpdateResponse struct {
-		CurrentVersion string `json:"current_version"`
-		LatestVersion  string `json:"latest_version"`
-		HasUpdate      bool   `json:"has_update"`
-	}
 )
 
 type (
-	CheckUpdateOutput  = commonModel.Result[CheckUpdateResponse]
 	LogsOutput         = commonModel.Result[[]logUtil.LogEntry]
 	VisitorStatsOutput = commonModel.Result[[]visitor.DayStat]
 )
 
-func (dashboardHandler *DashboardHandler) CheckUpdate(ctx context.Context, _ *CheckUpdateInput) (CheckUpdateOutput, error) {
-	latestVersion, err := githubUtil.GetLatestVersion()
-	if err != nil {
-		// 包成带 message_key 的 BizError：用户看到本地化的「检查更新失败」而非底层网络错误串，
-		// 同时保留 Err 供 HandleError 记录底层原因。
-		return CheckUpdateOutput{}, &commonModel.BizError{
-			Code:       commonModel.ErrCodeInternal,
-			Msg:        commonModel.CHECK_UPDATE_FAILED,
-			MessageKey: commonModel.MsgKeyDashboardCheckUpdateFailed,
-			Err:        err,
-		}
-	}
-
-	cur := semver.Canonical("v" + strings.TrimPrefix(strings.TrimSpace(versionPkg.Version), "v"))
-	lat := semver.Canonical("v" + strings.TrimPrefix(strings.TrimSpace(latestVersion), "v"))
-	hasUpdate := cur != "" && lat != "" && semver.Compare(lat, cur) > 0
-
-	return commonModel.OK(CheckUpdateResponse{
-		CurrentVersion: versionPkg.Version,
-		LatestVersion:  latestVersion,
-		HasUpdate:      hasUpdate,
-	}), nil
-}
 
 // GetSystemLogs 获取系统历史日志（admin:settings）。成功响应预设显式 message_key（localizeResult 不覆盖）。
 func (dashboardHandler *DashboardHandler) GetSystemLogs(ctx context.Context, in *GetSystemLogsInput) (LogsOutput, error) {

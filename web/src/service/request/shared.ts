@@ -43,9 +43,9 @@ const getServiceBaseUrl = () => {
   return baseUrl.replace(/\/+$/, '')
 }
 
-export const resolveAvatarUrl = (rawUrl?: string, fallback = '/Ech0.svg') => {
+export const resolveAvatarUrl = (rawUrl?: string, fallback = '/timeline-mark.svg') => {
   const value = (rawUrl || '').trim()
-  if (!value || value === 'Ech0.svg' || value === '/Ech0.svg') {
+  if (!value || value === 'Ech0.svg' || value === '/Ech0.svg' || value === 'timeline-mark.svg' || value === '/timeline-mark.svg') {
     return fallback
   }
 

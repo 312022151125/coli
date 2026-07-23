@@ -85,7 +85,6 @@ const MEDIA_META: Record<string, { icon: string; labelKey: string }> = {
 const EXT_META: Record<string, { icon: string; labelKey: string }> = {
   MUSIC: { icon: '🎵', labelKey: 'editor.extMusic' },
   VIDEO: { icon: '🎬', labelKey: 'editor.extVideo' },
-  GITHUBPROJ: { icon: '💻', labelKey: 'editor.extGithubProject' },
   WEBSITE: { icon: '🔗', labelKey: 'editor.extWebsiteLink' },
   LOCATION: { icon: '📍', labelKey: 'editor.extLocation' },
   TWEET: { icon: '🐦', labelKey: 'editor.extTweet' },

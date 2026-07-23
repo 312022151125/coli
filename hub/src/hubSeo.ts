@@ -5,26 +5,26 @@ import type { RouteLocationNormalized } from 'vue-router'
 
 /** Public origin for canonical, Open Graph, and sitemap (override via `VITE_HUB_SITE_ORIGIN`). */
 export const HUB_SITE_ORIGIN = (
-  import.meta.env.VITE_HUB_SITE_ORIGIN ?? 'https://hub.ech0.app'
+  import.meta.env.VITE_HUB_SITE_ORIGIN ?? 'https://coli.dev/hub'
 ).replace(/\/+$/, '')
 
 const DEFAULT_DESCRIPTION =
-  'Ech0 Hub — discover and connect with the resonating voices of the web.'
+  'Browse public posts from independent instances in one shared stream.'
 
 const KEYWORDS =
-  'Ech0, Ech0 Hub, microblog, timeline, self-hosted, open source, RSS, feed, aggregate, decentralized'
+  'microblog, timeline, self-hosted, open source, RSS, feed, aggregate, decentralized'
 
 const ROUTES = {
   home: {
-    title: 'Ech0 Hub — where echoes meet and ideas resonate',
+    title: 'Public voices, gathered in one place.',
     description: DEFAULT_DESCRIPTION,
     path: '/',
     jsonLdType: 'WebSite',
   },
   explore: {
-    title: 'Explore — Ech0 Hub',
+    title: 'Explore the public timeline — coli.dev Hub',
     description:
-      'Browse public Ech0 instances in one aggregated timeline — discover voices from across the web.',
+      'Browse public posts from independent instances in one shared stream.',
     path: '/explore',
     jsonLdType: 'CollectionPage',
   },
@@ -79,7 +79,7 @@ export function applyHubRouteMeta(to: RouteLocationNormalized): void {
   ensureMeta('name', 'keywords', KEYWORDS)
 
   ensureMeta('property', 'og:type', 'website')
-  ensureMeta('property', 'og:site_name', 'Ech0 Hub')
+  ensureMeta('property', 'og:site_name', 'coli.dev Hub')
   ensureMeta('property', 'og:title', cfg.title)
   ensureMeta('property', 'og:description', cfg.description)
   ensureMeta('property', 'og:url', url)
@@ -101,7 +101,7 @@ export function applyHubRouteMeta(to: RouteLocationNormalized): void {
       url,
       isPartOf: {
         '@type': 'WebSite',
-        name: 'Ech0 Hub',
+        name: 'coli.dev Hub',
         url: `${HUB_SITE_ORIGIN}/`,
       },
       image: OG_IMAGE,

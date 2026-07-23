@@ -98,7 +98,7 @@ func (s *CommonService) GenerateRSS(ctx *gin.Context) (string, error) {
 			feed := &feeds.Feed{
 				Title:       "Ech0",
 				Link:        &feeds.Link{Href: fmt.Sprintf("%s://%s/", schema, host)},
-				Image:       &feeds.Image{Url: fmt.Sprintf("%s://%s/Ech0.svg", schema, host)},
+				Image:       &feeds.Image{Url: fmt.Sprintf("%s://%s/timeline-mark.svg", schema, host)},
 				Description: "Ech0",
 				Author:      &feeds.Author{Name: "Ech0"},
 				Updated:     time.Now().UTC(),

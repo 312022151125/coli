@@ -87,9 +87,7 @@ func formatExtension(ext *echoModel.EchoExtension) string {
 			return "[视频分享] 视频ID " + id
 		}
 	case echoModel.Extension_GITHUBPROJ:
-		if u := str("repoUrl"); u != "" {
-			return "[GitHub 项目] " + u
-		}
+		return ""
 	case echoModel.Extension_WEBSITE:
 		title, site := str("title"), str("site")
 		switch {

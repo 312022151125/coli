@@ -278,6 +278,9 @@ func (authService *AuthService) HandleOAuthCallback(
 
 func (authService *AuthService) getOAuthSetting(provider string) (*settingModel.OAuth2Setting, error) {
 	setting, err := coreSetting.Get(context.Background(), authService.durableKV, coreSetting.OAuth2)
+	if provider == string(commonModel.OAuth2GITHUB) {
+		return nil, errors.New(commonModel.UNSUPPORTED_OAUTH_PROVIDER)
+	}
 	if err != nil {
 		return nil, err
 	}
@@ -312,17 +315,6 @@ func (authService *AuthService) buildOAuthAuthorizeURL(
 	}
 
 	switch provider {
-	case string(commonModel.OAuth2GITHUB):
-		config := oauth2.Config{
-			ClientID:    setting.ClientID,
-			RedirectURL: setting.RedirectURI,
-			Scopes:      setting.Scopes,
-			Endpoint: oauth2.Endpoint{
-				AuthURL:  setting.AuthURL,
-				TokenURL: setting.TokenURL,
-			},
-		}
-		return config.AuthCodeURL(state)
 	case string(commonModel.OAuth2GOOGLE):
 		config := oauth2.Config{
 			ClientID:    setting.ClientID,
@@ -733,18 +725,26 @@ func (authService *AuthService) PasskeyRegisterBegin(
 		return resp, err
 	}
 
-	authService.repository.CacheSetPasskeySession(
-		getPasskeyRegisterSessionKey(nonce),
-		passkeySessionCache{
-			Session:    *session,
-			Origin:     origin,
-			DeviceName: deviceName,
-		},
-		passkeySessionTTL,
-	)
+	options, sessionData, err := wa.BeginRegistration(user, webauthn.WithExtensions(protocol.ExtensionBuilder{"credProps": true}))
+	if err != nil {
+		return resp, err
+	}
+
+	sessionBytes, err := json.Marshal(sessionData)
+	if err != nil {
+		return resp, err
+	}
+
+	if err := authService.repository.CacheSetPasskeySession(getPasskeyRegisterSessionKey(nonce), passkeySessionCache{
+		UserID:      user.ID,
+		SessionData: sessionBytes,
+		Origin:      origin,
+	}); err != nil {
+		return resp, err
+	}
 
 	resp.Nonce = nonce
-	resp.PublicKey = &creation.Response
+	resp.PublicKey = options.Response
 	return resp, nil
 }
 

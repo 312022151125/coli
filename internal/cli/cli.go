@@ -61,7 +61,7 @@ func DoVersion() {
 		versionPkg.BuildTime,
 		versionPkg.Author,
 		versionPkg.License,
-		versionPkg.RepoURL,
+		versionPkg.SourceURL,
 		versionPkg.Copyright(),
 	)
 	if versionPkg.BuildTime == "" {
@@ -71,7 +71,7 @@ func DoVersion() {
 			versionPkg.Commit,
 			versionPkg.Author,
 			versionPkg.License,
-			versionPkg.RepoURL,
+			versionPkg.SourceURL,
 			versionPkg.Copyright(),
 		)
 	}

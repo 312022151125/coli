@@ -107,16 +107,15 @@ func runsTxInline(tx *txmock.MockTransactor) {
 func TestHandleOAuthCallback_ValidationErrors(t *testing.T) {
 	helpers.SetJWTSecret(t, "callback-validation-secret")
 
-	// 一份合法的、provider=github 的 state，供「设置侧」错误用例复用。
 	validGithubState, _, err := jwtUtil.GenerateOAuthState(
 		string(authModel.OAuth2ActionLogin), "", allowedReturnURL, string(commonModel.OAuth2GITHUB),
 	)
 	require.NoError(t, err)
 
-	// state 内 provider=google，但回调 provider=github → 进入 provider 不一致分支。
 	mismatchProviderState, _, err := jwtUtil.GenerateOAuthState(
 		string(authModel.OAuth2ActionLogin), "", allowedReturnURL, string(commonModel.OAuth2GOOGLE),
 	)
+
 	require.NoError(t, err)
 
 	cases := []struct {

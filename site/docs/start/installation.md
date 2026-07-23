@@ -38,7 +38,7 @@ docker run -d \
 
 ### 镜像与版本
 
-- 镜像名一般为 `sn0wl1n/ech0:latest`；需要固定版本可到 [GitHub Releases](https://github.com/lin-snow/Ech0/releases) 对照标签。
+ - 镜像名一般为 `sn0wl1n/ech0:latest`。
 - 升级流程见 [版本更新](/docs/start/update)。
 
 ### 常见故障（Docker）
@@ -53,7 +53,7 @@ docker run -d \
 
 ## Docker Compose
 
-新建目录，放入 `docker-compose.yml`（可参考仓库 [`docker/docker-compose.yml`](https://github.com/lin-snow/Ech0/blob/main/docker/docker-compose.yml) 或下列最小示例），在该目录执行：
+新建目录，放入 `docker-compose.yml`（可参考下列最小示例），在该目录执行：
 
 ```bash
 docker compose up -d
@@ -117,7 +117,7 @@ helm install my-ech0 ech0/ech0 --namespace my-namespace --create-namespace
 如果你需要从本地源码安装，也可以保留旧方式：
 
 ```bash
-git clone https://github.com/lin-snow/Ech0.git
+git clone https://coli.dev/source
 cd Ech0
 helm install ech0 ./charts/ech0
 ```
@@ -126,7 +126,7 @@ helm install ech0 ./charts/ech0
 
 ## 二进制
 
-从 [GitHub Releases](https://github.com/lin-snow/Ech0/releases) 下载对应平台压缩包，解压后：
+从官方发布渠道下载对应平台压缩包，解压后：
 
 ```bash
 ./ech0 serve

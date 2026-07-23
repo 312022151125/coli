@@ -59,33 +59,22 @@ var (
 
 // PrintGreetings 使用 lipgloss 输出欢迎信息
 func PrintGreetings(port string) {
-	// 渐变 Banner 渲染（每行变色）
-	banner := gradientBanner(GreetingBanner)
-
-	// 构建正文内容
 	content := lipgloss.JoinVertical(
 		lipgloss.Left,
 		infoStyle.Render(
 			"📦 "+titleStyle.Render("Version")+": "+highlight.Render(versionPkg.Version),
 		),
 		infoStyle.Render("🎈 "+titleStyle.Render("Port")+": "+highlight.Render(port)),
-		infoStyle.Render("🧙 "+titleStyle.Render("Author")+": "+highlight.Render("L1nSn0w")),
+		infoStyle.Render("🧙 "+titleStyle.Render("Author")+": "+highlight.Render(versionPkg.Author)),
 		infoStyle.Render(
-			"👉 "+titleStyle.Render("Website")+": "+highlight.Render("https://ech0.app/"),
+			"🌐 "+titleStyle.Render("Website")+": "+highlight.Render("https://coli.dev/"),
 		),
 		infoStyle.Render(
-			"👉 "+titleStyle.Render(
-				"GitHub",
-			)+": "+highlight.Render(
-				"https://github.com/lin-snow/Ech0",
-			),
+			"📦 "+titleStyle.Render("Source")+": "+highlight.Render(versionPkg.SourceURL),
 		),
 	)
 
-	full := lipgloss.JoinVertical(lipgloss.Left,
-		banner,
-		boxStyle.Render(content),
-	)
+	full := boxStyle.Render(content)
 
 	if _, err := fmt.Fprintln(os.Stdout, full); err != nil {
 		fmt.Fprintf(os.Stderr, "failed to print greetings: %v\n", err)

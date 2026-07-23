@@ -84,7 +84,7 @@ func TestHelloEch0(t *testing.T) {
 	assert.Equal(t, versionPkg.Copyright(), out.Data.Copyright)
 	// version.Info 被扁平化到顶层，应与 version.Get 一致。
 	assert.Equal(t, versionPkg.Version, out.Data.Version)
-	assert.Equal(t, versionPkg.RepoURL, out.Data.RepoURL)
+	assert.Equal(t, versionPkg.SourceURL, out.Data.SourceURL)
 	assert.Equal(t, versionPkg.License, out.Data.License)
 }
 

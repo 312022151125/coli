@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // Copyright (C) 2025-2026 lin-snow
 
+import '@fontsource-variable/space-grotesk'
 import 'virtual:uno.css'
 import '@/themes/index.scss'
 import 'floating-vue/dist/style.css'

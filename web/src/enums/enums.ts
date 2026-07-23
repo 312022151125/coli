@@ -14,7 +14,6 @@ export enum Mode {
 export enum ExtensionType {
   MUSIC = 'MUSIC',
   VIDEO = 'VIDEO',
-  GITHUBPROJ = 'GITHUBPROJ',
   WEBSITE = 'WEBSITE',
   LOCATION = 'LOCATION',
   TWEET = 'TWEET',

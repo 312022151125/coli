@@ -10,11 +10,11 @@ type SeoSystemSetting = {
   server_url?: string
 }
 
-const DEFAULT_SITE_TITLE = 'Ech0'
-const DEFAULT_OG_IMAGE = '/Ech0.png'
+const DEFAULT_SITE_TITLE = 'Personal Timeline'
+const DEFAULT_OG_IMAGE = '/android-chrome-512x512.png'
 const WEBSITE_JSONLD_ID = 'website-jsonld'
 const DEFAULT_SEO_DESCRIPTION =
-  'Ech0 is a next-generation open-source self-hosted platform built for individuals. It is lightweight and low-cost, making it easy to publish and share your ideas, writing, and links.'
+  'A personal timeline on your server—self-hosted, AGPL-3.0, ad-free and platform-free.'
 
 const resolvePageTitle = (siteTitle: string, routeTitle: unknown) => {
   if (typeof routeTitle !== 'string') return siteTitle

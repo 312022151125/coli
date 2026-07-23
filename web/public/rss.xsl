@@ -372,8 +372,6 @@
               </xsl:attribute>
               访问站点 →
             </a>
-            <span style="margin: 0 10px; opacity: 0.4;">|</span>
-            Powered by Ech0
           </footer>
         </main>
         <script>

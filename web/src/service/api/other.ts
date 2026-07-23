@@ -19,20 +19,6 @@ export function fetchDownloadExport() {
   })
 }
 
-export type CheckUpdateResult = {
-  current_version: string
-  latest_version: string
-  has_update: boolean
-}
-
-export function fetchCheckUpdate() {
-  return request<CheckUpdateResult>({
-    url: '/system/check-update',
-    method: 'GET',
-    // 失败提示由控制台自行展示，避免与 request 全局错误 Toast 重复
-    silentError: true,
-  })
-}
 
 // 获取网站标题
 export function fetchGetWebsiteTitle(websiteURL: string) {

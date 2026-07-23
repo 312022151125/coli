@@ -47,17 +47,6 @@
         {{ t('editor.videoId') }}: {{ editorStore.extensionToAdd.extension }}
       </div>
     </div>
-    <!-- Github项目分享 -->
-    <div v-if="editorStore.currentExtensionType === ExtensionType.GITHUBPROJ">
-      <div class="text-[var(--color-text-secondary)] font-bold mb-1">
-        {{ t('editor.githubShare') }}
-      </div>
-      <BaseInput
-        v-model="editorStore.extensionToAdd.extension"
-        class="rounded-lg h-auto w-full"
-        :placeholder="t('editor.githubUrlPlaceholder')"
-      />
-    </div>
     <!-- X (Twitter) 推文分享 -->
     <div v-if="editorStore.currentExtensionType === ExtensionType.TWEET">
       <div class="text-[var(--color-text-secondary)] font-bold mb-1">

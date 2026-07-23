@@ -4,7 +4,7 @@
 import { usePreferredReducedMotion, useTransition } from '@vueuse/core'
 import { computed, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { fetchCheckUpdate, fetchGetEchosByPage, fetchGetTodayEchos } from '@/service/api'
+import { fetchGetEchosByPage, fetchGetTodayEchos } from '@/service/api'
 import { useConnectStore, useSettingStore } from '@/stores'
 import { theToast } from '@/utils/toast'
 import { TheActivityLog, TheVisitorStatsWidget } from '@/components/advanced/widget'
@@ -45,9 +45,6 @@ const todayAnimated = useTransition(todayAnimTarget, {
 const connectAnimated = useTransition(connectAnimTarget, {
   duration: statAnimDuration,
 })
-const hasUpdate = ref(false)
-const latestVersion = ref('')
-const checkingUpdate = ref(false)
 
 const formatMetric = (value: number | null) => {
   if (value === null) return '--'
@@ -130,38 +127,8 @@ const loadDashboardStats = async () => {
   loading.value = false
 }
 
-const CHECK_UPDATE_ERR_TOAST_ID = 'dashboard-check-update-error'
 
-const handleCheckUpdate = async () => {
-  if (checkingUpdate.value) return
-  checkingUpdate.value = true
-  let failed = false
-  try {
-    const res = await fetchCheckUpdate()
-    if (res.code === 1 && res.data) {
-      hasUpdate.value = res.data.has_update
-      latestVersion.value = res.data.latest_version
-      if (res.data.has_update) {
-        theToast.info(String(t('dashboard.updateAvailable', { version: res.data.latest_version })))
-      } else {
-        theToast.info(String(t('dashboard.alreadyLatest')))
-      }
-    } else {
-      failed = true
-    }
-  } catch {
-    failed = true
-  } finally {
-    checkingUpdate.value = false
-  }
-  if (failed) {
-    theToast.error(String(t('dashboard.checkUpdateFailed')), { id: CHECK_UPDATE_ERR_TOAST_ID })
-  }
-}
-
-const handleStatCardClick = (key: string) => {
-  if (key === 'version') void handleCheckUpdate()
-}
+const handleStatCardClick = (_key: string) => {}
 
 onMounted(() => {
   void loadDashboardStats()
@@ -181,10 +148,8 @@ onMounted(() => {
       <div
         v-for="(item, statIndex) in dashboardStats"
         :key="item.key"
-        :class="['stat-card', item.key === 'version' ? 'stat-card--clickable' : '']"
+        class="stat-card"
         :style="{ '--stat-enter-delay': `${statIndex * 72}ms` }"
-        v-tooltip="item.key === 'version' ? t('dashboard.clickToCheckUpdate') : undefined"
-        @click="handleStatCardClick(item.key)"
       >
         <div class="stat-icon-wrap">
           <TotalIcon v-if="item.icon === 'echos'" class="stat-card-icon stat-card-icon--fill" />
@@ -204,25 +169,6 @@ onMounted(() => {
             }"
           >
             {{ statValueText(item) }}
-            <span
-              v-if="item.key === 'version' && hasUpdate"
-              class="update-dot"
-              :title="t('dashboard.updateAvailable', { version: latestVersion })"
-            />
-            <svg
-              v-if="item.key === 'version' && checkingUpdate"
-              class="stat-spinner"
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-            >
-              <path d="M21 12a9 9 0 1 1-6.219-8.56" />
-            </svg>
           </p>
           <p class="stat-label">{{ item.label }}</p>
         </div>

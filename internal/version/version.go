@@ -25,10 +25,8 @@ const (
 	// Author is the primary author / copyright holder.
 	Author = "L1nSn0w"
 
-	// RepoURL is the canonical source repository URL. AGPL-3.0 §13 requires
-	// network users be able to obtain the corresponding source — this URL
-	// (combined with Commit) is what the About page surfaces to satisfy that.
-	RepoURL = "https://github.com/lin-snow/Ech0"
+	// SourceURL is the first-party corresponding source page URL.
+	SourceURL = "https://coli.dev/source"
 
 	// StartYear is the project inception year, used to render copyright ranges.
 	// 首个公开 commit 是 2025-03-21；以此为版权起始年。
@@ -51,7 +49,7 @@ type Info struct {
 	BuildTime string `json:"build_time"`
 	License   string `json:"license"`
 	Author    string `json:"author"`
-	RepoURL   string `json:"repo_url"`
+	SourceURL string `json:"source_url"`
 }
 
 // Get returns a snapshot of the current build / release metadata.
@@ -62,7 +60,7 @@ func Get() Info {
 		BuildTime: BuildTime,
 		License:   License,
 		Author:    Author,
-		RepoURL:   RepoURL,
+		SourceURL: SourceURL,
 	}
 }
 

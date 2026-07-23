@@ -29,7 +29,7 @@ describe('settingStore.init', () => {
       code: 1,
       data: {
         site_title: 'Ech0',
-        server_logo: '/Ech0.svg',
+        server_logo: '/timeline-mark.svg',
         server_name: 'Ech0',
         server_url: '',
         allow_register: true,

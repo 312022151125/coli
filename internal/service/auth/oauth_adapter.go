@@ -27,7 +27,6 @@ type oauthProviderAdapter interface {
 }
 
 type (
-	githubOAuthAdapter struct{}
 	googleOAuthAdapter struct{}
 	qqOAuthAdapter     struct{}
 	customOAuthAdapter struct{}
@@ -36,7 +35,7 @@ type (
 func getOAuthProviderAdapter(provider string) (oauthProviderAdapter, error) {
 	switch provider {
 	case string(commonModel.OAuth2GITHUB):
-		return &githubOAuthAdapter{}, nil
+		return nil, errors.New(commonModel.UNSUPPORTED_OAUTH_PROVIDER)
 	case string(commonModel.OAuth2GOOGLE):
 		return &googleOAuthAdapter{}, nil
 	case string(commonModel.OAuth2QQ):
@@ -48,24 +47,6 @@ func getOAuthProviderAdapter(provider string) (oauthProviderAdapter, error) {
 	}
 }
 
-func (a *githubOAuthAdapter) ResolveIdentity(
-	setting *settingModel.OAuth2Setting,
-	code string,
-	_ *authModel.OAuthState,
-) (*oauthIdentity, error) {
-	tokenResp, err := exchangeGithubCodeForToken(setting, code)
-	if err != nil {
-		return nil, err
-	}
-	userInfo, err := fetchGitHubUserInfo(setting, tokenResp.AccessToken)
-	if err != nil {
-		return nil, err
-	}
-	return &oauthIdentity{
-		ExternalID: fmt.Sprint(userInfo.ID),
-		AuthType:   string(authModel.AuthTypeOAuth2),
-	}, nil
-}
 
 func (a *googleOAuthAdapter) ResolveIdentity(
 	setting *settingModel.OAuth2Setting,

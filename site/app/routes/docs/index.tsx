@@ -133,7 +133,7 @@ export default function DocsIndex({ loaderData }: Route.ComponentProps) {
         </Link>
       </header>
 
-      <h1 className="mt-8 font-serif text-xl font-normal leading-snug text-sand-12">
+      <h1 className="mt-8 font-sans text-xl font-semibold leading-snug text-sand-12">
         Documentation
       </h1>
       <p className="mt-2 max-w-[42ch] text-[0.8125rem] leading-relaxed text-sand-11">
@@ -162,7 +162,7 @@ export default function DocsIndex({ loaderData }: Route.ComponentProps) {
                     <DocHeroIcon slug={card.slug} />
                   </span>
                   <span className="flex min-w-0 flex-1 flex-col justify-center">
-                    <span className="block font-serif text-[0.9375rem] font-semibold leading-snug text-sand-12">
+                    <span className="block font-sans text-[0.9375rem] font-semibold leading-snug text-sand-12">
                       {card.title}
                     </span>
                     <span className="mt-1.5 block min-h-[2.75rem] text-[0.8125rem] leading-relaxed text-sand-11">
@@ -195,7 +195,7 @@ export default function DocsIndex({ loaderData }: Route.ComponentProps) {
                 to={`/docs/${card.slug}`}
                 className="flex min-h-[3.25rem] flex-col justify-center gap-0.5 rounded-lg border border-sand-6/90 bg-sand-2/40 px-2 py-1.5 text-left shadow-[0_1px_2px_rgba(33,32,28,0.03)] transition-colors hover:border-sand-11/25 hover:bg-sand-2/80"
               >
-                <span className="font-serif text-[0.6875rem] font-semibold leading-tight text-sand-12 line-clamp-2">
+                <span className="font-sans text-[0.6875rem] font-semibold leading-tight text-sand-12 line-clamp-2">
                   {card.title}
                 </span>
                 {card.description ? (
