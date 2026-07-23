@@ -74,9 +74,9 @@ jobs:
           test -f "${VEC_DIR}/cgo/sqlite-vec.h"
           cp "${VEC_DIR}/cgo/sqlite-vec.h" "${SQLITE_INC}/"
           test -f "${VEC_DIR}/cgo/sqlite-vec.c"
-          cp "${VEC_DIR}/cgo/sqlite-vec.c" "${SQLITE_INC}/"
+          ${CC:-gcc} -c "${VEC_DIR}/cgo/sqlite-vec.c" -I"${SQLITE_INC}" -DSQLITE_CORE -o "${SQLITE_INC}/sqlite-vec.o"
           export CGO_CFLAGS="-I${SQLITE_INC} -Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int64_t=uint64_t -Wno-typedef-redefinition -fno-sanitize=undefined"
-          STATIC_LDFLAGS="-linkmode external -extldflags '-static'"
+          export CGO_LDFLAGS="${SQLITE_INC}/sqlite-vec.o -lm"
           go build -tags netgo -ldflags "$STATIC_LDFLAGS" -o "ech0-linux-${GOARCH}" ./cmd/ech0/main.go
 
       - name: Upload backend binary
