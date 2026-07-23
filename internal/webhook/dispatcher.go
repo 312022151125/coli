@@ -8,11 +8,11 @@ import (
 	"log/slog"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/config"
-	"github.com/lin-snow/ech0/internal/event"
-	webhookModel "github.com/lin-snow/ech0/internal/model/webhook"
-	asyncUtil "github.com/lin-snow/ech0/internal/util/async"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	"github.com/312022151125/coli/internal/config"
+	"github.com/312022151125/coli/internal/event"
+	webhookModel "github.com/312022151125/coli/internal/model/webhook"
+	asyncUtil "github.com/312022151125/coli/internal/util/async"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 type WebhookStore interface {

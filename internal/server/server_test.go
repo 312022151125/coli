@@ -9,7 +9,7 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
-	"github.com/lin-snow/ech0/internal/config"
+	"github.com/312022151125/coli/internal/config"
 )
 
 func TestServerStopWithoutHTTPServer(t *testing.T) {

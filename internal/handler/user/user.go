@@ -7,11 +7,11 @@ package handler
 import (
 	"context"
 
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	model "github.com/lin-snow/ech0/internal/model/user"
-	service "github.com/lin-snow/ech0/internal/service/user"
-	"github.com/lin-snow/ech0/pkg/viewer"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	model "github.com/312022151125/coli/internal/model/user"
+	service "github.com/312022151125/coli/internal/service/user"
+	"github.com/312022151125/coli/pkg/viewer"
 )
 
 type UserHandler struct {

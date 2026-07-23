@@ -11,12 +11,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/database"
-	"github.com/lin-snow/ech0/internal/migrator/spec"
-	commentModel "github.com/lin-snow/ech0/internal/model/comment"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
-	fileModel "github.com/lin-snow/ech0/internal/model/file"
+	"github.com/312022151125/coli/internal/database"
+	"github.com/312022151125/coli/internal/migrator/spec"
+	commentModel "github.com/312022151125/coli/internal/model/comment"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
+	fileModel "github.com/312022151125/coli/internal/model/file"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )

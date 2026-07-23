@@ -22,7 +22,7 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/lin-snow/ech0/internal/kvstore"
+	"github.com/312022151125/coli/internal/kvstore"
 )
 
 // Spec 描述单个 KV 配置的读取契约。

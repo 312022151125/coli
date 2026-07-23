@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/lin-snow/ech0/pkg/gocap/store"
+	"github.com/312022151125/coli/pkg/gocap/store"
 )
 
 // newTestStore builds a memstore whose background GC effectively never fires, so

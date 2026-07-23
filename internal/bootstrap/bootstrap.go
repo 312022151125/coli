@@ -4,8 +4,8 @@
 package bootstrap
 
 import (
-	"github.com/lin-snow/ech0/internal/config"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	"github.com/312022151125/coli/internal/config"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 func initLogger() {

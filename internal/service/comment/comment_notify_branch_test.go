@@ -7,8 +7,8 @@ import (
 	"context"
 	"testing"
 
-	commentModel "github.com/lin-snow/ech0/internal/model/comment"
-	"github.com/lin-snow/ech0/internal/test/helpers"
+	commentModel "github.com/312022151125/coli/internal/model/comment"
+	"github.com/312022151125/coli/internal/test/helpers"
 	"github.com/stretchr/testify/assert"
 	mock "github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"

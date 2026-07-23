@@ -7,9 +7,9 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/lin-snow/ech0/internal/database"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	errUtil "github.com/lin-snow/ech0/internal/util/err"
+	"github.com/312022151125/coli/internal/database"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	errUtil "github.com/312022151125/coli/internal/util/err"
 )
 
 var readOnlySafeMethods = map[string]struct{}{

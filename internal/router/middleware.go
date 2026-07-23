@@ -5,9 +5,9 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/lin-snow/ech0/internal/config"
-	i18nUtil "github.com/lin-snow/ech0/internal/i18n"
-	"github.com/lin-snow/ech0/internal/middleware"
+	"github.com/312022151125/coli/internal/config"
+	i18nUtil "github.com/312022151125/coli/internal/i18n"
+	"github.com/312022151125/coli/internal/middleware"
 )
 
 // setupMiddleware 设置中间件

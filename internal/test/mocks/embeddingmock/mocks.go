@@ -10,9 +10,9 @@ package embeddingmock
 import (
 	"context"
 
-	model0 "github.com/lin-snow/ech0/internal/model/echo"
-	model1 "github.com/lin-snow/ech0/internal/model/embedding"
-	"github.com/lin-snow/ech0/internal/model/setting"
+	model0 "github.com/312022151125/coli/internal/model/echo"
+	model1 "github.com/312022151125/coli/internal/model/embedding"
+	"github.com/312022151125/coli/internal/model/setting"
 	mock "github.com/stretchr/testify/mock"
 )
 

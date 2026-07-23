@@ -11,7 +11,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/lin-snow/ech0/internal/router"
+	"github.com/312022151125/coli/internal/router"
 )
 
 const outPath = "internal/openapi/openapi.yaml"

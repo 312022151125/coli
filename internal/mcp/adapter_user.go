@@ -7,8 +7,8 @@ import (
 	"context"
 	"encoding/json"
 
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	"github.com/lin-snow/ech0/pkg/viewer"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	"github.com/312022151125/coli/pkg/viewer"
 )
 
 func (a *Adapter) registerUserResources(reg *Registry) {

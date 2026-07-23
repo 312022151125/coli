@@ -4,7 +4,7 @@
 package model
 
 import (
-	uuidUtil "github.com/lin-snow/ech0/internal/util/uuid"
+	uuidUtil "github.com/312022151125/coli/internal/util/uuid"
 	"gorm.io/gorm"
 )
 

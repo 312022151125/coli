@@ -6,11 +6,11 @@ package repository
 import (
 	"context"
 
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
-	userModel "github.com/lin-snow/ech0/internal/model/user"
-	echoRepository "github.com/lin-snow/ech0/internal/repository/echo"
-	commonService "github.com/lin-snow/ech0/internal/service/common"
-	"github.com/lin-snow/ech0/internal/transaction"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
+	userModel "github.com/312022151125/coli/internal/model/user"
+	echoRepository "github.com/312022151125/coli/internal/repository/echo"
+	commonService "github.com/312022151125/coli/internal/service/common"
+	"github.com/312022151125/coli/internal/transaction"
 	"gorm.io/gorm"
 )
 

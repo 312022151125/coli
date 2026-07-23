@@ -8,12 +8,12 @@ import (
 
 	"github.com/danielgtaylor/huma/v2"
 	"github.com/gin-gonic/gin"
-	"github.com/lin-snow/ech0/internal/config"
-	"github.com/lin-snow/ech0/internal/handler"
-	"github.com/lin-snow/ech0/internal/handler/humares"
-	"github.com/lin-snow/ech0/internal/middleware"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	authService "github.com/lin-snow/ech0/internal/service/auth"
+	"github.com/312022151125/coli/internal/config"
+	"github.com/312022151125/coli/internal/handler"
+	"github.com/312022151125/coli/internal/handler/humares"
+	"github.com/312022151125/coli/internal/middleware"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	authService "github.com/312022151125/coli/internal/service/auth"
 )
 
 // 本文件是「Huma 装配层」：建统一 API、定义端点的鉴权姿态(posture)与注册器(route)、

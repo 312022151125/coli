@@ -9,11 +9,11 @@ import (
 	"io"
 	"strings"
 
-	"github.com/lin-snow/ech0/internal/agent"
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
-	embeddingModel "github.com/lin-snow/ech0/internal/model/embedding"
-	fileModel "github.com/lin-snow/ech0/internal/model/file"
-	"github.com/lin-snow/ech0/internal/storage"
+	"github.com/312022151125/coli/internal/agent"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
+	embeddingModel "github.com/312022151125/coli/internal/model/embedding"
+	fileModel "github.com/312022151125/coli/internal/model/file"
+	"github.com/312022151125/coli/internal/storage"
 )
 
 // maxChatImages 是单轮注入模型的图片数上限（控制 payload 与成本）。

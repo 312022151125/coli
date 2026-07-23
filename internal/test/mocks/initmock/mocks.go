@@ -8,8 +8,8 @@
 package initmock
 
 import (
-	model0 "github.com/lin-snow/ech0/internal/model/auth"
-	"github.com/lin-snow/ech0/internal/model/init"
+	model0 "github.com/312022151125/coli/internal/model/auth"
+	"github.com/312022151125/coli/internal/model/init"
 	mock "github.com/stretchr/testify/mock"
 )
 

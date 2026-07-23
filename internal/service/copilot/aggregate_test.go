@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
 )
 
 // pagingEchoSvc 是 EchoService 的测试替身，只覆写 QueryEchos：按 created_at 倒序的固定数据集

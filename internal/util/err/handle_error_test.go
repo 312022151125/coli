@@ -7,7 +7,7 @@ import (
 	"errors"
 	"testing"
 
-	model "github.com/lin-snow/ech0/internal/model/common"
+	model "github.com/312022151125/coli/internal/model/common"
 )
 
 func TestHandleError(t *testing.T) {

@@ -9,7 +9,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/lin-snow/ech0/pkg/gocap/core"
+	"github.com/312022151125/coli/pkg/gocap/core"
 )
 
 type errorBody struct {

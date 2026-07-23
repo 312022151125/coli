@@ -7,9 +7,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/lin-snow/ech0/internal/kvstore"
-	embeddingModel "github.com/lin-snow/ech0/internal/model/embedding"
-	"github.com/lin-snow/ech0/internal/test/helpers"
+	"github.com/312022151125/coli/internal/kvstore"
+	embeddingModel "github.com/312022151125/coli/internal/model/embedding"
+	"github.com/312022151125/coli/internal/test/helpers"
 )
 
 // loadSession 在 userID 为空、KV 未命中、JSON 损坏时都 best-effort 返回 nil。

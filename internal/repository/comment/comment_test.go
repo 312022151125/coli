@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	model "github.com/lin-snow/ech0/internal/model/comment"
-	commentRepository "github.com/lin-snow/ech0/internal/repository/comment"
-	"github.com/lin-snow/ech0/internal/test/helpers"
+	model "github.com/312022151125/coli/internal/model/comment"
+	commentRepository "github.com/312022151125/coli/internal/repository/comment"
+	"github.com/312022151125/coli/internal/test/helpers"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"gorm.io/gorm"

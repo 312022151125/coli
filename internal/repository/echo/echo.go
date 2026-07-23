@@ -9,13 +9,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/cache"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	model "github.com/lin-snow/ech0/internal/model/echo"
-	fileModel "github.com/lin-snow/ech0/internal/model/file"
-	echoService "github.com/lin-snow/ech0/internal/service/echo"
-	"github.com/lin-snow/ech0/internal/transaction"
-	timezoneUtil "github.com/lin-snow/ech0/internal/util/timezone"
+	"github.com/312022151125/coli/internal/cache"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	model "github.com/312022151125/coli/internal/model/echo"
+	fileModel "github.com/312022151125/coli/internal/model/file"
+	echoService "github.com/312022151125/coli/internal/service/echo"
+	"github.com/312022151125/coli/internal/transaction"
+	timezoneUtil "github.com/312022151125/coli/internal/util/timezone"
 	"gorm.io/gorm"
 )
 

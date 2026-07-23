@@ -4,7 +4,7 @@
 package router
 
 import (
-	"github.com/lin-snow/ech0/internal/handler"
+	"github.com/312022151125/coli/internal/handler"
 )
 
 // setupResourceRoutes 设置资源路由。

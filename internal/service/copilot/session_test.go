@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/agent"
-	embeddingModel "github.com/lin-snow/ech0/internal/model/embedding"
+	"github.com/312022151125/coli/internal/agent"
+	embeddingModel "github.com/312022151125/coli/internal/model/embedding"
 )
 
 func src(content string) embeddingModel.SearchResult {

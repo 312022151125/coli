@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/lin-snow/ech0/internal/cache"
+	"github.com/312022151125/coli/internal/cache"
 )
 
 type cacheKeyTracker struct {

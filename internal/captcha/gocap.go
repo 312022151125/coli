@@ -12,8 +12,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/config"
-	"github.com/lin-snow/ech0/pkg/gocap/cap"
+	"github.com/312022151125/coli/internal/config"
+	"github.com/312022151125/coli/pkg/gocap/cap"
 )
 
 const defaultSiteKey = "ech0-comment"

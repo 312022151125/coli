@@ -9,9 +9,9 @@ import (
 	"time"
 	_ "time/tzdata" // 内嵌 IANA 时区库，保证 LoadLocation("Asia/Shanghai") 在任意平台可用
 
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	commonService "github.com/lin-snow/ech0/internal/service/common"
-	commonmock "github.com/lin-snow/ech0/internal/test/mocks/commonmock"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	commonService "github.com/312022151125/coli/internal/service/common"
+	commonmock "github.com/312022151125/coli/internal/test/mocks/commonmock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"

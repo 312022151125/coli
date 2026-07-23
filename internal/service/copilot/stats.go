@@ -12,8 +12,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/agent"
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
+	"github.com/312022151125/coli/internal/agent"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
 )
 
 // statsTopTags 是 stats_overview 输出的常用标签条数上限。

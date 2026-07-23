@@ -11,7 +11,7 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/lin-snow/ech0/internal/service/copilot"
+	"github.com/312022151125/coli/internal/service/copilot"
 	mock "github.com/stretchr/testify/mock"
 )
 

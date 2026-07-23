@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	visitorModel "github.com/lin-snow/ech0/internal/model/visitor"
-	"github.com/lin-snow/ech0/internal/visitor"
+	visitorModel "github.com/312022151125/coli/internal/model/visitor"
+	"github.com/312022151125/coli/internal/visitor"
 )
 
 func TestBuildDailyStat(t *testing.T) {

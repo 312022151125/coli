@@ -8,9 +8,9 @@ import (
 	"errors"
 	"testing"
 
-	fileModel "github.com/lin-snow/ech0/internal/model/file"
-	"github.com/lin-snow/ech0/internal/test/helpers"
-	"github.com/lin-snow/ech0/internal/transaction"
+	fileModel "github.com/312022151125/coli/internal/model/file"
+	"github.com/312022151125/coli/internal/test/helpers"
+	"github.com/312022151125/coli/internal/transaction"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"gorm.io/gorm"

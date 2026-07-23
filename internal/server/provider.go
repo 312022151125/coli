@@ -6,10 +6,10 @@ package server
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/google/wire"
-	"github.com/lin-snow/ech0/internal/config"
-	"github.com/lin-snow/ech0/internal/handler"
-	"github.com/lin-snow/ech0/internal/middleware"
-	"github.com/lin-snow/ech0/internal/router"
+	"github.com/312022151125/coli/internal/config"
+	"github.com/312022151125/coli/internal/handler"
+	"github.com/312022151125/coli/internal/middleware"
+	"github.com/312022151125/coli/internal/router"
 )
 
 func ProvideGinEngine() *gin.Engine {

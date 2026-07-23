@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/lin-snow/ech0/pkg/log/tint"
+	"github.com/312022151125/coli/pkg/log/tint"
 )
 
 // LevelPanic / LevelFatal 是标准库 slog 没有的两个级别，映射到 Error 之上，

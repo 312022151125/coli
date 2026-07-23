@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"github.com/charmbracelet/lipgloss"
-	versionPkg "github.com/lin-snow/ech0/internal/version"
+	versionPkg "github.com/312022151125/coli/internal/version"
 )
 
 const (

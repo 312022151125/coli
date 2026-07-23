@@ -10,8 +10,8 @@ import (
 	"strings"
 	"testing"
 
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

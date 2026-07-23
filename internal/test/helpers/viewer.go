@@ -6,7 +6,7 @@ package helpers
 import (
 	"context"
 
-	"github.com/lin-snow/ech0/pkg/viewer"
+	"github.com/312022151125/coli/pkg/viewer"
 )
 
 // CtxAsUser 返回带普通用户身份的 context（service 层用 viewer.MustFromContext 取身份）。

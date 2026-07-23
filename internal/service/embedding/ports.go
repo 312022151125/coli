@@ -7,9 +7,9 @@ package service
 import (
 	"context"
 
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
-	model "github.com/lin-snow/ech0/internal/model/embedding"
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
+	model "github.com/312022151125/coli/internal/model/embedding"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
 )
 
 // Embedder 是文本向量化的可注入依赖（默认实现 internal/embedding.Client）。

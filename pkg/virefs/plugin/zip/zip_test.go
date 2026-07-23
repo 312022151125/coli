@@ -12,7 +12,7 @@ import (
 	"strings"
 	"testing"
 
-	virefs "github.com/lin-snow/ech0/pkg/virefs"
+	virefs "github.com/312022151125/coli/pkg/virefs"
 )
 
 // ---------- helpers ----------

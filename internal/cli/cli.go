@@ -8,10 +8,10 @@ import (
 	"net"
 
 	"github.com/charmbracelet/huh"
-	"github.com/lin-snow/ech0/internal/config"
-	"github.com/lin-snow/ech0/internal/di"
-	tuiUtil "github.com/lin-snow/ech0/internal/util/tui"
-	versionPkg "github.com/lin-snow/ech0/internal/version"
+	"github.com/312022151125/coli/internal/config"
+	"github.com/312022151125/coli/internal/di"
+	tuiUtil "github.com/312022151125/coli/internal/util/tui"
+	versionPkg "github.com/312022151125/coli/internal/version"
 )
 
 func isWebPortInUse() bool {

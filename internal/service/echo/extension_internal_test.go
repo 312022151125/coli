@@ -7,8 +7,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	model "github.com/lin-snow/ech0/internal/model/echo"
-	fileModel "github.com/lin-snow/ech0/internal/model/file"
+	model "github.com/312022151125/coli/internal/model/echo"
+	fileModel "github.com/312022151125/coli/internal/model/file"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -49,7 +49,7 @@ func TestNormalizeEchoExtension_AllTypes(t *testing.T) {
 	t.Run("github project rejected", func(t *testing.T) {
 		_, err := normalizeEchoExtension(&model.EchoExtension{
 			Type:    model.Extension_GITHUBPROJ,
-			Payload: map[string]interface{}{"repoUrl": "https://github.com/lin-snow/ech0"},
+			Payload: map[string]interface{}{"repoUrl": "https://github.com/312022151125/coli"},
 		})
 		require.Error(t, err)
 	})

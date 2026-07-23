@@ -9,11 +9,11 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/lin-snow/ech0/internal/config"
-	res "github.com/lin-snow/ech0/internal/handler/response"
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	cookieUtil "github.com/lin-snow/ech0/internal/util/cookie"
+	"github.com/312022151125/coli/internal/config"
+	res "github.com/312022151125/coli/internal/handler/response"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	cookieUtil "github.com/312022151125/coli/internal/util/cookie"
 )
 
 type (

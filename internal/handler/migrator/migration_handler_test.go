@@ -8,9 +8,9 @@ import (
 	"errors"
 	"testing"
 
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	migratorModel "github.com/lin-snow/ech0/internal/model/migrator"
-	migratormock "github.com/lin-snow/ech0/internal/test/mocks/migratormock"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	migratorModel "github.com/312022151125/coli/internal/model/migrator"
+	migratormock "github.com/312022151125/coli/internal/test/mocks/migratormock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"

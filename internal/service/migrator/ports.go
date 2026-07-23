@@ -8,8 +8,8 @@ import (
 	"mime/multipart"
 
 	"github.com/gin-gonic/gin"
-	migratorModel "github.com/lin-snow/ech0/internal/model/migrator"
-	commonService "github.com/lin-snow/ech0/internal/service/common"
+	migratorModel "github.com/312022151125/coli/internal/model/migrator"
+	commonService "github.com/312022151125/coli/internal/service/common"
 )
 
 type Service interface {

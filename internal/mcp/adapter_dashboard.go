@@ -7,7 +7,7 @@ import (
 	"context"
 	"encoding/json"
 
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
+	authModel "github.com/312022151125/coli/internal/model/auth"
 )
 
 func (a *Adapter) registerDashboardResources(reg *Registry) {

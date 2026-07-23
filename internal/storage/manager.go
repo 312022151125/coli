@@ -9,11 +9,11 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/lin-snow/ech0/internal/config"
-	"github.com/lin-snow/ech0/internal/kvstore"
-	fileModel "github.com/lin-snow/ech0/internal/model/file"
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
-	coreSetting "github.com/lin-snow/ech0/internal/setting"
+	"github.com/312022151125/coli/internal/config"
+	"github.com/312022151125/coli/internal/kvstore"
+	fileModel "github.com/312022151125/coli/internal/model/file"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
+	coreSetting "github.com/312022151125/coli/internal/setting"
 )
 
 type Manager struct {

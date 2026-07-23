@@ -8,7 +8,7 @@ import (
 	"encoding/json"
 	"time"
 
-	model "github.com/lin-snow/ech0/internal/model/setting"
+	model "github.com/312022151125/coli/internal/model/setting"
 )
 
 // Role 表示一条对话消息的发送者角色

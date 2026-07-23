@@ -3,7 +3,7 @@
 
 package storage
 
-import "github.com/lin-snow/ech0/pkg/virefs"
+import "github.com/312022151125/coli/pkg/virefs"
 
 // NewFileSchema builds a VireFS Schema that routes files into
 // subdirectories by extension. Plug it into VireFS via

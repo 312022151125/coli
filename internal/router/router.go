@@ -7,10 +7,10 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/lin-snow/ech0/internal/config"
-	"github.com/lin-snow/ech0/internal/handler"
-	"github.com/lin-snow/ech0/internal/middleware"
-	authService "github.com/lin-snow/ech0/internal/service/auth"
+	"github.com/312022151125/coli/internal/config"
+	"github.com/312022151125/coli/internal/handler"
+	"github.com/312022151125/coli/internal/middleware"
+	authService "github.com/312022151125/coli/internal/service/auth"
 )
 
 type AppRouterGroup struct {

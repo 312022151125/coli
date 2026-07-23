@@ -9,9 +9,9 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/service/s3"
-	"github.com/lin-snow/ech0/internal/config"
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
-	"github.com/lin-snow/ech0/pkg/virefs"
+	"github.com/312022151125/coli/internal/config"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
+	"github.com/312022151125/coli/pkg/virefs"
 )
 
 // errBucketRequired 在未填写 Bucket 时返回，给出比 SDK 底层报错更直观的提示。

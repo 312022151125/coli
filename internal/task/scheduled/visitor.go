@@ -9,10 +9,10 @@ import (
 	"time"
 
 	"github.com/go-co-op/gocron/v2"
-	visitorModel "github.com/lin-snow/ech0/internal/model/visitor"
-	visitorRepository "github.com/lin-snow/ech0/internal/repository/visitor"
-	"github.com/lin-snow/ech0/internal/visitor"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	visitorModel "github.com/312022151125/coli/internal/model/visitor"
+	visitorRepository "github.com/312022151125/coli/internal/repository/visitor"
+	"github.com/312022151125/coli/internal/visitor"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 const visitorSnapshotTag = "VisitorSnapshotSchedule"

@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	model "github.com/lin-snow/ech0/internal/model/comment"
+	model "github.com/312022151125/coli/internal/model/comment"
 )
 
 type notifyContent struct {

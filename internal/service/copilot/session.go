@@ -12,11 +12,11 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/lin-snow/ech0/internal/agent"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	embeddingModel "github.com/lin-snow/ech0/internal/model/embedding"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
-	"github.com/lin-snow/ech0/pkg/viewer"
+	"github.com/312022151125/coli/internal/agent"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	embeddingModel "github.com/312022151125/coli/internal/model/embedding"
+	logUtil "github.com/312022151125/coli/pkg/log"
+	"github.com/312022151125/coli/pkg/viewer"
 )
 
 // maxStoredChatMessages 是单个用户持久化会话保留的最大消息条数（超出取最近 N 条）。

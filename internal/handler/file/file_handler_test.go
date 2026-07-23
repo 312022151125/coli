@@ -11,8 +11,8 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	filemock "github.com/lin-snow/ech0/internal/test/mocks/filemock"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	filemock "github.com/312022151125/coli/internal/test/mocks/filemock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"

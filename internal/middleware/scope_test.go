@@ -10,9 +10,9 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	"github.com/lin-snow/ech0/pkg/viewer"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	"github.com/312022151125/coli/pkg/viewer"
 )
 
 func TestRequireScopes_ReturnsScopeForbiddenCode(t *testing.T) {

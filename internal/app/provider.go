@@ -7,12 +7,12 @@ import (
 	"context"
 
 	"github.com/google/wire"
-	bus "github.com/lin-snow/ech0/internal/event/bus"
-	"github.com/lin-snow/ech0/internal/job"
-	"github.com/lin-snow/ech0/internal/kvstore"
-	"github.com/lin-snow/ech0/internal/server"
-	"github.com/lin-snow/ech0/internal/setting"
-	"github.com/lin-snow/ech0/internal/task"
+	bus "github.com/312022151125/coli/internal/event/bus"
+	"github.com/312022151125/coli/internal/job"
+	"github.com/312022151125/coli/internal/kvstore"
+	"github.com/312022151125/coli/internal/server"
+	"github.com/312022151125/coli/internal/setting"
+	"github.com/312022151125/coli/internal/task"
 )
 
 func ProvideOptions(

@@ -9,7 +9,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	logUtil "github.com/312022151125/coli/pkg/log"
 	"golang.org/x/sync/errgroup"
 )
 

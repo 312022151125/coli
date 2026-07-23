@@ -7,9 +7,9 @@ import (
 	"context"
 	"testing"
 
-	connectModel "github.com/lin-snow/ech0/internal/model/connect"
-	"github.com/lin-snow/ech0/internal/test/helpers"
-	"github.com/lin-snow/ech0/internal/transaction"
+	connectModel "github.com/312022151125/coli/internal/model/connect"
+	"github.com/312022151125/coli/internal/test/helpers"
+	"github.com/312022151125/coli/internal/transaction"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"gorm.io/gorm"

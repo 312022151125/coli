@@ -5,15 +5,15 @@ package mcp
 
 import (
 	"github.com/gin-gonic/gin"
-	commentService "github.com/lin-snow/ech0/internal/service/comment"
-	commonService "github.com/lin-snow/ech0/internal/service/common"
-	connectService "github.com/lin-snow/ech0/internal/service/connect"
-	copilotService "github.com/lin-snow/ech0/internal/service/copilot"
-	dashboardService "github.com/lin-snow/ech0/internal/service/dashboard"
-	echoService "github.com/lin-snow/ech0/internal/service/echo"
-	fileService "github.com/lin-snow/ech0/internal/service/file"
-	settingService "github.com/lin-snow/ech0/internal/service/setting"
-	userService "github.com/lin-snow/ech0/internal/service/user"
+	commentService "github.com/312022151125/coli/internal/service/comment"
+	commonService "github.com/312022151125/coli/internal/service/common"
+	connectService "github.com/312022151125/coli/internal/service/connect"
+	copilotService "github.com/312022151125/coli/internal/service/copilot"
+	dashboardService "github.com/312022151125/coli/internal/service/dashboard"
+	echoService "github.com/312022151125/coli/internal/service/echo"
+	fileService "github.com/312022151125/coli/internal/service/file"
+	settingService "github.com/312022151125/coli/internal/service/setting"
+	userService "github.com/312022151125/coli/internal/service/user"
 )
 
 type Handler struct {

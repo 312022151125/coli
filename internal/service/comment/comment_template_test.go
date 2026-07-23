@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	model "github.com/lin-snow/ech0/internal/model/comment"
+	model "github.com/312022151125/coli/internal/model/comment"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -9,9 +9,9 @@ import (
 	"errors"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/job"
-	jobModel "github.com/lin-snow/ech0/internal/model/job"
-	"github.com/lin-snow/ech0/internal/transaction"
+	"github.com/312022151125/coli/internal/job"
+	jobModel "github.com/312022151125/coli/internal/model/job"
+	"github.com/312022151125/coli/internal/transaction"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
 )

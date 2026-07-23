@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	logUtil "github.com/312022151125/coli/pkg/log"
 	"gorm.io/gorm"
 )
 

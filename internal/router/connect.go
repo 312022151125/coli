@@ -7,9 +7,9 @@ import (
 	"net/http"
 
 	"github.com/danielgtaylor/huma/v2"
-	"github.com/lin-snow/ech0/internal/handler"
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	authService "github.com/lin-snow/ech0/internal/service/auth"
+	"github.com/312022151125/coli/internal/handler"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	authService "github.com/312022151125/coli/internal/service/auth"
 )
 
 // registerConnect 注册实例互联（Connect）路由。

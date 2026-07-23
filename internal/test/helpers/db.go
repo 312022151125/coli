@@ -4,7 +4,7 @@
 // Package helpers 提供后端单元测试共享的脚手架：内存数据库、身份上下文、配置覆写、
 // 响应封套解析与常用 fixture。仅被各包的 _test.go 导入，不会进入生产二进制。用法：
 //
-//	import "github.com/lin-snow/ech0/internal/test/helpers"
+//	import "github.com/312022151125/coli/internal/test/helpers"
 //	db := helpers.NewTestDB(t)
 package helpers
 
@@ -16,7 +16,7 @@ import (
 	"testing"
 
 	sqlite_vec "github.com/asg017/sqlite-vec-go-bindings/cgo"
-	"github.com/lin-snow/ech0/internal/database"
+	"github.com/312022151125/coli/internal/database"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

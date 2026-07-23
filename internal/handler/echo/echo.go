@@ -7,10 +7,10 @@ package handler
 import (
 	"context"
 
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	model "github.com/lin-snow/ech0/internal/model/echo"
-	service "github.com/lin-snow/ech0/internal/service/echo"
-	timezoneUtil "github.com/lin-snow/ech0/internal/util/timezone"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	model "github.com/312022151125/coli/internal/model/echo"
+	service "github.com/312022151125/coli/internal/service/echo"
+	timezoneUtil "github.com/312022151125/coli/internal/util/timezone"
 )
 
 type EchoHandler struct {

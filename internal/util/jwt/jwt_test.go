@@ -15,9 +15,9 @@ import (
 	"time"
 
 	"github.com/golang-jwt/jwt/v5"
-	"github.com/lin-snow/ech0/internal/config"
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	userModel "github.com/lin-snow/ech0/internal/model/user"
+	"github.com/312022151125/coli/internal/config"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	userModel "github.com/312022151125/coli/internal/model/user"
 )
 
 func TestCreateClaims_WithSessionType(t *testing.T) {

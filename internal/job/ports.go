@@ -12,7 +12,7 @@ import (
 	"context"
 	"errors"
 
-	jobModel "github.com/lin-snow/ech0/internal/model/job"
+	jobModel "github.com/312022151125/coli/internal/model/job"
 )
 
 // ErrNotFound 表示该类型当前没有作业行。上层据此合成领域哨兵（如 migration 的 idle）。

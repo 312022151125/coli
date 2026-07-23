@@ -11,8 +11,8 @@ import (
 	"strconv"
 	"strings"
 
-	model "github.com/lin-snow/ech0/internal/model/embedding"
-	"github.com/lin-snow/ech0/internal/transaction"
+	model "github.com/312022151125/coli/internal/model/embedding"
+	"github.com/312022151125/coli/internal/transaction"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
 )

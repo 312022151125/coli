@@ -12,9 +12,9 @@ import (
 	"strings"
 
 	"github.com/aws/aws-sdk-go-v2/aws"
-	"github.com/lin-snow/ech0/internal/config"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
-	"github.com/lin-snow/ech0/pkg/virefs"
+	"github.com/312022151125/coli/internal/config"
+	logUtil "github.com/312022151125/coli/pkg/log"
+	"github.com/312022151125/coli/pkg/virefs"
 )
 
 const (

@@ -7,7 +7,7 @@ package memos
 import (
 	"context"
 
-	"github.com/lin-snow/ech0/internal/migrator/spec"
+	"github.com/312022151125/coli/internal/migrator/spec"
 )
 
 type Importer struct{}

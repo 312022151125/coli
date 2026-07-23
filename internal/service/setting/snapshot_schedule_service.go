@@ -7,13 +7,13 @@ import (
 	"context"
 	"errors"
 
-	"github.com/lin-snow/ech0/internal/event"
-	eventbus "github.com/lin-snow/ech0/internal/event/bus"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	model "github.com/lin-snow/ech0/internal/model/setting"
-	coreSetting "github.com/lin-snow/ech0/internal/setting"
-	fmtUtil "github.com/lin-snow/ech0/internal/util/format"
-	"github.com/lin-snow/ech0/pkg/viewer"
+	"github.com/312022151125/coli/internal/event"
+	eventbus "github.com/312022151125/coli/internal/event/bus"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	model "github.com/312022151125/coli/internal/model/setting"
+	coreSetting "github.com/312022151125/coli/internal/setting"
+	fmtUtil "github.com/312022151125/coli/internal/util/format"
+	"github.com/312022151125/coli/pkg/viewer"
 )
 
 // GetSnapshotScheduleSetting 获取定时快照计划。缺省值由 setting 引擎处理。

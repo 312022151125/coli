@@ -10,8 +10,8 @@ package echomock
 import (
 	"context"
 
-	model0 "github.com/lin-snow/ech0/internal/model/common"
-	"github.com/lin-snow/ech0/internal/model/echo"
+	model0 "github.com/312022151125/coli/internal/model/common"
+	"github.com/312022151125/coli/internal/model/echo"
 	mock "github.com/stretchr/testify/mock"
 )
 

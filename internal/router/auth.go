@@ -7,10 +7,10 @@ import (
 	"net/http"
 
 	"github.com/danielgtaylor/huma/v2"
-	"github.com/lin-snow/ech0/internal/handler"
-	"github.com/lin-snow/ech0/internal/middleware"
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	authService "github.com/lin-snow/ech0/internal/service/auth"
+	"github.com/312022151125/coli/internal/handler"
+	"github.com/312022151125/coli/internal/middleware"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	authService "github.com/312022151125/coli/internal/service/auth"
 )
 
 // setupAuthRoutes 保留**留在裸 gin** 的认证端点：OAuth2 重定向、cookie/token 签发流程、

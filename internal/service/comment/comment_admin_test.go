@@ -8,9 +8,9 @@ import (
 	"errors"
 	"testing"
 
-	commentModel "github.com/lin-snow/ech0/internal/model/comment"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	"github.com/lin-snow/ech0/internal/test/helpers"
+	commentModel "github.com/312022151125/coli/internal/model/comment"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	"github.com/312022151125/coli/internal/test/helpers"
 	"github.com/stretchr/testify/assert"
 	mock "github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"

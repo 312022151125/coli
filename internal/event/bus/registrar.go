@@ -6,7 +6,7 @@ package bus
 import (
 	"sync/atomic"
 
-	"github.com/lin-snow/ech0/pkg/busen"
+	"github.com/312022151125/coli/pkg/busen"
 )
 
 // Draining 是订阅者的可选能力：停机时排空其内部异步资源（如 webhook Dispatcher 的 worker pool）。

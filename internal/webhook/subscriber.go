@@ -7,9 +7,9 @@ import (
 	"context"
 	"log/slog"
 
-	"github.com/lin-snow/ech0/internal/event"
-	eventbus "github.com/lin-snow/ech0/internal/event/bus"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	"github.com/312022151125/coli/internal/event"
+	eventbus "github.com/312022151125/coli/internal/event/bus"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 // Registrations 让 Dispatcher 作为普通事件订阅者自注册：为每个可观测事件登记一条同步订阅，

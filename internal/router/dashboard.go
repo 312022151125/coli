@@ -7,10 +7,10 @@ import (
 	"net/http"
 
 	"github.com/danielgtaylor/huma/v2"
-	"github.com/lin-snow/ech0/internal/handler"
-	"github.com/lin-snow/ech0/internal/middleware"
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	authService "github.com/lin-snow/ech0/internal/service/auth"
+	"github.com/312022151125/coli/internal/handler"
+	"github.com/312022151125/coli/internal/middleware"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	authService "github.com/312022151125/coli/internal/service/auth"
 )
 
 // setupDashboardRoutes 仅保留实时日志订阅走裸 gin：SSE 流 + WebSocket。

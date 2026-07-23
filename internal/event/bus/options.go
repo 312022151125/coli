@@ -4,8 +4,8 @@
 package bus
 
 import (
-	"github.com/lin-snow/ech0/internal/config"
-	"github.com/lin-snow/ech0/pkg/busen"
+	"github.com/312022151125/coli/internal/config"
+	"github.com/312022151125/coli/pkg/busen"
 )
 
 // AsyncParallel 是“异步、多 worker 并行消费”的订阅策略，供按事件并行处理且无需保序的订阅者使用

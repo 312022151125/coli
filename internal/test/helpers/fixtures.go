@@ -4,8 +4,8 @@
 package helpers
 
 import (
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
-	userModel "github.com/lin-snow/ech0/internal/model/user"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
+	userModel "github.com/312022151125/coli/internal/model/user"
 )
 
 // NewUser 构造带合理默认值的用户；用 option 覆盖字段。例：helpers.NewUser(helpers.AsAdmin)。

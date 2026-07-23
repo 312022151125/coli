@@ -6,9 +6,9 @@ package repository
 import (
 	"context"
 
-	model "github.com/lin-snow/ech0/internal/model/connect"
-	connectService "github.com/lin-snow/ech0/internal/service/connect"
-	"github.com/lin-snow/ech0/internal/transaction"
+	model "github.com/312022151125/coli/internal/model/connect"
+	connectService "github.com/312022151125/coli/internal/service/connect"
+	"github.com/312022151125/coli/internal/transaction"
 	"gorm.io/gorm"
 )
 

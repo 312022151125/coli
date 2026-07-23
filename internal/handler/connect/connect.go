@@ -7,9 +7,9 @@ package handler
 import (
 	"context"
 
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	connectModel "github.com/lin-snow/ech0/internal/model/connect"
-	service "github.com/lin-snow/ech0/internal/service/connect"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	connectModel "github.com/312022151125/coli/internal/model/connect"
+	service "github.com/312022151125/coli/internal/service/connect"
 )
 
 type ConnectHandler struct {

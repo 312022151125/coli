@@ -8,13 +8,13 @@ import (
 	"errors"
 	"strings"
 
-	i18nUtil "github.com/lin-snow/ech0/internal/i18n"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	model "github.com/lin-snow/ech0/internal/model/setting"
-	coreSetting "github.com/lin-snow/ech0/internal/setting"
-	urlUtil "github.com/lin-snow/ech0/internal/util/url"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
-	"github.com/lin-snow/ech0/pkg/viewer"
+	i18nUtil "github.com/312022151125/coli/internal/i18n"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	model "github.com/312022151125/coli/internal/model/setting"
+	coreSetting "github.com/312022151125/coli/internal/setting"
+	urlUtil "github.com/312022151125/coli/internal/util/url"
+	logUtil "github.com/312022151125/coli/pkg/log"
+	"github.com/312022151125/coli/pkg/viewer"
 )
 
 // GetSetting 获取系统设置。缺省值/归一化统一由 setting 引擎处理，启动 seeder 已落库，

@@ -8,7 +8,7 @@ import (
 	"context"
 	"io"
 
-	virefs "github.com/lin-snow/ech0/pkg/virefs"
+	virefs "github.com/312022151125/coli/pkg/virefs"
 )
 
 // Pack reads the listed keys from fsys and writes them into a zip archive

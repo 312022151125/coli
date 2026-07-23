@@ -6,7 +6,7 @@ package service
 import (
 	"testing"
 
-	model "github.com/lin-snow/ech0/internal/model/comment"
+	model "github.com/312022151125/coli/internal/model/comment"
 )
 
 func TestUseCommentRecipient(t *testing.T) {

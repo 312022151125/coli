@@ -4,11 +4,11 @@
 package service
 
 import (
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	initModel "github.com/lin-snow/ech0/internal/model/init"
-	userModel "github.com/lin-snow/ech0/internal/model/user"
-	settingService "github.com/lin-snow/ech0/internal/service/setting"
-	userService "github.com/lin-snow/ech0/internal/service/user"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	initModel "github.com/312022151125/coli/internal/model/init"
+	userModel "github.com/312022151125/coli/internal/model/user"
+	settingService "github.com/312022151125/coli/internal/service/setting"
+	userService "github.com/312022151125/coli/internal/service/user"
 )
 
 type Service interface {

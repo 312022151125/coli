@@ -9,12 +9,12 @@ import (
 
 	"github.com/danielgtaylor/huma/v2"
 	"github.com/gin-gonic/gin"
-	"github.com/lin-snow/ech0/internal/handler"
-	"github.com/lin-snow/ech0/internal/handler/humares"
-	"github.com/lin-snow/ech0/internal/middleware"
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	authService "github.com/lin-snow/ech0/internal/service/auth"
+	"github.com/312022151125/coli/internal/handler"
+	"github.com/312022151125/coli/internal/handler/humares"
+	"github.com/312022151125/coli/internal/middleware"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	authService "github.com/312022151125/coli/internal/service/auth"
 )
 
 // registerEcho 注册 Echo / Tag 路由（全部 JSON，已无裸 gin 端点）。

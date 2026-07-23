@@ -11,7 +11,7 @@ import (
 	"net/http"
 	"time"
 
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 // clientConfig holds the resolved options for NewClient.

@@ -8,12 +8,12 @@ import (
 
 	"github.com/danielgtaylor/huma/v2"
 	"github.com/gin-gonic/gin"
-	"github.com/lin-snow/ech0/internal/captcha"
-	"github.com/lin-snow/ech0/internal/handler"
-	"github.com/lin-snow/ech0/internal/handler/humares"
-	"github.com/lin-snow/ech0/internal/middleware"
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	authService "github.com/lin-snow/ech0/internal/service/auth"
+	"github.com/312022151125/coli/internal/captcha"
+	"github.com/312022151125/coli/internal/handler"
+	"github.com/312022151125/coli/internal/handler/humares"
+	"github.com/312022151125/coli/internal/middleware"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	authService "github.com/312022151125/coli/internal/service/auth"
 )
 
 // setupCommentRoutes 仅保留 captcha 挂载走裸 gin（gin.WrapH，非 JSON-REST）。

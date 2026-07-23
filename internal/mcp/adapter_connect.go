@@ -7,8 +7,8 @@ import (
 	"context"
 	"encoding/json"
 
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	connectModel "github.com/lin-snow/ech0/internal/model/connect"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	connectModel "github.com/312022151125/coli/internal/model/connect"
 )
 
 func (a *Adapter) registerConnectTools(reg *Registry) {

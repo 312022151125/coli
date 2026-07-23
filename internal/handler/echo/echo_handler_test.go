@@ -8,11 +8,11 @@ import (
 	"testing"
 	_ "time/tzdata" // 内嵌 IANA 时区库，保证 NormalizeTimezone 在任意平台可解析 "Asia/Tokyo" 等时区
 
-	handler "github.com/lin-snow/ech0/internal/handler/echo"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
-	"github.com/lin-snow/ech0/internal/test/helpers"
-	"github.com/lin-snow/ech0/internal/test/mocks/echomock"
+	handler "github.com/312022151125/coli/internal/handler/echo"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
+	"github.com/312022151125/coli/internal/test/helpers"
+	"github.com/312022151125/coli/internal/test/mocks/echomock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"

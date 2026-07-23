@@ -6,8 +6,8 @@ package util
 import (
 	"errors"
 
-	model "github.com/lin-snow/ech0/internal/model/common"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	model "github.com/312022151125/coli/internal/model/common"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 // HandleError 处理错误信息，记录日志并返回错误消息（级别与可见性维持现状：Error）。

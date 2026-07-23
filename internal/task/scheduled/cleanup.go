@@ -9,8 +9,8 @@ import (
 	"time"
 
 	"github.com/go-co-op/gocron/v2"
-	fileService "github.com/lin-snow/ech0/internal/service/file"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	fileService "github.com/312022151125/coli/internal/service/file"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 // Cleanup 周期清理过期的临时/孤儿文件。

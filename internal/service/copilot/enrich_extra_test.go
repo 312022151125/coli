@@ -8,11 +8,11 @@ import (
 	"reflect"
 	"testing"
 
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
-	embeddingModel "github.com/lin-snow/ech0/internal/model/embedding"
-	fileModel "github.com/lin-snow/ech0/internal/model/file"
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
-	"github.com/lin-snow/ech0/internal/storage"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
+	embeddingModel "github.com/312022151125/coli/internal/model/embedding"
+	fileModel "github.com/312022151125/coli/internal/model/file"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
+	"github.com/312022151125/coli/internal/storage"
 )
 
 // enrichEchoSvc 是 EchoService 的测试替身，只覆写 GetEchoById 返回带指定附件的 Echo，

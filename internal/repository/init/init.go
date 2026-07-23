@@ -6,9 +6,9 @@ package repository
 import (
 	"errors"
 
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	userModel "github.com/lin-snow/ech0/internal/model/user"
-	initService "github.com/lin-snow/ech0/internal/service/init"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	userModel "github.com/312022151125/coli/internal/model/user"
+	initService "github.com/312022151125/coli/internal/service/init"
 	"gorm.io/gorm"
 )
 

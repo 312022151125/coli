@@ -11,8 +11,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/model/setting"
-	model0 "github.com/lin-snow/ech0/internal/model/webhook"
+	"github.com/312022151125/coli/internal/model/setting"
+	model0 "github.com/312022151125/coli/internal/model/webhook"
 	mock "github.com/stretchr/testify/mock"
 )
 

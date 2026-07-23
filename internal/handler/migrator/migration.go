@@ -8,10 +8,10 @@ import (
 	"context"
 
 	"github.com/gin-gonic/gin"
-	response "github.com/lin-snow/ech0/internal/handler/response"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	migratorModel "github.com/lin-snow/ech0/internal/model/migrator"
-	service "github.com/lin-snow/ech0/internal/service/migrator"
+	response "github.com/312022151125/coli/internal/handler/response"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	migratorModel "github.com/312022151125/coli/internal/model/migrator"
+	service "github.com/312022151125/coli/internal/service/migrator"
 )
 
 type MigrationHandler struct {

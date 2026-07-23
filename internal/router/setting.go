@@ -7,9 +7,9 @@ import (
 	"net/http"
 
 	"github.com/danielgtaylor/huma/v2"
-	"github.com/lin-snow/ech0/internal/handler"
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	authService "github.com/lin-snow/ech0/internal/service/auth"
+	"github.com/312022151125/coli/internal/handler"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	authService "github.com/312022151125/coli/internal/service/auth"
 )
 
 // registerSetting 注册系统设置路由（全部 JSON）。

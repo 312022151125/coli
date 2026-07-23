@@ -7,9 +7,9 @@ import (
 	"encoding/json"
 	"testing"
 
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	jobModel "github.com/lin-snow/ech0/internal/model/job"
-	migratorModel "github.com/lin-snow/ech0/internal/model/migrator"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	jobModel "github.com/312022151125/coli/internal/model/job"
+	migratorModel "github.com/312022151125/coli/internal/model/migrator"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

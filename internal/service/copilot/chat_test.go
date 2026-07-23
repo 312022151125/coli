@@ -8,9 +8,9 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/lin-snow/ech0/internal/kvstore"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
+	"github.com/312022151125/coli/internal/kvstore"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
 )
 
 // KV miss 时统一加载器报 AGENT_SETTING_NOT_FOUND，且不写默认行（best-effort 只读）。

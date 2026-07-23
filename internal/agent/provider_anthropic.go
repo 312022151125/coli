@@ -12,7 +12,7 @@ import (
 	anthropic "github.com/anthropics/anthropic-sdk-go"
 	"github.com/anthropics/anthropic-sdk-go/option"
 	"github.com/anthropics/anthropic-sdk-go/packages/param"
-	model "github.com/lin-snow/ech0/internal/model/setting"
+	model "github.com/312022151125/coli/internal/model/setting"
 )
 
 // anthropicDefaultMaxTokens 是 Anthropic API 必填字段 max_tokens 的默认值

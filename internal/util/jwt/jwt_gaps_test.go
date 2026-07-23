@@ -8,10 +8,10 @@ import (
 	"time"
 
 	"github.com/golang-jwt/jwt/v5"
-	"github.com/lin-snow/ech0/internal/config"
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	userModel "github.com/lin-snow/ech0/internal/model/user"
-	"github.com/lin-snow/ech0/internal/test/helpers"
+	"github.com/312022151125/coli/internal/config"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	userModel "github.com/312022151125/coli/internal/model/user"
+	"github.com/312022151125/coli/internal/test/helpers"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

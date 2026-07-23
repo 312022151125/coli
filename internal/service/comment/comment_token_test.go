@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/test/helpers"
+	"github.com/312022151125/coli/internal/test/helpers"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

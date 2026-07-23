@@ -1,4 +1,4 @@
-module github.com/lin-snow/ech0
+module github.com/312022151125/coli
 
 go 1.26.4
 

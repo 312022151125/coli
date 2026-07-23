@@ -6,7 +6,7 @@ package cmd
 import (
 	"os"
 
-	"github.com/lin-snow/ech0/internal/cli"
+	"github.com/312022151125/coli/internal/cli"
 	"github.com/spf13/cobra"
 )
 

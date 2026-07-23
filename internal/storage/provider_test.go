@@ -6,7 +6,7 @@ package storage
 import (
 	"testing"
 
-	"github.com/lin-snow/ech0/internal/config"
+	"github.com/312022151125/coli/internal/config"
 )
 
 // TestBuildS3PathURLResolver_Addressing 锁定公开直链的寻址方式与 SDK 一致：

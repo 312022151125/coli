@@ -6,8 +6,8 @@ package mcp
 import (
 	"context"
 
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	commonModel "github.com/312022151125/coli/internal/model/common"
 )
 
 func (a *Adapter) registerFileTools(reg *Registry) {

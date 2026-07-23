@@ -13,9 +13,9 @@ import (
 	"strings"
 	"time"
 
-	versionPkg "github.com/lin-snow/ech0/internal/version"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
-	"github.com/lin-snow/ech0/pkg/viewer"
+	versionPkg "github.com/312022151125/coli/internal/version"
+	logUtil "github.com/312022151125/coli/pkg/log"
+	"github.com/312022151125/coli/pkg/viewer"
 )
 
 const toolTimeout = 10 * time.Second

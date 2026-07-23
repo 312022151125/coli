@@ -8,13 +8,13 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	i18nUtil "github.com/lin-snow/ech0/internal/i18n"
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	authService "github.com/lin-snow/ech0/internal/service/auth"
-	errUtil "github.com/lin-snow/ech0/internal/util/err"
-	jwtUtil "github.com/lin-snow/ech0/internal/util/jwt"
-	"github.com/lin-snow/ech0/pkg/viewer"
+	i18nUtil "github.com/312022151125/coli/internal/i18n"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	authService "github.com/312022151125/coli/internal/service/auth"
+	errUtil "github.com/312022151125/coli/internal/util/err"
+	jwtUtil "github.com/312022151125/coli/internal/util/jwt"
+	"github.com/312022151125/coli/pkg/viewer"
 )
 
 // rejection 描述一次鉴权失败需要返回给客户端的内容（状态码 + 业务错误码 + i18n key + 回退文案）。

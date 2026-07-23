@@ -3,7 +3,7 @@
 
 package service
 
-import settingModel "github.com/lin-snow/ech0/internal/model/setting"
+import settingModel "github.com/312022151125/coli/internal/model/setting"
 
 const (
 	// defaultContextWindow 是未配置 AgentSetting.ContextWindow 时的保守假设（token）。

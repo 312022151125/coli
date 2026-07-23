@@ -7,7 +7,7 @@ import (
 	"net/http"
 
 	"github.com/danielgtaylor/huma/v2"
-	"github.com/lin-snow/ech0/internal/handler"
+	"github.com/312022151125/coli/internal/handler"
 )
 
 // registerInit 注册系统初始化路由（公开，无鉴权）。

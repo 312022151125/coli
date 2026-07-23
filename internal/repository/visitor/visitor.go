@@ -6,8 +6,8 @@ package repository
 import (
 	"context"
 
-	visitorModel "github.com/lin-snow/ech0/internal/model/visitor"
-	"github.com/lin-snow/ech0/internal/transaction"
+	visitorModel "github.com/312022151125/coli/internal/model/visitor"
+	"github.com/312022151125/coli/internal/transaction"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
 )

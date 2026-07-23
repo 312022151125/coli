@@ -10,8 +10,8 @@ package commentmock
 import (
 	"context"
 
-	"github.com/lin-snow/ech0/internal/model/comment"
-	"github.com/lin-snow/ech0/internal/service/comment"
+	"github.com/312022151125/coli/internal/model/comment"
+	"github.com/312022151125/coli/internal/service/comment"
 	mock "github.com/stretchr/testify/mock"
 )
 

@@ -8,8 +8,8 @@ import (
 	"errors"
 	"testing"
 
-	model "github.com/lin-snow/ech0/internal/model/setting"
-	"github.com/lin-snow/ech0/internal/test/helpers"
+	model "github.com/312022151125/coli/internal/model/setting"
+	"github.com/312022151125/coli/internal/test/helpers"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"gorm.io/gorm"

@@ -6,9 +6,9 @@ package service
 import (
 	"testing"
 
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	model "github.com/lin-snow/ech0/internal/model/setting"
-	userModel "github.com/lin-snow/ech0/internal/model/user"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	model "github.com/312022151125/coli/internal/model/setting"
+	userModel "github.com/312022151125/coli/internal/model/user"
 )
 
 func TestCreateAccessToken_RejectsUnknownScope(t *testing.T) {

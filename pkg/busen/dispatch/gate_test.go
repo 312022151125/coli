@@ -7,7 +7,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/lin-snow/ech0/pkg/busen/dispatch"
+	"github.com/312022151125/coli/pkg/busen/dispatch"
 )
 
 func TestGateEnterClosedTransitions(t *testing.T) {

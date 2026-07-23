@@ -15,9 +15,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/event"
-	webhookModel "github.com/lin-snow/ech0/internal/model/webhook"
-	"github.com/lin-snow/ech0/internal/util/egress"
+	"github.com/312022151125/coli/internal/event"
+	webhookModel "github.com/312022151125/coli/internal/model/webhook"
+	"github.com/312022151125/coli/internal/util/egress"
 )
 
 func buildRequest(wh *webhookModel.Webhook, obs event.WebhookObservation) (*http.Request, error) {

@@ -13,14 +13,14 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/feeds"
-	"github.com/lin-snow/ech0/internal/cache"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	userModel "github.com/lin-snow/ech0/internal/model/user"
-	"github.com/lin-snow/ech0/internal/storage"
-	"github.com/lin-snow/ech0/internal/util/egress"
-	mdUtil "github.com/lin-snow/ech0/internal/util/md"
-	timezoneUtil "github.com/lin-snow/ech0/internal/util/timezone"
-	urlUtil "github.com/lin-snow/ech0/internal/util/url"
+	"github.com/312022151125/coli/internal/cache"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	userModel "github.com/312022151125/coli/internal/model/user"
+	"github.com/312022151125/coli/internal/storage"
+	"github.com/312022151125/coli/internal/util/egress"
+	mdUtil "github.com/312022151125/coli/internal/util/md"
+	timezoneUtil "github.com/312022151125/coli/internal/util/timezone"
+	urlUtil "github.com/312022151125/coli/internal/util/url"
 	"golang.org/x/net/html"
 )
 

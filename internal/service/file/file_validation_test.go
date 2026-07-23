@@ -9,7 +9,7 @@ import (
 	"mime/multipart"
 	"testing"
 
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
+	commonModel "github.com/312022151125/coli/internal/model/common"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

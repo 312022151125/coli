@@ -4,11 +4,11 @@
 package service
 
 import (
-	"github.com/lin-snow/ech0/internal/kvstore"
-	"github.com/lin-snow/ech0/internal/storage"
-	"github.com/lin-snow/ech0/internal/transaction"
-	webhookclient "github.com/lin-snow/ech0/internal/webhook"
-	"github.com/lin-snow/ech0/pkg/busen"
+	"github.com/312022151125/coli/internal/kvstore"
+	"github.com/312022151125/coli/internal/storage"
+	"github.com/312022151125/coli/internal/transaction"
+	webhookclient "github.com/312022151125/coli/internal/webhook"
+	"github.com/312022151125/coli/pkg/busen"
 )
 
 type SettingService struct {

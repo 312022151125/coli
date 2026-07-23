@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
-	model "github.com/lin-snow/ech0/internal/model/comment"
-	commentService "github.com/lin-snow/ech0/internal/service/comment"
-	"github.com/lin-snow/ech0/internal/transaction"
+	model "github.com/312022151125/coli/internal/model/comment"
+	commentService "github.com/312022151125/coli/internal/service/comment"
+	"github.com/312022151125/coli/internal/transaction"
 	"gorm.io/gorm"
 )
 

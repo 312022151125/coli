@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/database"
-	dbMigration "github.com/lin-snow/ech0/internal/database/migration"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
+	"github.com/312022151125/coli/internal/database"
+	dbMigration "github.com/312022151125/coli/internal/database/migration"
+	commonModel "github.com/312022151125/coli/internal/model/common"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

@@ -15,8 +15,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/config"
-	"github.com/lin-snow/ech0/pkg/virefs"
+	"github.com/312022151125/coli/internal/config"
+	"github.com/312022151125/coli/pkg/virefs"
 )
 
 type StorageSelector struct {

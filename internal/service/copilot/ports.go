@@ -10,9 +10,9 @@ import (
 	"context"
 	"net/http"
 
-	userModel "github.com/lin-snow/ech0/internal/model/user"
-	echoService "github.com/lin-snow/ech0/internal/service/echo"
-	embeddingService "github.com/lin-snow/ech0/internal/service/embedding"
+	userModel "github.com/312022151125/coli/internal/model/user"
+	echoService "github.com/312022151125/coli/internal/service/echo"
+	embeddingService "github.com/312022151125/coli/internal/service/embedding"
 )
 
 // SummaryService 暴露 AI 近期总结能力（实现见 summary.go）。

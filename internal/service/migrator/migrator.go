@@ -16,17 +16,17 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/lin-snow/ech0/internal/event"
-	eventbus "github.com/lin-snow/ech0/internal/event/bus"
-	"github.com/lin-snow/ech0/internal/job"
-	coreMigrator "github.com/lin-snow/ech0/internal/migrator"
-	snapshot "github.com/lin-snow/ech0/internal/migrator/snapshot"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	jobModel "github.com/lin-snow/ech0/internal/model/job"
-	migratorModel "github.com/lin-snow/ech0/internal/model/migrator"
-	uuidUtil "github.com/lin-snow/ech0/internal/util/uuid"
-	"github.com/lin-snow/ech0/pkg/busen"
-	"github.com/lin-snow/ech0/pkg/viewer"
+	"github.com/312022151125/coli/internal/event"
+	eventbus "github.com/312022151125/coli/internal/event/bus"
+	"github.com/312022151125/coli/internal/job"
+	coreMigrator "github.com/312022151125/coli/internal/migrator"
+	snapshot "github.com/312022151125/coli/internal/migrator/snapshot"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	jobModel "github.com/312022151125/coli/internal/model/job"
+	migratorModel "github.com/312022151125/coli/internal/model/migrator"
+	uuidUtil "github.com/312022151125/coli/internal/util/uuid"
+	"github.com/312022151125/coli/pkg/busen"
+	"github.com/312022151125/coli/pkg/viewer"
 )
 
 // MigratorService 是迁移领域服务的 HTTP 生命周期编排：导入(start/status/cancel/cleanup)、

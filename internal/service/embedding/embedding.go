@@ -10,14 +10,14 @@ import (
 	"encoding/json"
 	"strings"
 
-	"github.com/lin-snow/ech0/internal/embedding"
-	"github.com/lin-snow/ech0/internal/kvstore"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
-	model "github.com/lin-snow/ech0/internal/model/embedding"
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
-	coreSetting "github.com/lin-snow/ech0/internal/setting"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	"github.com/312022151125/coli/internal/embedding"
+	"github.com/312022151125/coli/internal/kvstore"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
+	model "github.com/312022151125/coli/internal/model/embedding"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
+	coreSetting "github.com/312022151125/coli/internal/setting"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 // 检索默认返回的命中条数

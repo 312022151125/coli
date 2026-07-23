@@ -12,8 +12,8 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/model/auth"
-	model0 "github.com/lin-snow/ech0/internal/model/user"
+	"github.com/312022151125/coli/internal/model/auth"
+	model0 "github.com/312022151125/coli/internal/model/user"
 	mock "github.com/stretchr/testify/mock"
 )
 

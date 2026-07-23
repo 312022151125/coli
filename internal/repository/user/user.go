@@ -6,10 +6,10 @@ package repository
 import (
 	"context"
 
-	"github.com/lin-snow/ech0/internal/cache"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	model "github.com/lin-snow/ech0/internal/model/user"
-	"github.com/lin-snow/ech0/internal/transaction"
+	"github.com/312022151125/coli/internal/cache"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	model "github.com/312022151125/coli/internal/model/user"
+	"github.com/312022151125/coli/internal/transaction"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
 )

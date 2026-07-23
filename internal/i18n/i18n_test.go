@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
+	commonModel "github.com/312022151125/coli/internal/model/common"
 )
 
 func TestSanitizeAcceptLanguage(t *testing.T) {

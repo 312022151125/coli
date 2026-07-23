@@ -7,10 +7,10 @@ package handler
 import (
 	"context"
 
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	initModel "github.com/lin-snow/ech0/internal/model/init"
-	service "github.com/lin-snow/ech0/internal/service/init"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	initModel "github.com/312022151125/coli/internal/model/init"
+	service "github.com/312022151125/coli/internal/service/init"
 )
 
 type InitHandler struct {

@@ -9,11 +9,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/agent"
-	"github.com/lin-snow/ech0/internal/i18n"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
-	"github.com/lin-snow/ech0/pkg/viewer"
+	"github.com/312022151125/coli/internal/agent"
+	"github.com/312022151125/coli/internal/i18n"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	logUtil "github.com/312022151125/coli/pkg/log"
+	"github.com/312022151125/coli/pkg/viewer"
 )
 
 // GetRecent 返回站点作者近期活动的 AI 自然语言总结（带缓存 + singleflight 防击穿）。

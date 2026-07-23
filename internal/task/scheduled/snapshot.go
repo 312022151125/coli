@@ -10,13 +10,13 @@ import (
 	"sync"
 
 	"github.com/go-co-op/gocron/v2"
-	"github.com/lin-snow/ech0/internal/event"
-	eventbus "github.com/lin-snow/ech0/internal/event/bus"
-	"github.com/lin-snow/ech0/internal/kvstore"
-	coreMigrator "github.com/lin-snow/ech0/internal/migrator"
-	coreSetting "github.com/lin-snow/ech0/internal/setting"
-	"github.com/lin-snow/ech0/pkg/busen"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	"github.com/312022151125/coli/internal/event"
+	eventbus "github.com/312022151125/coli/internal/event/bus"
+	"github.com/312022151125/coli/internal/kvstore"
+	coreMigrator "github.com/312022151125/coli/internal/migrator"
+	coreSetting "github.com/312022151125/coli/internal/setting"
+	"github.com/312022151125/coli/pkg/busen"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 const snapshotScheduleTag = "SnapshotSchedule"

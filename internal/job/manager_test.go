@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/job"
-	jobModel "github.com/lin-snow/ech0/internal/model/job"
+	"github.com/312022151125/coli/internal/job"
+	jobModel "github.com/312022151125/coli/internal/model/job"
 )
 
 // stubRepo 是内存态 JobRepository，用于确定性测试 Manager 状态机（不碰 DB）。

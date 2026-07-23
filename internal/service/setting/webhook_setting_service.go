@@ -8,12 +8,12 @@ import (
 	"errors"
 	"time"
 
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	model "github.com/lin-snow/ech0/internal/model/setting"
-	webhookModel "github.com/lin-snow/ech0/internal/model/webhook"
-	"github.com/lin-snow/ech0/internal/util/egress"
-	urlUtil "github.com/lin-snow/ech0/internal/util/url"
-	"github.com/lin-snow/ech0/pkg/viewer"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	model "github.com/312022151125/coli/internal/model/setting"
+	webhookModel "github.com/312022151125/coli/internal/model/webhook"
+	"github.com/312022151125/coli/internal/util/egress"
+	urlUtil "github.com/312022151125/coli/internal/util/url"
+	"github.com/312022151125/coli/pkg/viewer"
 )
 
 // GetAllWebhooks 获取所有 Webhook

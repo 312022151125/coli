@@ -8,10 +8,10 @@ import (
 	"mime/multipart"
 
 	"github.com/gin-gonic/gin"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	fileModel "github.com/lin-snow/ech0/internal/model/file"
-	userModel "github.com/lin-snow/ech0/internal/model/user"
-	"github.com/lin-snow/ech0/internal/storage"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	fileModel "github.com/312022151125/coli/internal/model/file"
+	userModel "github.com/312022151125/coli/internal/model/user"
+	"github.com/312022151125/coli/internal/storage"
 )
 
 type Service interface {

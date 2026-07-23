@@ -8,8 +8,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/lin-snow/ech0/internal/agent"
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
+	"github.com/312022151125/coli/internal/agent"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
 )
 
 // maxPromptTags 限制注入 system prompt 的标签数量，避免标签很多时占用过多 token。

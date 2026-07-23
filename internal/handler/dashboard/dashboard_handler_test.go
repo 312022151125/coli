@@ -11,12 +11,12 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
-	dashboardHandler "github.com/lin-snow/ech0/internal/handler/dashboard"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	dashboardService "github.com/lin-snow/ech0/internal/service/dashboard"
-	dashboardmock "github.com/lin-snow/ech0/internal/test/mocks/dashboardmock"
-	"github.com/lin-snow/ech0/internal/visitor"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	dashboardHandler "github.com/312022151125/coli/internal/handler/dashboard"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	dashboardService "github.com/312022151125/coli/internal/service/dashboard"
+	dashboardmock "github.com/312022151125/coli/internal/test/mocks/dashboardmock"
+	"github.com/312022151125/coli/internal/visitor"
+	logUtil "github.com/312022151125/coli/pkg/log"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

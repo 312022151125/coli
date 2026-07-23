@@ -9,8 +9,8 @@ package humares
 import (
 	"context"
 
-	i18nUtil "github.com/lin-snow/ech0/internal/i18n"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
+	i18nUtil "github.com/312022151125/coli/internal/i18n"
+	commonModel "github.com/312022151125/coli/internal/model/common"
 )
 
 // Envelope 是所有 JSON 端点的 Huma 输出包装。Huma 序列化其 Body 字段，

@@ -7,9 +7,9 @@ import (
 	"errors"
 	"testing"
 
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	userModel "github.com/lin-snow/ech0/internal/model/user"
-	"github.com/lin-snow/ech0/internal/test/helpers"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	userModel "github.com/312022151125/coli/internal/model/user"
+	"github.com/312022151125/coli/internal/test/helpers"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"gorm.io/gorm"

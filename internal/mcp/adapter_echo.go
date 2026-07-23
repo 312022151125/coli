@@ -10,9 +10,9 @@ import (
 	"strconv"
 	"strings"
 
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
 )
 
 func (a *Adapter) registerEchoTools(reg *Registry) {

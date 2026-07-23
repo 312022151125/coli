@@ -10,15 +10,15 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"
-	"github.com/lin-snow/ech0/internal/config"
-	i18nUtil "github.com/lin-snow/ech0/internal/i18n"
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	authService "github.com/lin-snow/ech0/internal/service/auth"
-	userService "github.com/lin-snow/ech0/internal/service/user"
-	cookieUtil "github.com/lin-snow/ech0/internal/util/cookie"
-	errUtil "github.com/lin-snow/ech0/internal/util/err"
-	jwtUtil "github.com/lin-snow/ech0/internal/util/jwt"
+	"github.com/312022151125/coli/internal/config"
+	i18nUtil "github.com/312022151125/coli/internal/i18n"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	authService "github.com/312022151125/coli/internal/service/auth"
+	userService "github.com/312022151125/coli/internal/service/user"
+	cookieUtil "github.com/312022151125/coli/internal/util/cookie"
+	errUtil "github.com/312022151125/coli/internal/util/err"
+	jwtUtil "github.com/312022151125/coli/internal/util/jwt"
 )
 
 type AuthHandler struct {

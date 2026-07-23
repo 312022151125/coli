@@ -5,8 +5,8 @@
 package model
 
 import (
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
-	fileModel "github.com/lin-snow/ech0/internal/model/file"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
+	fileModel "github.com/312022151125/coli/internal/model/file"
 )
 
 // EchoEmbedding 是 Echo 向量索引的元数据 + 内容快照表（普通表，进 AutoMigrate）。

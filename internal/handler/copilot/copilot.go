@@ -8,10 +8,10 @@ import (
 	"context"
 
 	"github.com/gin-gonic/gin"
-	i18n "github.com/lin-snow/ech0/internal/i18n"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	copilotService "github.com/lin-snow/ech0/internal/service/copilot"
-	timezoneUtil "github.com/lin-snow/ech0/internal/util/timezone"
+	i18n "github.com/312022151125/coli/internal/i18n"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	copilotService "github.com/312022151125/coli/internal/service/copilot"
+	timezoneUtil "github.com/312022151125/coli/internal/util/timezone"
 )
 
 type CopilotHandler struct {

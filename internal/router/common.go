@@ -7,8 +7,8 @@ import (
 	"net/http"
 
 	"github.com/danielgtaylor/huma/v2"
-	"github.com/lin-snow/ech0/internal/handler"
-	authService "github.com/lin-snow/ech0/internal/service/auth"
+	"github.com/312022151125/coli/internal/handler"
+	authService "github.com/312022151125/coli/internal/service/auth"
 )
 
 // registerCommon 注册通用 JSON 路由。

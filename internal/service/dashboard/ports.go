@@ -6,8 +6,8 @@ package service
 import (
 	"net/http"
 
-	"github.com/lin-snow/ech0/internal/visitor"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	"github.com/312022151125/coli/internal/visitor"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 type SystemLogQuery struct {

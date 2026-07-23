@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/go-co-op/gocron/v2"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 const logModule = "task"

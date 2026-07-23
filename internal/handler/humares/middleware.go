@@ -9,7 +9,7 @@ import (
 	"github.com/danielgtaylor/huma/v2"
 	"github.com/danielgtaylor/huma/v2/adapters/humagin"
 	"github.com/gin-gonic/gin"
-	i18nUtil "github.com/lin-snow/ech0/internal/i18n"
+	i18nUtil "github.com/312022151125/coli/internal/i18n"
 	goi18n "github.com/nicksnyder/go-i18n/v2/i18n"
 )
 

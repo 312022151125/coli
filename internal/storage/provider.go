@@ -11,10 +11,10 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/google/wire"
-	"github.com/lin-snow/ech0/internal/config"
-	"github.com/lin-snow/ech0/internal/kvstore"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
-	"github.com/lin-snow/ech0/pkg/virefs"
+	"github.com/312022151125/coli/internal/config"
+	"github.com/312022151125/coli/internal/kvstore"
+	logUtil "github.com/312022151125/coli/pkg/log"
+	"github.com/312022151125/coli/pkg/virefs"
 )
 
 func ProvideStorageManager(durableKV kvstore.Store) *Manager { return NewStorageManager(durableKV) }

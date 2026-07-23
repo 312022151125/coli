@@ -7,10 +7,10 @@ import (
 	"context"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/event"
-	eventbus "github.com/lin-snow/ech0/internal/event/bus"
-	embeddingService "github.com/lin-snow/ech0/internal/service/embedding"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	"github.com/312022151125/coli/internal/event"
+	eventbus "github.com/312022151125/coli/internal/event/bus"
+	embeddingService "github.com/312022151125/coli/internal/service/embedding"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 // EmbeddingProcessor 订阅 Echo 增删改事件，维护向量索引（增量）。

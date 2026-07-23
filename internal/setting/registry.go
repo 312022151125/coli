@@ -9,13 +9,13 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/lin-snow/ech0/internal/config"
-	i18nUtil "github.com/lin-snow/ech0/internal/i18n"
-	"github.com/lin-snow/ech0/internal/kvstore"
-	commentModel "github.com/lin-snow/ech0/internal/model/comment"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
-	urlUtil "github.com/lin-snow/ech0/internal/util/url"
+	"github.com/312022151125/coli/internal/config"
+	i18nUtil "github.com/312022151125/coli/internal/i18n"
+	"github.com/312022151125/coli/internal/kvstore"
+	commentModel "github.com/312022151125/coli/internal/model/comment"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
+	urlUtil "github.com/312022151125/coli/internal/util/url"
 )
 
 // 各配置的「词汇」：一处声明 key / 默认值 / 归一化（/ 升级迁移）。读取统一走

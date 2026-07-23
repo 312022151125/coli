@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	commentModel "github.com/lin-snow/ech0/internal/model/comment"
+	commentModel "github.com/312022151125/coli/internal/model/comment"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"gorm.io/gorm"

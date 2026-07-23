@@ -6,9 +6,9 @@ package runner
 import (
 	"context"
 
-	"github.com/lin-snow/ech0/internal/job"
-	coreMigrator "github.com/lin-snow/ech0/internal/migrator"
-	migratorModel "github.com/lin-snow/ech0/internal/model/migrator"
+	"github.com/312022151125/coli/internal/job"
+	coreMigrator "github.com/312022151125/coli/internal/migrator"
+	migratorModel "github.com/312022151125/coli/internal/model/migrator"
 )
 
 // MigrationImporter 是迁移导入执行端，便于测试解耦（由 migrator.ImportEngine 满足）。

@@ -6,8 +6,8 @@ package storage
 import (
 	"testing"
 
-	"github.com/lin-snow/ech0/internal/config"
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
+	"github.com/312022151125/coli/internal/config"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
 )
 
 func TestStorageConfigFromSetting(t *testing.T) {

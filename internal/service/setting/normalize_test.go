@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	model "github.com/lin-snow/ech0/internal/model/setting"
-	userModel "github.com/lin-snow/ech0/internal/model/user"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	model "github.com/312022151125/coli/internal/model/setting"
+	userModel "github.com/312022151125/coli/internal/model/user"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -11,11 +11,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/lin-snow/ech0/internal/kvstore"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
-	userModel "github.com/lin-snow/ech0/internal/model/user"
-	"github.com/lin-snow/ech0/internal/test/helpers"
+	"github.com/312022151125/coli/internal/kvstore"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
+	userModel "github.com/312022151125/coli/internal/model/user"
+	"github.com/312022151125/coli/internal/test/helpers"
 )
 
 // noFlushWriter 是不实现 http.Flusher 的 ResponseWriter：用于触发 AskStream 的「streaming unsupported」分支。

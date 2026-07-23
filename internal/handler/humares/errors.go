@@ -13,9 +13,9 @@ import (
 
 	"github.com/danielgtaylor/huma/v2"
 	"github.com/danielgtaylor/huma/v2/adapters/humagin"
-	i18nUtil "github.com/lin-snow/ech0/internal/i18n"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	errUtil "github.com/lin-snow/ech0/internal/util/err"
+	i18nUtil "github.com/312022151125/coli/internal/i18n"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	errUtil "github.com/312022151125/coli/internal/util/err"
 )
 
 // ErrorBody 仅用于 OpenAPI 文档：与错误响应的 wire 形态（Result[any]）一致，

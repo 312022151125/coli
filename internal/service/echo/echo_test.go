@@ -6,8 +6,8 @@ package service
 import (
 	"testing"
 
-	model "github.com/lin-snow/ech0/internal/model/echo"
-	fileModel "github.com/lin-snow/ech0/internal/model/file"
+	model "github.com/312022151125/coli/internal/model/echo"
+	fileModel "github.com/312022151125/coli/internal/model/file"
 )
 
 func TestNormalizeEchoExtension(t *testing.T) {

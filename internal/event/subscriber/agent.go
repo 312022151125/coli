@@ -6,11 +6,11 @@ package subscriber
 import (
 	"context"
 
-	"github.com/lin-snow/ech0/internal/agent"
-	"github.com/lin-snow/ech0/internal/event"
-	eventbus "github.com/lin-snow/ech0/internal/event/bus"
-	"github.com/lin-snow/ech0/internal/kvstore"
-	coreSetting "github.com/lin-snow/ech0/internal/setting"
+	"github.com/312022151125/coli/internal/agent"
+	"github.com/312022151125/coli/internal/event"
+	eventbus "github.com/312022151125/coli/internal/event/bus"
+	"github.com/312022151125/coli/internal/kvstore"
+	coreSetting "github.com/312022151125/coli/internal/setting"
 )
 
 type AgentProcessor struct {

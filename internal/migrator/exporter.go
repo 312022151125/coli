@@ -7,8 +7,8 @@ import (
 	"context"
 	"strings"
 
-	"github.com/lin-snow/ech0/internal/migrator/spec"
-	migratorModel "github.com/lin-snow/ech0/internal/model/migrator"
+	"github.com/312022151125/coli/internal/migrator/spec"
+	migratorModel "github.com/312022151125/coli/internal/model/migrator"
 )
 
 // ExportOutcome 是一次导出的产物描述。ArtifactPath 为本地归档路径(供同步下载流式下发,不暴露给

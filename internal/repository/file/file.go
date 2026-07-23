@@ -7,9 +7,9 @@ import (
 	"context"
 	"strings"
 
-	model "github.com/lin-snow/ech0/internal/model/file"
-	fileService "github.com/lin-snow/ech0/internal/service/file"
-	"github.com/lin-snow/ech0/internal/transaction"
+	model "github.com/312022151125/coli/internal/model/file"
+	fileService "github.com/312022151125/coli/internal/service/file"
+	"github.com/312022151125/coli/internal/transaction"
 	"gorm.io/gorm"
 )
 

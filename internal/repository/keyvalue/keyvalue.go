@@ -6,9 +6,9 @@ package keyvalue
 import (
 	"context"
 
-	"github.com/lin-snow/ech0/internal/cache"
-	model "github.com/lin-snow/ech0/internal/model/common"
-	"github.com/lin-snow/ech0/internal/transaction"
+	"github.com/312022151125/coli/internal/cache"
+	model "github.com/312022151125/coli/internal/model/common"
+	"github.com/312022151125/coli/internal/transaction"
 	"gorm.io/gorm"
 )
 

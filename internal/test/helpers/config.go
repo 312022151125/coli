@@ -6,7 +6,7 @@ package helpers
 import (
 	"testing"
 
-	"github.com/lin-snow/ech0/internal/config"
+	"github.com/312022151125/coli/internal/config"
 )
 
 // SetJWTSecret 覆写测试期的全局 JWT 密钥，并在测试结束时还原。

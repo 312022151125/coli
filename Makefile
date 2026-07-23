@@ -8,7 +8,7 @@ GIT_COMMIT=$(shell git rev-parse --short HEAD 2>/dev/null || echo unknown)
 
 # Inject build metadata into the binary so /hello can return the real commit/time.
 # 这两个变量必须是 var（不能是 const），见 internal/version/version.go。
-VERSION_PKG=github.com/lin-snow/ech0/internal/version
+VERSION_PKG=github.com/312022151125/coli/internal/version
 LDFLAGS=-X $(VERSION_PKG).Commit=$(GIT_COMMIT) -X $(VERSION_PKG).BuildTime=$(BUILD_TIME)
 
 # Docker variables

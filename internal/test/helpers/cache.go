@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/cache"
+	"github.com/312022151125/coli/internal/cache"
 )
 
 // NewTestCache 返回一个确定性的内存 ICache（map + mutex），用于需要 cache.ICache 的

@@ -4,9 +4,9 @@
 package migrator
 
 import (
-	"github.com/lin-snow/ech0/internal/cache"
-	"github.com/lin-snow/ech0/internal/kvstore"
-	"github.com/lin-snow/ech0/internal/storage"
+	"github.com/312022151125/coli/internal/cache"
+	"github.com/312022151125/coli/internal/kvstore"
+	"github.com/312022151125/coli/internal/storage"
 )
 
 // 这些端口是引擎执行体(Importer/Exporter)所需的基础设施依赖,由 DI 注入。放在核心

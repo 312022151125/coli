@@ -6,8 +6,8 @@ package mcp
 import (
 	"context"
 
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
 )
 
 func (a *Adapter) registerWebhookTools(reg *Registry) {

@@ -7,10 +7,10 @@ import (
 	"context"
 	"time"
 
-	model "github.com/lin-snow/ech0/internal/model/setting"
-	webhookModel "github.com/lin-snow/ech0/internal/model/webhook"
-	commonService "github.com/lin-snow/ech0/internal/service/common"
-	fileService "github.com/lin-snow/ech0/internal/service/file"
+	model "github.com/312022151125/coli/internal/model/setting"
+	webhookModel "github.com/312022151125/coli/internal/model/webhook"
+	commonService "github.com/312022151125/coli/internal/service/common"
+	fileService "github.com/312022151125/coli/internal/service/file"
 )
 
 type Service interface {

@@ -11,11 +11,11 @@ import (
 	"testing"
 	"time"
 
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
-	embeddingModel "github.com/lin-snow/ech0/internal/model/embedding"
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
-	userModel "github.com/lin-snow/ech0/internal/model/user"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
+	embeddingModel "github.com/312022151125/coli/internal/model/embedding"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
+	userModel "github.com/312022151125/coli/internal/model/user"
 )
 
 // --- 手写极简替身（copilot 域接口很窄，逐方法覆写即可，其余嵌入 nil 接口未调用即不触发） ---

@@ -7,10 +7,10 @@
 package event
 
 import (
-	commentModel "github.com/lin-snow/ech0/internal/model/comment"
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
-	userModel "github.com/lin-snow/ech0/internal/model/user"
+	commentModel "github.com/312022151125/coli/internal/model/comment"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
+	userModel "github.com/312022151125/coli/internal/model/user"
 )
 
 // Named 是事件的稳定外部名（用作 webhook 观察的 topic / X-Ech0-Event）。所有事件都实现它。

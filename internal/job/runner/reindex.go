@@ -7,8 +7,8 @@ package runner
 import (
 	"context"
 
-	"github.com/lin-snow/ech0/internal/job"
-	embeddingService "github.com/lin-snow/ech0/internal/service/embedding"
+	"github.com/312022151125/coli/internal/job"
+	embeddingService "github.com/312022151125/coli/internal/service/embedding"
 )
 
 // ReindexPayload 无输入（全量重建）。

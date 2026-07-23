@@ -11,7 +11,7 @@ import (
 	"fmt"
 	"strings"
 
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
 	openai "github.com/sashabaranov/go-openai"
 )
 

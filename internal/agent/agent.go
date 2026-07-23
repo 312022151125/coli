@@ -11,8 +11,8 @@ import (
 	"context"
 	"errors"
 
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	model "github.com/lin-snow/ech0/internal/model/setting"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	model "github.com/312022151125/coli/internal/model/setting"
 )
 
 const (

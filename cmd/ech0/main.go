@@ -6,8 +6,8 @@ package main
 import (
 	_ "time/tzdata"
 
-	"github.com/lin-snow/ech0/cmd"
-	"github.com/lin-snow/ech0/internal/bootstrap"
+	"github.com/312022151125/coli/cmd"
+	"github.com/312022151125/coli/internal/bootstrap"
 )
 
 func main() {

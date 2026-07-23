@@ -10,7 +10,7 @@ import (
 	"io"
 	"strings"
 
-	model "github.com/lin-snow/ech0/internal/model/setting"
+	model "github.com/312022151125/coli/internal/model/setting"
 	openai "github.com/sashabaranov/go-openai"
 )
 

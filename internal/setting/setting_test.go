@@ -9,10 +9,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/lin-snow/ech0/internal/kvstore"
-	commentModel "github.com/lin-snow/ech0/internal/model/comment"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
+	"github.com/312022151125/coli/internal/kvstore"
+	commentModel "github.com/312022151125/coli/internal/model/comment"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
 )
 
 type demo struct {

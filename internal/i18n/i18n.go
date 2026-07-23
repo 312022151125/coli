@@ -11,9 +11,9 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/lin-snow/ech0/internal/database"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	userModel "github.com/lin-snow/ech0/internal/model/user"
+	"github.com/312022151125/coli/internal/database"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	userModel "github.com/312022151125/coli/internal/model/user"
 	goi18n "github.com/nicksnyder/go-i18n/v2/i18n"
 	"golang.org/x/text/language"
 )

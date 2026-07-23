@@ -5,7 +5,7 @@ package middleware
 
 import (
 	"github.com/google/wire"
-	authService "github.com/lin-snow/ech0/internal/service/auth"
+	authService "github.com/312022151125/coli/internal/service/auth"
 )
 
 // Deps 聚合中间件所需的外部依赖，由 Wire 注入。

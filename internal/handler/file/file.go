@@ -8,10 +8,10 @@ import (
 	"context"
 
 	"github.com/gin-gonic/gin"
-	res "github.com/lin-snow/ech0/internal/handler/response"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	service "github.com/lin-snow/ech0/internal/service/file"
-	"github.com/lin-snow/ech0/internal/storage"
+	res "github.com/312022151125/coli/internal/handler/response"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	service "github.com/312022151125/coli/internal/service/file"
+	"github.com/312022151125/coli/internal/storage"
 )
 
 type FileHandler struct {

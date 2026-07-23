@@ -11,10 +11,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/agent"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
-	embeddingModel "github.com/lin-snow/ech0/internal/model/embedding"
+	"github.com/312022151125/coli/internal/agent"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
+	embeddingModel "github.com/312022151125/coli/internal/model/embedding"
 )
 
 // defaultTopK 是未配置窗口、模型也未指定 limit 时返回的命中条数（小而稳）。

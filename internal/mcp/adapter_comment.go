@@ -8,8 +8,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	model "github.com/lin-snow/ech0/internal/model/comment"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	model "github.com/312022151125/coli/internal/model/comment"
 )
 
 var integrationCommentInputSchema = map[string]any{

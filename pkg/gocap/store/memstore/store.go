@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/lin-snow/ech0/pkg/gocap/store"
+	"github.com/312022151125/coli/pkg/gocap/store"
 )
 
 type redeemEntry struct {

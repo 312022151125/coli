@@ -12,11 +12,11 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"
-	"github.com/lin-snow/ech0/internal/config"
-	"github.com/lin-snow/ech0/internal/database"
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	userModel "github.com/lin-snow/ech0/internal/model/user"
-	jwtUtil "github.com/lin-snow/ech0/internal/util/jwt"
+	"github.com/312022151125/coli/internal/config"
+	"github.com/312022151125/coli/internal/database"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	userModel "github.com/312022151125/coli/internal/model/user"
+	jwtUtil "github.com/312022151125/coli/internal/util/jwt"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )

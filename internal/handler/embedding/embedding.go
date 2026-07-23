@@ -9,9 +9,9 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/lin-snow/ech0/internal/job"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	jobModel "github.com/lin-snow/ech0/internal/model/job"
+	"github.com/312022151125/coli/internal/job"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	jobModel "github.com/312022151125/coli/internal/model/job"
 )
 
 // reindexStatusIdle 是「从未运行 / 已无作业行」时合成的哨兵状态，对应 job.ErrNotFound。

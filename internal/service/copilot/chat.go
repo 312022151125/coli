@@ -12,13 +12,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/agent"
-	"github.com/lin-snow/ech0/internal/config"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	embeddingModel "github.com/lin-snow/ech0/internal/model/embedding"
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
-	timezoneUtil "github.com/lin-snow/ech0/internal/util/timezone"
-	"github.com/lin-snow/ech0/pkg/viewer"
+	"github.com/312022151125/coli/internal/agent"
+	"github.com/312022151125/coli/internal/config"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	embeddingModel "github.com/312022151125/coli/internal/model/embedding"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
+	timezoneUtil "github.com/312022151125/coli/internal/util/timezone"
+	"github.com/312022151125/coli/pkg/viewer"
 )
 
 // chatTemperature 是 Chat 生成温度

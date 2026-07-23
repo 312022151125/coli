@@ -15,12 +15,12 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"
-	"github.com/lin-snow/ech0/internal/config"
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	userModel "github.com/lin-snow/ech0/internal/model/user"
-	cookieUtil "github.com/lin-snow/ech0/internal/util/cookie"
-	jwtUtil "github.com/lin-snow/ech0/internal/util/jwt"
+	"github.com/312022151125/coli/internal/config"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	userModel "github.com/312022151125/coli/internal/model/user"
+	cookieUtil "github.com/312022151125/coli/internal/util/cookie"
+	jwtUtil "github.com/312022151125/coli/internal/util/jwt"
 )
 
 // ---------------------------------------------------------------------------

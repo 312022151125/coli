@@ -10,9 +10,9 @@ package dashboardmock
 import (
 	"net/http"
 
-	"github.com/lin-snow/ech0/internal/service/dashboard"
-	"github.com/lin-snow/ech0/internal/visitor"
-	"github.com/lin-snow/ech0/pkg/log"
+	"github.com/312022151125/coli/internal/service/dashboard"
+	"github.com/312022151125/coli/internal/visitor"
+	"github.com/312022151125/coli/pkg/log"
 	mock "github.com/stretchr/testify/mock"
 )
 

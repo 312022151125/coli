@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

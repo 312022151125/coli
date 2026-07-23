@@ -11,11 +11,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/agent"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
-	"github.com/lin-snow/ech0/internal/storage"
+	"github.com/312022151125/coli/internal/agent"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
+	"github.com/312022151125/coli/internal/storage"
 )
 
 const (

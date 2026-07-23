@@ -8,7 +8,7 @@ import (
 	"context"
 	"io"
 
-	virefs "github.com/lin-snow/ech0/pkg/virefs"
+	virefs "github.com/312022151125/coli/pkg/virefs"
 )
 
 // Unpack reads a zip archive from r and writes every file entry into dst

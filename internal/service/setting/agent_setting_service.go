@@ -8,12 +8,12 @@ import (
 	"errors"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/agent"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	model "github.com/lin-snow/ech0/internal/model/setting"
-	coreSetting "github.com/lin-snow/ech0/internal/setting"
-	urlUtil "github.com/lin-snow/ech0/internal/util/url"
-	"github.com/lin-snow/ech0/pkg/viewer"
+	"github.com/312022151125/coli/internal/agent"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	model "github.com/312022151125/coli/internal/model/setting"
+	coreSetting "github.com/312022151125/coli/internal/setting"
+	urlUtil "github.com/312022151125/coli/internal/util/url"
+	"github.com/312022151125/coli/pkg/viewer"
 )
 
 // agentTestTimeout 是 LLM 连通性探测的整体超时，避免坏 endpoint 把请求挂死。

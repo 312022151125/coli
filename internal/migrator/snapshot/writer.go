@@ -22,9 +22,9 @@ import (
 	"strings"
 	"time"
 
-	logUtil "github.com/lin-snow/ech0/pkg/log"
-	"github.com/lin-snow/ech0/pkg/virefs"
-	vizip "github.com/lin-snow/ech0/pkg/virefs/plugin/zip"
+	logUtil "github.com/312022151125/coli/pkg/log"
+	"github.com/312022151125/coli/pkg/virefs"
+	vizip "github.com/312022151125/coli/pkg/virefs/plugin/zip"
 )
 
 // ErrNoSnapshot 表示快照目录下尚无可下载的快照（需先执行一次导出）。

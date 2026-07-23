@@ -12,7 +12,7 @@ import (
 	"mime/multipart"
 
 	"github.com/gin-gonic/gin"
-	"github.com/lin-snow/ech0/internal/model/migrator"
+	"github.com/312022151125/coli/internal/model/migrator"
 	mock "github.com/stretchr/testify/mock"
 )
 

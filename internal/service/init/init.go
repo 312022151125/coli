@@ -6,10 +6,10 @@ package service
 import (
 	"context"
 
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	initModel "github.com/lin-snow/ech0/internal/model/init"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	initModel "github.com/312022151125/coli/internal/model/init"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 type InitService struct {

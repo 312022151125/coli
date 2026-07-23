@@ -6,9 +6,9 @@ package service
 import (
 	"context"
 
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	model "github.com/lin-snow/ech0/internal/model/user"
-	fileService "github.com/lin-snow/ech0/internal/service/file"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	model "github.com/312022151125/coli/internal/model/user"
+	fileService "github.com/312022151125/coli/internal/service/file"
 )
 
 type Service interface {

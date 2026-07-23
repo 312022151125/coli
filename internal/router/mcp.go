@@ -4,9 +4,9 @@
 package router
 
 import (
-	"github.com/lin-snow/ech0/internal/handler"
-	"github.com/lin-snow/ech0/internal/middleware"
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
+	"github.com/312022151125/coli/internal/handler"
+	"github.com/312022151125/coli/internal/middleware"
+	authModel "github.com/312022151125/coli/internal/model/auth"
 )
 
 func setupMCPRoutes(groups *AppRouterGroup, h *handler.Bundle) {

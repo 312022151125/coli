@@ -8,9 +8,9 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/lin-snow/ech0/internal/job"
-	jobModel "github.com/lin-snow/ech0/internal/model/job"
-	jobRepository "github.com/lin-snow/ech0/internal/repository/job"
+	"github.com/312022151125/coli/internal/job"
+	jobModel "github.com/312022151125/coli/internal/model/job"
+	jobRepository "github.com/312022151125/coli/internal/repository/job"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

@@ -7,9 +7,9 @@ import (
 	"context"
 	"testing"
 
-	model "github.com/lin-snow/ech0/internal/model/embedding"
-	"github.com/lin-snow/ech0/internal/test/helpers"
-	"github.com/lin-snow/ech0/internal/transaction"
+	model "github.com/312022151125/coli/internal/model/embedding"
+	"github.com/312022151125/coli/internal/test/helpers"
+	"github.com/312022151125/coli/internal/transaction"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"gorm.io/gorm"

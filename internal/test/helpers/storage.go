@@ -6,7 +6,7 @@ package helpers
 import (
 	"testing"
 
-	"github.com/lin-snow/ech0/internal/storage"
+	"github.com/312022151125/coli/internal/storage"
 )
 
 // NewTestStorage 返回一个仅本地、根目录落在 t.TempDir() 的 storage.Manager，

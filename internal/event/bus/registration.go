@@ -6,7 +6,7 @@ package bus
 import (
 	"context"
 
-	"github.com/lin-snow/ech0/pkg/busen"
+	"github.com/312022151125/coli/pkg/busen"
 )
 
 // Registration 在给定总线上注册一条订阅并返回其取消函数。

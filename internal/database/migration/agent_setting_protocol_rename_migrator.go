@@ -8,7 +8,7 @@ import (
 	"errors"
 	"fmt"
 
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
+	commonModel "github.com/312022151125/coli/internal/model/common"
 	"gorm.io/gorm"
 )
 

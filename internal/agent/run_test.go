@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	model "github.com/lin-snow/ech0/internal/model/setting"
+	model "github.com/312022151125/coli/internal/model/setting"
 )
 
 // fakeProvider 是一个脚本化的 Provider 测试替身：每次 Stream 调用依次消费 scripts[calls]

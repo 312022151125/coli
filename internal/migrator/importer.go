@@ -10,13 +10,13 @@ import (
 	"log/slog"
 	"strings"
 
-	"github.com/lin-snow/ech0/internal/migrator/spec"
-	commentModel "github.com/lin-snow/ech0/internal/model/comment"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	migratorModel "github.com/lin-snow/ech0/internal/model/migrator"
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
-	echoRepository "github.com/lin-snow/ech0/internal/repository/echo"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	"github.com/312022151125/coli/internal/migrator/spec"
+	commentModel "github.com/312022151125/coli/internal/model/comment"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	migratorModel "github.com/312022151125/coli/internal/model/migrator"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
+	echoRepository "github.com/312022151125/coli/internal/repository/echo"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 // ImportEngine 跑迁移数据导入的编排:选来源 Importer 适配器 → 运行 → 应用配置 → 失效缓存 →

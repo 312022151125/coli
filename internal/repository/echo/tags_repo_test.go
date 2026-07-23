@@ -8,7 +8,7 @@ import (
 	"errors"
 	"testing"
 
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"gorm.io/gorm"

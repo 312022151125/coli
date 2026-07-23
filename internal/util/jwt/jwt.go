@@ -12,11 +12,11 @@ import (
 
 	"github.com/coreos/go-oidc/v3/oidc"
 	"github.com/golang-jwt/jwt/v5"
-	"github.com/lin-snow/ech0/internal/config"
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	userModel "github.com/lin-snow/ech0/internal/model/user"
-	cryptoUtil "github.com/lin-snow/ech0/internal/util/crypto"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	"github.com/312022151125/coli/internal/config"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	userModel "github.com/312022151125/coli/internal/model/user"
+	cryptoUtil "github.com/312022151125/coli/internal/util/crypto"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 // CreateClaims 创建浏览器会话的 access token claims。

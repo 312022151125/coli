@@ -11,11 +11,11 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	service "github.com/lin-snow/ech0/internal/service/dashboard"
-	jwtUtil "github.com/lin-snow/ech0/internal/util/jwt"
-	"github.com/lin-snow/ech0/internal/visitor"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	service "github.com/312022151125/coli/internal/service/dashboard"
+	jwtUtil "github.com/312022151125/coli/internal/util/jwt"
+	"github.com/312022151125/coli/internal/visitor"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 type DashboardHandler struct {

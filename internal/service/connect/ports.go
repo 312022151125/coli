@@ -6,9 +6,9 @@ package service
 import (
 	"context"
 
-	model "github.com/lin-snow/ech0/internal/model/connect"
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
-	commonService "github.com/lin-snow/ech0/internal/service/common"
+	model "github.com/312022151125/coli/internal/model/connect"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
+	commonService "github.com/312022151125/coli/internal/service/common"
 )
 
 type Service interface {

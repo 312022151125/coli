@@ -12,10 +12,10 @@ import (
 	"mime/multipart"
 
 	"github.com/gin-gonic/gin"
-	"github.com/lin-snow/ech0/internal/model/common"
-	model1 "github.com/lin-snow/ech0/internal/model/file"
-	model0 "github.com/lin-snow/ech0/internal/model/user"
-	"github.com/lin-snow/ech0/internal/storage"
+	"github.com/312022151125/coli/internal/model/common"
+	model1 "github.com/312022151125/coli/internal/model/file"
+	model0 "github.com/312022151125/coli/internal/model/user"
+	"github.com/312022151125/coli/internal/storage"
 	mock "github.com/stretchr/testify/mock"
 )
 

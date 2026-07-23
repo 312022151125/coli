@@ -7,7 +7,7 @@ import (
 	"crypto/rand"
 	"time"
 
-	"github.com/lin-snow/ech0/pkg/gocap/store"
+	"github.com/312022151125/coli/pkg/gocap/store"
 )
 
 // Option mutates engine configuration during construction.

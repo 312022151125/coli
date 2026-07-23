@@ -7,7 +7,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/lin-snow/ech0/pkg/busen/router"
+	"github.com/312022151125/coli/pkg/busen/router"
 )
 
 func TestCompileInvalidPatterns(t *testing.T) {

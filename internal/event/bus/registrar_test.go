@@ -8,11 +8,11 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/lin-snow/ech0/internal/event"
-	eventbus "github.com/lin-snow/ech0/internal/event/bus"
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
-	"github.com/lin-snow/ech0/internal/test/helpers"
-	"github.com/lin-snow/ech0/pkg/busen"
+	"github.com/312022151125/coli/internal/event"
+	eventbus "github.com/312022151125/coli/internal/event/bus"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
+	"github.com/312022151125/coli/internal/test/helpers"
+	"github.com/312022151125/coli/pkg/busen"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

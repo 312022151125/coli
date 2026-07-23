@@ -12,12 +12,12 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	res "github.com/lin-snow/ech0/internal/handler/response"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	service "github.com/lin-snow/ech0/internal/service/common"
-	errorUtil "github.com/lin-snow/ech0/internal/util/err"
-	timezoneUtil "github.com/lin-snow/ech0/internal/util/timezone"
-	versionPkg "github.com/lin-snow/ech0/internal/version"
+	res "github.com/312022151125/coli/internal/handler/response"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	service "github.com/312022151125/coli/internal/service/common"
+	errorUtil "github.com/312022151125/coli/internal/util/err"
+	timezoneUtil "github.com/312022151125/coli/internal/util/timezone"
+	versionPkg "github.com/312022151125/coli/internal/version"
 )
 
 type (

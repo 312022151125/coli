@@ -9,10 +9,10 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/lin-snow/ech0/pkg/gocap/core"
-	"github.com/lin-snow/ech0/pkg/gocap/store"
-	"github.com/lin-snow/ech0/pkg/gocap/store/memstore"
-	caphttp "github.com/lin-snow/ech0/pkg/gocap/transport/http"
+	"github.com/312022151125/coli/pkg/gocap/core"
+	"github.com/312022151125/coli/pkg/gocap/store"
+	"github.com/312022151125/coli/pkg/gocap/store/memstore"
+	caphttp "github.com/312022151125/coli/pkg/gocap/transport/http"
 )
 
 type Engine struct {

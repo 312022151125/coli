@@ -13,12 +13,12 @@ import (
 	"os"
 	"time"
 
-	"github.com/lin-snow/ech0/internal/database"
-	"github.com/lin-snow/ech0/internal/migrator/snapshot"
-	"github.com/lin-snow/ech0/internal/migrator/spec"
-	migratorModel "github.com/lin-snow/ech0/internal/model/migrator"
-	"github.com/lin-snow/ech0/internal/storage"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	"github.com/312022151125/coli/internal/database"
+	"github.com/312022151125/coli/internal/migrator/snapshot"
+	"github.com/312022151125/coli/internal/migrator/spec"
+	migratorModel "github.com/312022151125/coli/internal/model/migrator"
+	"github.com/312022151125/coli/internal/storage"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 const uploadTimeout = 60 * time.Minute

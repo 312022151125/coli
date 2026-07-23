@@ -6,12 +6,12 @@ package migrator
 import (
 	"fmt"
 
-	fsExporter "github.com/lin-snow/ech0/internal/migrator/exporter/fs"
-	s3Exporter "github.com/lin-snow/ech0/internal/migrator/exporter/s3"
-	ech0Importer "github.com/lin-snow/ech0/internal/migrator/importer/ech0"
-	memosImporter "github.com/lin-snow/ech0/internal/migrator/importer/memos"
-	"github.com/lin-snow/ech0/internal/migrator/spec"
-	migratorModel "github.com/lin-snow/ech0/internal/model/migrator"
+	fsExporter "github.com/312022151125/coli/internal/migrator/exporter/fs"
+	s3Exporter "github.com/312022151125/coli/internal/migrator/exporter/s3"
+	ech0Importer "github.com/312022151125/coli/internal/migrator/importer/ech0"
+	memosImporter "github.com/312022151125/coli/internal/migrator/importer/memos"
+	"github.com/312022151125/coli/internal/migrator/spec"
+	migratorModel "github.com/312022151125/coli/internal/model/migrator"
 )
 
 // BuildImporter 按来源选导入适配器(ech0 / memos),与 BuildExporter 对称。

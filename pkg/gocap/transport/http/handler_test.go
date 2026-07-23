@@ -13,9 +13,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/lin-snow/ech0/pkg/gocap/core"
-	"github.com/lin-snow/ech0/pkg/gocap/store"
-	"github.com/lin-snow/ech0/pkg/gocap/store/memstore"
+	"github.com/312022151125/coli/pkg/gocap/core"
+	"github.com/312022151125/coli/pkg/gocap/store"
+	"github.com/312022151125/coli/pkg/gocap/store/memstore"
 )
 
 func TestPathStrictAndMethodAllow(t *testing.T) {

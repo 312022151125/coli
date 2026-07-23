@@ -6,7 +6,7 @@ package service
 import (
 	"testing"
 
-	model "github.com/lin-snow/ech0/internal/model/connect"
+	model "github.com/312022151125/coli/internal/model/connect"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

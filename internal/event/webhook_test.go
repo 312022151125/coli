@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	userModel "github.com/lin-snow/ech0/internal/model/user"
+	userModel "github.com/312022151125/coli/internal/model/user"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

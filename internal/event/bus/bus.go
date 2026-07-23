@@ -7,9 +7,9 @@ import (
 	"log/slog"
 	"sync"
 
-	"github.com/lin-snow/ech0/internal/config"
-	"github.com/lin-snow/ech0/pkg/busen"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	"github.com/312022151125/coli/internal/config"
+	"github.com/312022151125/coli/pkg/busen"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 const (

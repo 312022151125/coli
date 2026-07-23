@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
 )
 
 // mkStatsEcho 构造一条指定日期（YYYY-MM-DD, UTC）与标签的 Echo。

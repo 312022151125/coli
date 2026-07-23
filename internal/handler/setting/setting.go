@@ -7,10 +7,10 @@ package handler
 import (
 	"context"
 
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	model "github.com/lin-snow/ech0/internal/model/setting"
-	webhookModel "github.com/lin-snow/ech0/internal/model/webhook"
-	service "github.com/lin-snow/ech0/internal/service/setting"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	model "github.com/312022151125/coli/internal/model/setting"
+	webhookModel "github.com/312022151125/coli/internal/model/webhook"
+	service "github.com/312022151125/coli/internal/service/setting"
 )
 
 type SettingHandler struct {

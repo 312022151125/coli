@@ -6,7 +6,7 @@ package async
 import (
 	"sync"
 
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 // WorkerPool 是一个可复用的通用异步任务池

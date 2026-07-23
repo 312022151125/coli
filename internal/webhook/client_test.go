@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/lin-snow/ech0/internal/event"
-	webhookModel "github.com/lin-snow/ech0/internal/model/webhook"
+	"github.com/312022151125/coli/internal/event"
+	webhookModel "github.com/312022151125/coli/internal/model/webhook"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

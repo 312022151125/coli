@@ -7,11 +7,11 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	i18nUtil "github.com/lin-snow/ech0/internal/i18n"
-	authModel "github.com/lin-snow/ech0/internal/model/auth"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	errUtil "github.com/lin-snow/ech0/internal/util/err"
-	"github.com/lin-snow/ech0/pkg/viewer"
+	i18nUtil "github.com/312022151125/coli/internal/i18n"
+	authModel "github.com/312022151125/coli/internal/model/auth"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	errUtil "github.com/312022151125/coli/internal/util/err"
+	"github.com/312022151125/coli/pkg/viewer"
 )
 
 func RequireScopes(scopes ...string) gin.HandlerFunc {

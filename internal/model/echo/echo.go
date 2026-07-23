@@ -4,8 +4,8 @@
 package model
 
 import (
-	fileModel "github.com/lin-snow/ech0/internal/model/file"
-	uuidUtil "github.com/lin-snow/ech0/internal/util/uuid"
+	fileModel "github.com/312022151125/coli/internal/model/file"
+	uuidUtil "github.com/312022151125/coli/internal/util/uuid"
 	"gorm.io/gorm"
 )
 

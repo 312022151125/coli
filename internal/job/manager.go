@@ -12,8 +12,8 @@ import (
 	"sync"
 	"time"
 
-	jobModel "github.com/lin-snow/ech0/internal/model/job"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	jobModel "github.com/312022151125/coli/internal/model/job"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 const logModule = "job"

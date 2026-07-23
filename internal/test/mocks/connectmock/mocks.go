@@ -10,8 +10,8 @@ package connectmock
 import (
 	"context"
 
-	"github.com/lin-snow/ech0/internal/model/connect"
-	model0 "github.com/lin-snow/ech0/internal/model/echo"
+	"github.com/312022151125/coli/internal/model/connect"
+	model0 "github.com/312022151125/coli/internal/model/echo"
 	mock "github.com/stretchr/testify/mock"
 )
 

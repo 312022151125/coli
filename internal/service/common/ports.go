@@ -7,9 +7,9 @@ import (
 	"context"
 
 	"github.com/gin-gonic/gin"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
-	userModel "github.com/lin-snow/ech0/internal/model/user"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
+	userModel "github.com/312022151125/coli/internal/model/user"
 )
 
 type Service interface {

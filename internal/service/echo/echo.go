@@ -12,16 +12,16 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/lin-snow/ech0/internal/event"
-	eventbus "github.com/lin-snow/ech0/internal/event/bus"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	model "github.com/lin-snow/ech0/internal/model/echo"
-	"github.com/lin-snow/ech0/internal/storage"
-	"github.com/lin-snow/ech0/internal/transaction"
-	urlUtil "github.com/lin-snow/ech0/internal/util/url"
-	"github.com/lin-snow/ech0/pkg/busen"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
-	"github.com/lin-snow/ech0/pkg/viewer"
+	"github.com/312022151125/coli/internal/event"
+	eventbus "github.com/312022151125/coli/internal/event/bus"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	model "github.com/312022151125/coli/internal/model/echo"
+	"github.com/312022151125/coli/internal/storage"
+	"github.com/312022151125/coli/internal/transaction"
+	urlUtil "github.com/312022151125/coli/internal/util/url"
+	"github.com/312022151125/coli/pkg/busen"
+	logUtil "github.com/312022151125/coli/pkg/log"
+	"github.com/312022151125/coli/pkg/viewer"
 )
 
 type EchoService struct {

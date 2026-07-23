@@ -8,10 +8,10 @@ import (
 	"errors"
 	"strings"
 
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	model "github.com/lin-snow/ech0/internal/model/setting"
-	coreSetting "github.com/lin-snow/ech0/internal/setting"
-	"github.com/lin-snow/ech0/pkg/viewer"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	model "github.com/312022151125/coli/internal/model/setting"
+	coreSetting "github.com/312022151125/coli/internal/setting"
+	"github.com/312022151125/coli/pkg/viewer"
 )
 
 // GetEmbeddingSetting 获取 Embedding 向量设置。

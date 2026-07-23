@@ -11,10 +11,10 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	model "github.com/lin-snow/ech0/internal/model/comment"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	service "github.com/lin-snow/ech0/internal/service/comment"
-	"github.com/lin-snow/ech0/pkg/viewer"
+	model "github.com/312022151125/coli/internal/model/comment"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	service "github.com/312022151125/coli/internal/service/comment"
+	"github.com/312022151125/coli/pkg/viewer"
 )
 
 type CommentHandler struct {

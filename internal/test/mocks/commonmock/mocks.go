@@ -11,9 +11,9 @@ import (
 	"context"
 
 	"github.com/gin-gonic/gin"
-	model0 "github.com/lin-snow/ech0/internal/model/common"
-	model1 "github.com/lin-snow/ech0/internal/model/echo"
-	"github.com/lin-snow/ech0/internal/model/user"
+	model0 "github.com/312022151125/coli/internal/model/common"
+	model1 "github.com/312022151125/coli/internal/model/echo"
+	"github.com/312022151125/coli/internal/model/user"
 	mock "github.com/stretchr/testify/mock"
 )
 

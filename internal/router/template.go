@@ -5,7 +5,7 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/lin-snow/ech0/internal/handler"
+	"github.com/312022151125/coli/internal/handler"
 )
 
 // setupTemplateRoutes 设置模板路由

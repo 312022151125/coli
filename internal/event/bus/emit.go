@@ -7,9 +7,9 @@ import (
 	"context"
 	"log/slog"
 
-	"github.com/lin-snow/ech0/internal/event"
-	"github.com/lin-snow/ech0/pkg/busen"
-	logUtil "github.com/lin-snow/ech0/pkg/log"
+	"github.com/312022151125/coli/internal/event"
+	"github.com/312022151125/coli/pkg/busen"
+	logUtil "github.com/312022151125/coli/pkg/log"
 )
 
 // Emit 按事件类型发布到总线（busen 按精确 Go 类型路由，无需 topic）。若事件实现 event.Keyed，

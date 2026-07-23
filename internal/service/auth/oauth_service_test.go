@@ -8,10 +8,10 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/lin-snow/ech0/internal/config"
-	"github.com/lin-snow/ech0/internal/kvstore"
-	commonModel "github.com/lin-snow/ech0/internal/model/common"
-	settingModel "github.com/lin-snow/ech0/internal/model/setting"
+	"github.com/312022151125/coli/internal/config"
+	"github.com/312022151125/coli/internal/kvstore"
+	commonModel "github.com/312022151125/coli/internal/model/common"
+	settingModel "github.com/312022151125/coli/internal/model/setting"
 )
 
 // oauthKVWithRedirect 构造一个内存 KV，预置一份仅设了 redirect_uri 的 OAuth2 设置，

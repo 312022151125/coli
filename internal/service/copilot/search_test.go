@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	echoModel "github.com/lin-snow/ech0/internal/model/echo"
-	embeddingModel "github.com/lin-snow/ech0/internal/model/embedding"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
+	embeddingModel "github.com/312022151125/coli/internal/model/embedding"
 )
 
 func TestResolveTagIDs(t *testing.T) {

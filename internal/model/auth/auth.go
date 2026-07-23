@@ -8,7 +8,7 @@ import (
 
 	"github.com/go-webauthn/webauthn/protocol"
 	"github.com/golang-jwt/jwt/v5"
-	uuidUtil "github.com/lin-snow/ech0/internal/util/uuid"
+	uuidUtil "github.com/312022151125/coli/internal/util/uuid"
 	"gorm.io/gorm"
 )
 
