@@ -63,6 +63,15 @@ jobs:
           CC: ${{ matrix.goarch == 'arm64' && 'aarch64-linux-musl-gcc' || 'gcc' }}
         run: |
           set -euo pipefail
+          if [ "${GOARCH}" = "arm64" ]; then
+            SQLITE_INC="${RUNNER_TEMP}/sqlite-include"
+            mkdir -p "${SQLITE_INC}"
+            go mod download github.com/mattn/go-sqlite3
+            MATTN_DIR="$(go list -m -f '{{.Dir}}' github.com/mattn/go-sqlite3)"
+            test -f "${MATTN_DIR}/sqlite3-binding.h"
+            cp "${MATTN_DIR}/sqlite3-binding.h" "${SQLITE_INC}/sqlite3.h"
+            export CGO_CFLAGS="-I${SQLITE_INC} -Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int64_t=uint64_t -Wno-typedef-redefinition -fno-sanitize=undefined"
+          fi
           STATIC_LDFLAGS="-linkmode external -extldflags '-static'"
           go build -tags netgo -ldflags "$STATIC_LDFLAGS" -o "ech0-linux-${GOARCH}" ./cmd/ech0/main.go
 
