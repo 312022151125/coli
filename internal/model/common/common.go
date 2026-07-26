@@ -114,6 +114,8 @@ const (
 	UserLocalAuthBackfilledKey = "user_local_auth_backfilled_v1"
 	// UsersPasswordColumnDroppedKey 是回填后删除 users.password 遗留列的幂等标记键
 	UsersPasswordColumnDroppedKey = "users_password_column_dropped_v1"
+	// EchoKindBackfilledKey 是把历史空 kind 值回填为 note 的幂等标记键
+	EchoKindBackfilledKey = "echo_kind_backfilled_v1"
 	// ChatSessionKeyPrefix 是 Chat 持久化会话的键前缀（每个 userID 一条，键为前缀 + userID）
 	ChatSessionKeyPrefix = "chat_session:"
 )

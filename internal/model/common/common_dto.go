@@ -20,6 +20,7 @@ type EchoQueryDto struct {
 	PageSize  int      `json:"pageSize"`
 	Search    string   `json:"search"`
 	TagIDs    []string `json:"tagIds"`
+	Kinds     []string `json:"kinds"`
 	SortBy    string   `json:"sortBy"`
 	SortOrder string   `json:"sortOrder"`
 	// DateFrom / DateTo：按 echos.created_at 过滤的 Unix 秒闭区间。

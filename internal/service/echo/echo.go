@@ -77,6 +77,12 @@ func (echoService *EchoService) PostEcho(ctx context.Context, newEcho *model.Ech
 	}
 	newEcho.Extension = normalizedExt
 
+	normalizedKind, err := normalizeEchoKind(newEcho.Kind)
+	if err != nil {
+		return err
+	}
+	newEcho.Kind = normalizedKind
+
 	newEcho.Username = user.Username
 
 	if isEchoEmpty(newEcho) {
@@ -265,6 +271,14 @@ func (echoService *EchoService) UpdateEcho(ctx context.Context, echo *model.Echo
 		return err
 	}
 	echo.Extension = normalizedExt
+
+	if strings.TrimSpace(echo.Kind) != "" {
+		normalizedKind, err := normalizeEchoKind(echo.Kind)
+		if err != nil {
+			return err
+		}
+		echo.Kind = normalizedKind
+	}
 
 	for i := range echo.EchoFiles {
 		echo.EchoFiles[i].EchoID = echo.ID
@@ -515,6 +529,19 @@ func (echoService *EchoService) QueryEchos(
 		Items: echos,
 		Total: total,
 	}, nil
+}
+
+// normalizeEchoKind 归一化 kind：trim + lowercase；空串归为 note；仅接受四个合法值，
+// 非法值直接拒绝而不是静默落回 note，避免调用方拼错 kind 却悄悄丢失语义。
+func normalizeEchoKind(kind string) (string, error) {
+	kind = strings.ToLower(strings.TrimSpace(kind))
+	if kind == "" {
+		return model.KindNote, nil
+	}
+	if !model.ValidEchoKinds[kind] {
+		return "", fmt.Errorf("unsupported echo kind: %s", kind)
+	}
+	return kind, nil
 }
 
 // isSafeTagName 拒绝包含 HTML 元字符的标签名，配合 RSS 渲染端的 HTML 转义形成纵深防御

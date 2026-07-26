@@ -15,6 +15,7 @@ type EchoFile = fileModel.EchoFile
 type Echo struct {
 	ID        string         `gorm:"type:char(36);primaryKey"                      json:"id"`
 	Content   string         `gorm:"type:text;not null"                            json:"content"`
+	Kind      string         `gorm:"type:varchar(16);not null;default:note;index"  json:"kind"`
 	Username  string         `gorm:"type:varchar(100)"                             json:"username,omitempty"`
 	EchoFiles []EchoFile     `gorm:"foreignKey:EchoID;constraint:OnDelete:CASCADE" json:"echo_files,omitempty"`
 	Layout    string         `gorm:"type:varchar(50);default:'waterfall'"          json:"layout,omitempty"`
@@ -71,8 +72,8 @@ func (e *EchoExtension) BeforeCreate(_ *gorm.DB) error {
 }
 
 const (
-	Extension_MUSIC      = "MUSIC"
-	Extension_VIDEO      = "VIDEO"
+	Extension_MUSIC = "MUSIC"
+	Extension_VIDEO = "VIDEO"
 	// Retained for historical stored rows; disabled for new creation.
 	Extension_GITHUBPROJ = "GITHUBPROJ"
 	Extension_WEBSITE    = "WEBSITE"
@@ -88,3 +89,18 @@ const (
 	// 播放器本就忽略 layout。用于把 image 专属的多布局语义从音视频身上剥离。
 	LayoutNone = "none"
 )
+
+const (
+	KindNote    = "note"
+	KindProject = "project"
+	KindStartup = "startup"
+	KindIdea    = "idea"
+)
+
+// ValidEchoKinds 是所有合法的 kind 取值集合，供 normalize/validate 复用。
+var ValidEchoKinds = map[string]bool{
+	KindNote:    true,
+	KindProject: true,
+	KindStartup: true,
+	KindIdea:    true,
+}

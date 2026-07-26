@@ -10,7 +10,6 @@ import (
 	"sync/atomic"
 	"time"
 
-	sqlite_vec "github.com/asg017/sqlite-vec-go-bindings/cgo"
 	"github.com/312022151125/coli/internal/config"
 	dbMigration "github.com/312022151125/coli/internal/database/migration"
 	authModel "github.com/312022151125/coli/internal/model/auth"
@@ -25,6 +24,7 @@ import (
 	visitorModel "github.com/312022151125/coli/internal/model/visitor"
 	webhookModel "github.com/312022151125/coli/internal/model/webhook"
 	util "github.com/312022151125/coli/internal/util/err"
+	sqlite_vec "github.com/asg017/sqlite-vec-go-bindings/cgo"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
@@ -159,6 +159,7 @@ func InitDatabase() {
 			dbMigration.NewUserLocalAuthBackfillMigrator(),
 			dbMigration.NewUsersPasswordDropMigrator(),
 			dbMigration.NewEchoExtensionOrphansMigrator(),
+			dbMigration.NewEchoKindBackfillMigrator(),
 		),
 	)
 }

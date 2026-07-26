@@ -15,6 +15,7 @@ type CreateTagDto struct {
 type EchoUpsertDto struct {
 	ID        string            `json:"id,omitempty"`
 	Content   string            `json:"content"`
+	Kind      string            `json:"kind,omitempty"`
 	EchoFiles []EchoFile        `json:"echo_files,omitempty" swaggertype:"array,object"`
 	Layout    string            `json:"layout,omitempty"`
 	Private   bool              `json:"private"`
@@ -27,6 +28,7 @@ func (dto *EchoUpsertDto) ToModel() *Echo {
 	echo := &Echo{
 		ID:        dto.ID,
 		Content:   dto.Content,
+		Kind:      dto.Kind,
 		EchoFiles: dto.EchoFiles,
 		Layout:    dto.Layout,
 		Private:   dto.Private,

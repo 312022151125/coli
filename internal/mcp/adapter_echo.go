@@ -25,6 +25,7 @@ func (a *Adapter) registerEchoTools(reg *Registry) {
 			"properties": map[string]any{
 				"query":      map[string]any{"type": "string", "description": "Full-text search keyword (matched against post content)"},
 				"tag_ids":    map[string]any{"type": "array", "items": map[string]any{"type": "string"}, "description": "Filter by one or more tag UUIDs (AND logic)"},
+				"kinds":      map[string]any{"type": "array", "items": map[string]any{"type": "string", "enum": []string{echoModel.KindNote, echoModel.KindProject, echoModel.KindStartup, echoModel.KindIdea}}, "description": "Filter by one or more post categories (OR logic); omit for all categories"},
 				"page":       map[string]any{"type": "integer", "description": "Page number, 1-based", "default": 1},
 				"page_size":  map[string]any{"type": "integer", "description": "Results per page (1–100)", "default": 20},
 				"sort_by":    map[string]any{"type": "string", "enum": []string{"created_at", "fav_count"}, "description": "Field to sort by", "default": "created_at"},
@@ -80,6 +81,12 @@ func (a *Adapter) registerEchoTools(reg *Registry) {
 		},
 	}
 	layoutEnum := []string{"waterfall", "grid", "horizontal", "carousel", "stack"}
+	kindEnum := []string{
+		echoModel.KindNote,
+		echoModel.KindProject,
+		echoModel.KindStartup,
+		echoModel.KindIdea,
+	}
 
 	reg.RegisterTool(ToolDefinition{
 		Name:  "create_post",
@@ -93,6 +100,7 @@ func (a *Adapter) registerEchoTools(reg *Registry) {
 			"type": "object",
 			"properties": map[string]any{
 				"content":    map[string]any{"type": "string", "description": "Post body (Markdown supported)"},
+				"kind":       map[string]any{"type": "string", "enum": kindEnum, "description": "Post category", "default": echoModel.KindNote},
 				"tags":       map[string]any{"type": "array", "items": map[string]any{"type": "string"}, "description": "Tag names to attach; non-existent tags are created automatically"},
 				"private":    map[string]any{"type": "boolean", "description": "Mark the post as private (only visible to the owner)", "default": false},
 				"layout":     map[string]any{"type": "string", "enum": layoutEnum, "description": "Image layout style", "default": "waterfall"},
@@ -113,6 +121,7 @@ func (a *Adapter) registerEchoTools(reg *Registry) {
 			"properties": map[string]any{
 				"id":         map[string]any{"type": "string", "format": "uuid", "description": "Post UUID"},
 				"content":    map[string]any{"type": "string", "description": "New body (Markdown)"},
+				"kind":       map[string]any{"type": "string", "enum": kindEnum, "description": "New post category"},
 				"tags":       map[string]any{"type": "array", "items": map[string]any{"type": "string"}, "description": "New tag name list (replaces all existing tags)"},
 				"private":    map[string]any{"type": "boolean", "description": "Set visibility"},
 				"layout":     map[string]any{"type": "string", "enum": layoutEnum, "description": "Image layout style"},
@@ -256,12 +265,23 @@ func (a *Adapter) searchPosts(ctx context.Context, args map[string]any) (*ToolCa
 			}
 		}
 	}
+	var kinds []string
+	if raw, ok := args["kinds"]; ok {
+		if arr, ok := raw.([]any); ok {
+			for _, v := range arr {
+				if s, ok := v.(string); ok {
+					kinds = append(kinds, s)
+				}
+			}
+		}
+	}
 
 	result, err := a.echoSvc.QueryEchos(ctx, commonModel.EchoQueryDto{
 		Page:      page,
 		PageSize:  pageSize,
 		Search:    query,
 		TagIDs:    tagIDs,
+		Kinds:     kinds,
 		SortBy:    sortBy,
 		SortOrder: sortOrder,
 	})
@@ -302,6 +322,7 @@ func (a *Adapter) createPost(ctx context.Context, args map[string]any) (*ToolCal
 
 	echo := &echoModel.Echo{
 		Content:   content,
+		Kind:      stringArg(args, "kind"),
 		Private:   boolArg(args, "private"),
 		Layout:    stringArg(args, "layout"),
 		Tags:      buildTags(args),
@@ -331,6 +352,7 @@ func (a *Adapter) updatePost(ctx context.Context, args map[string]any) (*ToolCal
 			echo.Private = b
 		}
 	}
+	echo.Kind = stringArg(args, "kind")
 	echo.Layout = stringArg(args, "layout")
 	echo.Tags = buildTags(args)
 	echo.EchoFiles = buildEchoFiles(args)

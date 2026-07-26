@@ -243,6 +243,9 @@ func (echoRepository *EchoRepository) UpdateEcho(ctx context.Context, echo *mode
 		"private": echo.Private,
 		"layout":  echo.Layout,
 	}
+	if echo.Kind != "" {
+		updates["kind"] = echo.Kind
+	}
 	if echo.CreatedAt != 0 {
 		updates["created_at"] = echo.CreatedAt
 	}
@@ -415,6 +418,9 @@ func (echoRepository *EchoRepository) QueryEchos(
 		if queryDto.DateTo > 0 {
 			db = db.Where("echos.created_at <= ?", queryDto.DateTo)
 		}
+		if len(queryDto.Kinds) > 0 {
+			db = db.Where("COALESCE(NULLIF(echos.kind, ''), 'note') IN ?", queryDto.Kinds)
+		}
 		return db
 	}
 
@@ -474,6 +480,11 @@ func (echoRepository *EchoRepository) QueryEchos(
 		}
 	}
 
+	for i := range echos {
+		if strings.TrimSpace(echos[i].Kind) == "" {
+			echos[i].Kind = model.KindNote
+		}
+	}
 	return echos, total, nil
 }
 
