@@ -89,7 +89,7 @@ const todayText = computed(() => {
 
 const loadDashboardStats = async () => {
   loading.value = true
-  const [echoRes, , todayRes] = await Promise.allSettled([
+  const [echoRes, todayRes] = await Promise.allSettled([
     fetchGetEchosByPage({ page: 1, pageSize: 1, search: '' }),
     fetchGetTodayEchos(),
   ])

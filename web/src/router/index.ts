@@ -120,6 +120,16 @@ const router = createRouter({
       },
     },
     {
+      path: '/register',
+      name: 'register',
+      component: () => import('../views/auth/AuthView.vue'),
+      meta: {
+        title: 'Register',
+        description: 'Create a coli.dev account.',
+        noindex: true,
+      },
+    },
+    {
       path: '/widget',
       name: 'widget',
       component: () => import('../views/widget/WidgetView.vue'),

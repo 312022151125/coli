@@ -6,7 +6,7 @@
       <h1
         class="text-6xl italic font-bold text-center text-[var(--color-text-muted)] mb-4 font-serif"
       >
-        Ech0
+        coli.dev
       </h1>
       <!-- 登录  -->
       <div v-if="AuthMode === 'login'">
@@ -125,7 +125,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import BaseInput from '@/components/common/BaseInput.vue'
 import BaseButton from '@/components/common/BaseButton.vue'
 import { useUserStore } from '@/stores'
@@ -142,8 +142,8 @@ import { fetchPasskeyLoginBegin, fetchPasskeyLoginFinish } from '@/service/api'
 import { theToast } from '@/utils/toast'
 import { base64urlToUint8Array, uint8ArrayToBase64url } from '@/utils/other'
 import { useI18n } from 'vue-i18n'
-
-const AuthMode = ref<'login' | 'register'>('login') // login / register
+const route = useRoute()
+const AuthMode = ref<'login' | 'register'>(route.name === 'register' ? 'register' : 'login') // login / register
 const username = ref<string>('')
 const password = ref<string>('')
 const userStore = useUserStore()
