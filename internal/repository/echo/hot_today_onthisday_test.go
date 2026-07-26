@@ -4,10 +4,12 @@
 package repository
 
 import (
+	"context"
 	"testing"
 	"time"
 
 	commentModel "github.com/312022151125/coli/internal/model/comment"
+	echoModel "github.com/312022151125/coli/internal/model/echo"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"gorm.io/gorm"
@@ -26,6 +28,39 @@ func seedComment(t *testing.T, db *gorm.DB, id, echoID string, status commentMod
 		Source:   commentModel.SourceGuest,
 	}
 	require.NoError(t, db.Create(&c).Error)
+}
+
+func TestEchoRepository_NormalizesLegacyEmptyKindsAcrossReads(t *testing.T) {
+	repo, db := newEchoRepo(t)
+	now := time.Now().UTC().Unix()
+	seedEcho(t, db, "e-legacy", "legacy", false, 1, now)
+	require.NoError(t, db.Model(&echoModel.Echo{}).Where("id = ?", "e-legacy").Update("kind", "").Error)
+
+	seedTag(t, db, "legacy-tag", "legacy")
+	linkTag(t, db, "e-legacy", "legacy-tag")
+
+	detail, err := repo.GetEchosById(context.Background(), "e-legacy")
+	require.NoError(t, err)
+	require.NotNil(t, detail)
+	assert.Equal(t, "note", detail.Kind)
+
+	page, _ := repo.GetEchosByPage(1, 10, "", true)
+	require.Len(t, page, 1)
+	assert.Equal(t, "note", page[0].Kind)
+
+	tagged, _, err := repo.GetEchosByTagId("legacy-tag", 1, 10, "", true)
+	require.NoError(t, err)
+	require.Len(t, tagged, 1)
+	assert.Equal(t, "note", tagged[0].Kind)
+
+	hot, err := repo.GetHotEchos(5, true)
+	require.NoError(t, err)
+	require.Len(t, hot, 1)
+	assert.Equal(t, "note", hot[0].Kind)
+
+	today := repo.GetTodayEchos(true, "UTC")
+	require.Len(t, today, 1)
+	assert.Equal(t, "note", today[0].Kind)
 }
 
 func TestEchoRepository_GetHotEchos(t *testing.T) {

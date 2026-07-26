@@ -33,6 +33,18 @@ func NewEchoRepository(
 	return &EchoRepository{db: dbProvider, cache: cache}
 }
 
+func normalizeEchoKind(echo *model.Echo) {
+	if strings.TrimSpace(echo.Kind) == "" {
+		echo.Kind = model.KindNote
+	}
+}
+
+func normalizeEchoKinds(echos []model.Echo) {
+	for i := range echos {
+		normalizeEchoKind(&echos[i])
+	}
+}
+
 func (echoRepository *EchoRepository) getDB(ctx context.Context) *gorm.DB {
 	if tx, ok := transaction.TxFromContext(ctx); ok {
 		return tx
@@ -107,6 +119,7 @@ func (echoRepository *EchoRepository) GetEchosByPage(
 	if err != nil {
 		return []model.Echo{}, 0
 	}
+	normalizeEchoKinds(pageResult.Items)
 	return pageResult.Items, pageResult.Total
 }
 
@@ -155,6 +168,10 @@ func (echoRepository *EchoRepository) GetEchosById(ctx context.Context, id strin
 	if err != nil {
 		return nil, err
 	}
+	if echo != nil {
+		normalizeEchoKind(echo)
+	}
+
 	return echo, nil
 }
 
@@ -230,6 +247,7 @@ func (echoRepository *EchoRepository) GetTodayEchos(showPrivate bool, timezone s
 	if err != nil {
 		return []model.Echo{}
 	}
+	normalizeEchoKinds(todayEchos)
 	return todayEchos
 }
 
@@ -549,6 +567,7 @@ func (echoRepository *EchoRepository) GetEchosByTagId(
 		Find(&echos).Error; err != nil {
 		return nil, 0, err
 	}
+	normalizeEchoKinds(echos)
 
 	return echos, total, nil
 }
@@ -619,6 +638,8 @@ func (echoRepository *EchoRepository) GetHotEchos(limit int, showPrivate bool) (
 		sorted[idOrder[e.ID]] = e
 	}
 
+	normalizeEchoKinds(sorted)
+
 	return sorted, nil
 }
 
@@ -653,6 +674,8 @@ func (echoRepository *EchoRepository) GetRandomEcho(showPrivate bool) (*model.Ec
 	if len(echos) == 0 {
 		return nil, nil
 	}
+	normalizeEchoKinds(echos)
+
 	return &echos[0], nil
 }
 
@@ -706,6 +729,7 @@ func (echoRepository *EchoRepository) GetOnThisDayEchos(showPrivate bool, timezo
 		Find(&echos).Error; err != nil {
 		return []model.Echo{}
 	}
+	normalizeEchoKinds(echos)
 	return echos
 }
 
