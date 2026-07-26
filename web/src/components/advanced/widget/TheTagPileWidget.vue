@@ -120,7 +120,7 @@ const palette = [
 ]
 
 const fixedTags = computed(() => [
-  `Ech0 ${props.ech0Version}`,
+  `coli.dev ${props.ech0Version}`,
   'Go',
   'Gin',
   'Gorm',

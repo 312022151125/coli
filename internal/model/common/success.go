@@ -90,7 +90,7 @@ const (
 // Agent 成功相关常量
 const (
 	AGENT_GET_RECENT_SUCCESS      = "获取近期活动总结成功"
-	AGENT_TEST_CONNECTION_SUCCESS = "Ech0 Copilot 连接测试成功"
+	AGENT_TEST_CONNECTION_SUCCESS = "coli.dev Copilot 连接测试成功"
 )
 
 // Chat 成功相关常量

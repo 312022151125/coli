@@ -100,7 +100,7 @@ const router = useRouter()
 const settingStore = useSettingStore()
 const { SystemSetting } = storeToRefs(settingStore)
 
-const siteName = computed(() => String(SystemSetting.value?.server_name ?? 'Ech0'))
+const siteName = computed(() => String(SystemSetting.value?.server_name ?? 'coli.dev'))
 const avatarUrl = computed(() => resolveAvatarUrl(SystemSetting.value?.server_logo))
 // 是否有任意媒体（图/音/视）——用于正文与媒体之间的间距。
 const hasMedia = computed(() => getEchoFilesBy(props.echo, { dedupeBy: 'id' }).length > 0)

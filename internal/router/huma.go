@@ -20,7 +20,7 @@ import (
 // 汇总所有域的注册清单(registerOperations)、离线导出 OpenAPI(GenerateOpenAPIYAML)。
 
 const (
-	humaAPITitle   = "Ech0 API 文档"
+	humaAPITitle   = "coli.dev API 文档"
 	humaAPIVersion = "1.0"
 	humaAPIBase    = "/api"
 )

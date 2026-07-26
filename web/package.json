@@ -4,7 +4,7 @@
   "private": true,
   "license": "AGPL-3.0-or-later",
   "author": "lin-snow",
-  "homepage": "https://github.com/lin-snow/Ech0",
+  "homepage": "https://coli.dev",
   "type": "module",
   "engines": {
     "node": ">=25.9.0"

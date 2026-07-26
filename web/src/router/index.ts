@@ -28,7 +28,7 @@ const router = createRouter({
       component: () => import('../views/home/HomeView.vue'),
       meta: {
         title: 'Home',
-        description: 'Ech0 home timeline for publishing and browsing thoughts, notes, and links.',
+        description: 'coli.dev home timeline for publishing and browsing thoughts, notes, and links.',
         optionalAuth: true,
       },
     },
@@ -44,7 +44,7 @@ const router = createRouter({
       redirect: '/panel/dashboard',
       meta: {
         title: 'Panel',
-        description: 'Ech0 management panel.',
+        description: 'coli.dev management panel.',
         requiresAuth: true,
         noindex: true,
       },
@@ -115,7 +115,7 @@ const router = createRouter({
       component: () => import('../views/auth/AuthView.vue'),
       meta: {
         title: 'Sign In',
-        description: 'Sign in to your Ech0 workspace.',
+        description: 'Sign in to your coli.dev workspace.',
         noindex: true,
       },
     },
@@ -135,7 +135,7 @@ const router = createRouter({
       component: () => import('../views/widget/WidgetView.vue'),
       meta: {
         title: 'Widget',
-        description: 'Ech0 embeddable widget.',
+        description: 'coli.dev embeddable widget.',
         noindex: true,
       },
     },
@@ -145,7 +145,7 @@ const router = createRouter({
       component: () => import('../views/init/InitView.vue'),
       meta: {
         title: 'Initialize',
-        description: 'Initialize your Ech0 instance.',
+        description: 'Initialize your coli.dev instance.',
         noindex: true,
       },
     },
@@ -186,7 +186,7 @@ const router = createRouter({
       },
       meta: {
         title: 'Echo',
-        description: 'Read a shared Ech0 post.',
+        description: 'Read a shared coli.dev post.',
       },
     },
     {
@@ -195,7 +195,7 @@ const router = createRouter({
       component: () => import('../views/about/AboutView.vue'),
       meta: {
         title: 'About',
-        description: 'Copyright, license and author information for this Ech0 instance.',
+        description: 'Copyright, license and author information for this coli.dev instance.',
       },
     },
     {

@@ -80,7 +80,7 @@ func buildScalarHTML(basePath string) []byte {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ech0 API 文档</title>
+  <title>coli.dev API 文档</title>
 </head>
 <body>
   <div id="app"></div>

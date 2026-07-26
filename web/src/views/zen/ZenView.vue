@@ -89,7 +89,7 @@ const zenStore = useZenStore()
 const settingStore = useSettingStore()
 const { SystemSetting } = storeToRefs(settingStore)
 
-const serverName = computed(() => String(SystemSetting.value?.server_name ?? 'Ech0'))
+const serverName = computed(() => String(SystemSetting.value?.server_name ?? 'coli.dev'))
 const logoUrl = computed(() => resolveAvatarUrl(SystemSetting.value?.server_logo))
 
 const sentinelRef = ref<HTMLElement | null>(null)
