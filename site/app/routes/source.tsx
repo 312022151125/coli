@@ -58,7 +58,7 @@ export default function SourcePage() {
               📦 Download source.tar.gz
             </a>
             <p className="mt-2 text-xs text-sand-11">
-              Version-matched source code tarball containing backend Go modules, web frontend SPA, Hub aggregator, and site documentation.
+              Version-matched source code tarball containing backend Go modules and web frontend SPA.
             </p>
           </div>
         </section>

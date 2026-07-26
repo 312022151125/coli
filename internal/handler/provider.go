@@ -8,7 +8,6 @@ import (
 	authHandler "github.com/312022151125/coli/internal/handler/auth"
 	commentHandler "github.com/312022151125/coli/internal/handler/comment"
 	commonHandler "github.com/312022151125/coli/internal/handler/common"
-	connectHandler "github.com/312022151125/coli/internal/handler/connect"
 	copilotHandler "github.com/312022151125/coli/internal/handler/copilot"
 	dashboardHandler "github.com/312022151125/coli/internal/handler/dashboard"
 	echoHandler "github.com/312022151125/coli/internal/handler/echo"
@@ -32,7 +31,6 @@ var (
 	InitSet      = wire.NewSet(initHandler.NewInitHandler)
 	CommonSet    = wire.NewSet(commonHandler.NewCommonHandler)
 	SettingSet   = wire.NewSet(settingHandler.NewSettingHandler)
-	ConnectSet   = wire.NewSet(connectHandler.NewConnectHandler)
 	DashboardSet = wire.NewSet(dashboardHandler.NewDashboardHandler)
 	CopilotSet   = wire.NewSet(copilotHandler.NewCopilotHandler)
 	EmbeddingSet = wire.NewSet(embeddingHandler.NewEmbeddingHandler)

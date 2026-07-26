@@ -28,7 +28,6 @@ Please keep this PR focused on a single change. For larger work, split into smal
 - [ ] Storage (local / S3)
 - [ ] Webhook / Agent / Events
 - [ ] Migration / Backup
-- [ ] Hub / Connect
 - [ ] Docs
 
 ## How to verify

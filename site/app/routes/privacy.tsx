@@ -7,15 +7,15 @@ import privacyMd from "../../content/privacy.md?raw";
 
 export function meta({ data }: Route.MetaArgs) {
   if (!data) {
-    return [{ title: "Privacy — Ech0" }];
+    return [{ title: "Privacy — coli.dev" }];
   }
   return [
-    { title: `${data.title} — Ech0` },
+    { title: `${data.title} — coli.dev` },
     {
       name: "description",
       content: data.description || data.title,
     },
-    { property: "og:title", content: `${data.title} — Ech0` },
+    { property: "og:title", content: `${data.title} — coli.dev` },
     { property: "og:url", content: absoluteUrl("/privacy") },
   ];
 }

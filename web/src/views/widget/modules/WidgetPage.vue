@@ -5,7 +5,7 @@
     <h1
       class="text-4xl md:text-6xl italic font-bold font-serif text-center text-[var(--color-text-muted)] mb-8"
     >
-      Ech0 Widget
+      coli.dev Widget
     </h1>
 
     <div class="px-8 mb-2">
@@ -23,7 +23,6 @@
     <div class="flex flex-col gap-4">
       <TheHeatMap />
       <TheRecentCard v-if="AgentSetting.enable" />
-      <TheConnectWidget />
       <TheCommentWidget />
     </div>
   </div>
@@ -34,7 +33,6 @@ import BaseButton from '@/components/common/BaseButton.vue'
 import Arrow from '@/components/icons/arrow.vue'
 import {
   TheCommentWidget,
-  TheConnectWidget,
   TheHeatMap,
   TheRecentCard,
 } from '@/components/advanced/widget'

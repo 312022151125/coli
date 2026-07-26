@@ -44,15 +44,6 @@ A ready-to-use example lives at [`docker/docker-compose.yml`](./docker/docker-co
 docker-compose up -d
 ```
 
-### 🧙 Script Deployment
-
-```shell
-curl -fsSL "https://raw.githubusercontent.com/lin-snow/Ech0/main/scripts/ech0.sh" -o ech0.sh && bash ech0.sh
-```
-
-> The script installs and manages Ech0 through systemd, so please run with root privileges when needed.
-> You can run `bash ech0.sh install /your/path/ech0` to customize the install path.
-
 ### ☸️ Kubernetes (Helm)
 
 If you want to deploy Ech0 in a Kubernetes cluster, use the Helm Chart provided by this project.
@@ -147,4 +138,4 @@ docker image prune -f
 - [Storage migration guide](./docs/usage/storage-migration.md) — local ⇄ S3 storage rules and migration.
 - [Webhook usage](./docs/usage/webhook-usage.md) — webhook events and payloads.
 - [MCP usage](./docs/usage/mcp-usage.md) — Model Context Protocol integration.
-- [`CONTRIBUTING.md`](./CONTRIBUTING.md) — contributor workflow.
+- Deployment, dev setup, and PR workflow docs live under [`docs/`](./docs/).

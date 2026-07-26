@@ -22,8 +22,6 @@ func TestIsValidScope(t *testing.T) {
 		{"comment-moderate", ScopeCommentMod, true},
 		{"file-read", ScopeFileRead, true},
 		{"file-write", ScopeFileWrite, true},
-		{"connect-read", ScopeConnectRead, true},
-		{"connect-write", ScopeConnectWrite, true},
 		{"profile-read", ScopeProfileRead, true},
 		{"profile-write", ScopeProfileWrite, true},
 		{"admin-settings", ScopeAdminSettings, true},

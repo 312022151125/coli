@@ -43,11 +43,9 @@ MCP-compatible client / Host
 │  ├─ adapter_comment.go → CommentService      │
 │  ├─ adapter_file.go    → FileService         │
 │  ├─ adapter_common.go  → CommonService       │
-│  ├─ adapter_connect.go → ConnectService      │
 │  ├─ adapter_agent.go   → AgentService        │
 │  ├─ adapter_webhook.go → SettingService      │
 │  └─ adapter_dashboard.go → DashboardService  │
-│  （不直连 Repository，强制走 Service 层）      │
 └──────────────────────────────────────────────┘
 ```
 
@@ -66,7 +64,6 @@ MCP-compatible client / Host
 | `adapter_comment.go` | Comment 域：`list_comments`、`create_comment` / `create_integration_comment` tools；`ech0://comments/recent`、`ech0://guide/integration-comment` resources |
 | `adapter_file.go` | File 域：list/get/delete/create_external file tools |
 | `adapter_common.go` | Common 域：heatmap resource |
-| `adapter_connect.go` | Connect 域：list/add/delete connects tools，connect self/info resources |
 | `adapter_agent.go` | Agent 域：get_recent tool（AI 近况摘要） |
 | `adapter_webhook.go` | Webhook 域：list/create/update/delete/test webhook tools |
 | `adapter_dashboard.go` | Dashboard 域：`ech0://stats/visitors` resource（近 7 天 PV/UV，需 admin scope） |

@@ -356,8 +356,7 @@
     "localeSyncFailed": "Failed to sync language preference",
     "themeLight": "Light",
     "themeDark": "Dark",
-    "themeSunny": "Sunny",
-    "githubAction": "GitHub"
+    "themeSunny": "Sunny"
   },
   "homeTop": {
     "searchTitle": "Search",
@@ -446,8 +445,8 @@
     "alreadyLiked": "You already liked this, thanks for the support!",
     "likeSuccess": "Liked successfully!",
     "copied": "Link copied to clipboard!",
-    "shareSuffix": "Shared via Ech0",
-    "sharePanelTitle": "Share this Ech0",
+    "shareSuffix": "Shared via coli.dev",
+    "sharePanelTitle": "Share this post",
     "shareSystem": "System share",
     "shareCopyMarkdown": "Copy as Markdown",
     "shareCopyLink": "Copy link",
@@ -982,11 +981,10 @@
     "back": "back"
   },
   "about": {
-    "linkAriaLabel": "About this Ech0 instance",
+    "linkAriaLabel": "About coli.dev",
     "fieldSource": "Source",
     "viewSource": "View source code",
-    "viewSourceAtCommit": "View source code at commit {commit}",
-    "poweredBy": "A personal timeline on your server—self-hosted, AGPL-3.0, ad-free and platform-free."
+    "viewSourceAtCommit": "View source code at commit {commit}"
   },
   "echoPage": {
     "loadingDetail": "Loading Echo details..."
@@ -1047,7 +1045,7 @@
     "invalidMessage": "Received invalid WebSocket message"
   },
   "copilotSetting": {
-    "title": "Ech0 Copilot"
+    "title": "coli.dev Copilot"
   },
   "embeddingSetting": {
     "title": "Vector Index",

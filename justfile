@@ -15,7 +15,7 @@ VERSION       := `git describe --tags --always 2>/dev/null || echo unknown`
 BUILD_TIME    := `date -u +%Y-%m-%dT%H:%M:%SZ`
 GIT_COMMIT    := `git rev-parse --short HEAD 2>/dev/null || echo unknown`
 
-VERSION_PKG   := "github.com/lin-snow/ech0/internal/version"
+VERSION_PKG   := "github.com/312022151125/coli/internal/version"
 LDFLAGS       := "-X " + VERSION_PKG + ".Commit=" + GIT_COMMIT + " -X " + VERSION_PKG + ".BuildTime=" + BUILD_TIME
 
 # --- Docker (overridable via env: DOCKER_REGISTRY=foo just build-image) ---

@@ -7,11 +7,11 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/charmbracelet/huh"
 	"github.com/312022151125/coli/internal/config"
 	"github.com/312022151125/coli/internal/di"
 	tuiUtil "github.com/312022151125/coli/internal/util/tui"
 	versionPkg "github.com/312022151125/coli/internal/version"
+	"github.com/charmbracelet/huh"
 )
 
 func isWebPortInUse() bool {
@@ -55,28 +55,22 @@ func DoServeWithBlock() {
 
 func DoVersion() {
 	msg := fmt.Sprintf(
-		"Version: v%s\nCommit: %s\nBuild Time: %s\nAuthor: %s\nWebsite: https://ech0.app/\nLicense: %s\nSource: %s\n%s",
+		"Version: v%s\nCommit: %s\nBuild Time: %s\nWebsite: https://coli.dev/\nSource: %s",
 		versionPkg.Version,
 		versionPkg.Commit,
 		versionPkg.BuildTime,
-		versionPkg.Author,
-		versionPkg.License,
 		versionPkg.SourceURL,
-		versionPkg.Copyright(),
 	)
 	if versionPkg.BuildTime == "" {
 		msg = fmt.Sprintf(
-			"Version: v%s\nCommit: %s\nAuthor: %s\nWebsite: https://ech0.app/\nLicense: %s\nSource: %s\n%s",
+			"Version: v%s\nCommit: %s\nWebsite: https://coli.dev/\nSource: %s",
 			versionPkg.Version,
 			versionPkg.Commit,
-			versionPkg.Author,
-			versionPkg.License,
 			versionPkg.SourceURL,
-			versionPkg.Copyright(),
 		)
 	}
 	item := struct{ Title, Msg string }{
-		Title: "📦 Ech0",
+		Title: "📦 coli.dev",
 		Msg:   msg,
 	}
 	tuiUtil.PrintCLIWithBox(item)

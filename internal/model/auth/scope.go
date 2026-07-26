@@ -24,8 +24,6 @@ const (
 	ScopeCommentMod     = "comment:moderate"
 	ScopeFileRead       = "file:read"
 	ScopeFileWrite      = "file:write"
-	ScopeConnectRead    = "connect:read"
-	ScopeConnectWrite   = "connect:write"
 	ScopeProfileRead    = "profile:read"
 	ScopeProfileWrite   = "profile:write"
 	ScopeAdminSettings  = "admin:settings"
@@ -45,8 +43,6 @@ var validScopes = map[string]struct{}{
 	ScopeCommentMod:    {},
 	ScopeFileRead:      {},
 	ScopeFileWrite:     {},
-	ScopeConnectRead:   {},
-	ScopeConnectWrite:  {},
 	ScopeProfileRead:   {},
 	ScopeProfileWrite:  {},
 	ScopeAdminSettings: {},

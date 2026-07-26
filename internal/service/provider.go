@@ -8,7 +8,6 @@ import (
 	authService "github.com/312022151125/coli/internal/service/auth"
 	commentService "github.com/312022151125/coli/internal/service/comment"
 	commonService "github.com/312022151125/coli/internal/service/common"
-	connectService "github.com/312022151125/coli/internal/service/connect"
 	copilotService "github.com/312022151125/coli/internal/service/copilot"
 	dashboardService "github.com/312022151125/coli/internal/service/dashboard"
 	echoService "github.com/312022151125/coli/internal/service/echo"
@@ -51,10 +50,6 @@ var (
 	SettingSet = wire.NewSet(
 		settingService.NewSettingService,
 		wire.Bind(new(settingService.Service), new(*settingService.SettingService)),
-	)
-	ConnectSet = wire.NewSet(
-		connectService.NewConnectService,
-		wire.Bind(new(connectService.Service), new(*connectService.ConnectService)),
 	)
 	DashboardSet = wire.NewSet(
 		dashboardService.NewDashboardService,

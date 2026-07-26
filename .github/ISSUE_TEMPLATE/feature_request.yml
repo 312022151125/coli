@@ -1,5 +1,5 @@
 name: ✨ Feature Request
-description: Propose a new feature or enhancement for Ech0.
+description: Propose a new feature or enhancement for coli.dev.
 title: "✨ [Feature] "
 labels:
   - enhancement
@@ -44,7 +44,6 @@ body:
         - Storage (local / S3)
         - Webhook / Agent / Events
         - Migration / Backup
-        - Hub / Connect
         - Docs
         - Other
     validations:

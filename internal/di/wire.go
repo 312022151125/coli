@@ -158,10 +158,6 @@ var HandlerSet = wire.NewSet(
 	service.SettingSet,
 	handler.SettingSet,
 
-	repository.ConnectSet,
-	service.ConnectSet,
-	handler.ConnectSet,
-
 	service.DashboardSet,
 	handler.DashboardSet,
 

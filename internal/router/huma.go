@@ -103,7 +103,6 @@ func registerOperations(api huma.API, h *handler.Bundle, revoker authService.Tok
 	registerAuth(api, h, revoker)
 	registerCommon(api, h, revoker)
 	registerEcho(api, h, revoker)
-	registerConnect(api, h, revoker)
 	registerUser(api, h, revoker)
 	registerSetting(api, h, revoker)
 	registerFile(api, h, revoker)

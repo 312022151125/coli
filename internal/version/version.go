@@ -2,35 +2,23 @@
 // Copyright (C) 2025-2026 lin-snow
 
 // Package version is the single source of truth for build / release metadata
-// of the Ech0 binary: semantic version, git commit, build time, license,
-// author, repository URL.
+// of the coli.dev binary: semantic version, git commit, build time, and the
+// AGPL corresponding-source offer URL.
 //
 // Const values are source-controlled (bump in code on release).
 // Var values are injected at build time via -ldflags "-X .../version.Commit=...".
 // See Makefile / docker/build.Dockerfile / .github/workflows/release.yml.
 package version
 
-import (
-	"fmt"
-	"time"
-)
+import "fmt"
 
 const (
 	// Version is the current semantic version. Bump on release.
 	Version = "5.4.6"
 
-	// License is the SPDX identifier of the project license.
-	License = "AGPL-3.0-or-later"
-
-	// Author is the primary author / copyright holder.
-	Author = "L1nSn0w"
-
-	// SourceURL is the first-party corresponding source page URL.
+	// SourceURL is the first-party corresponding source page URL, required by
+	// AGPL-3.0 §13 for network-deployed use.
 	SourceURL = "https://coli.dev/source"
-
-	// StartYear is the project inception year, used to render copyright ranges.
-	// 首个公开 commit 是 2025-03-21；以此为版权起始年。
-	StartYear = 2025
 )
 
 // Commit is the short git commit hash, injected at build time.
@@ -47,8 +35,6 @@ type Info struct {
 	Version   string `json:"version"`
 	Commit    string `json:"commit"`
 	BuildTime string `json:"build_time"`
-	License   string `json:"license"`
-	Author    string `json:"author"`
 	SourceURL string `json:"source_url"`
 }
 
@@ -58,19 +44,12 @@ func Get() Info {
 		Version:   Version,
 		Commit:    Commit,
 		BuildTime: BuildTime,
-		License:   License,
-		Author:    Author,
 		SourceURL: SourceURL,
 	}
 }
 
-// Copyright returns the human-readable copyright line, e.g.
-// "Copyright (C) 2025-2026 lin-snow".
-// The end year is the current UTC year, or StartYear if the clock is broken.
-func Copyright() string {
-	end := time.Now().UTC().Year()
-	if end <= StartYear {
-		return fmt.Sprintf("Copyright (C) %d %s", StartYear, Author)
-	}
-	return fmt.Sprintf("Copyright (C) %d-%d %s", StartYear, end, Author)
+// String returns a human-readable one-line summary, e.g.
+// "coli.dev v5.4.6 (commit abc123, built 2026-01-01T00:00:00Z)".
+func (i Info) String() string {
+	return fmt.Sprintf("coli.dev v%s (commit %s, built %s)", i.Version, i.Commit, i.BuildTime)
 }

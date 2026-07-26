@@ -35,13 +35,11 @@
               <TheEchos compact :scroll-target="mainColumn" />
             </template>
 
-            <div v-else-if="activeTab === 'status'" class="home-content-block home-status-widgets">
+            <div v-if="activeTab === 'status'" class="home-content-block home-status-widgets">
               <TheHeatMap />
               <TheRecentCard v-if="AgentSetting.enable" />
-              <TheConnectWidget />
               <TheCommentWidget />
             </div>
-            <HubPage v-else embedded :scroll-target="mainColumn" />
           </div>
         </div>
 
@@ -53,14 +51,9 @@
               @open-palette="paletteOpen = true"
               @open-chat="chatLauncherOpen = true"
             />
-            <a
-              href="https://github.com/lin-snow/Ech0"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="home-aside__version"
-            >
+            <span class="home-aside__version">
               version: {{ settingStore.hello?.version || '--' }}
-            </a>
+            </span>
           </div>
         </aside>
       </div>
@@ -84,7 +77,6 @@ import { useRoute } from 'vue-router'
 import { storeToRefs } from 'pinia'
 import {
   TheCommentWidget,
-  TheConnectWidget,
   TheHeatMap,
   TheRecentCard,
 } from '@/components/advanced/widget'
@@ -92,7 +84,6 @@ import {
 const route = useRoute()
 const TheEditor = defineAsyncComponent(() => import('./TheEditor.vue'))
 const TheTagsManager = defineAsyncComponent(() => import('./TheEditor/TheTagsManager.vue'))
-const HubPage = defineAsyncComponent(() => import('@/views/hub/modules/HubPage.vue'))
 
 const userStore = useUserStore()
 const settingStore = useSettingStore()
@@ -101,11 +92,10 @@ const { isLogin } = storeToRefs(userStore)
 const { AgentSetting } = storeToRefs(settingStore)
 const { searchingMode, isFilteringMode } = storeToRefs(echoStore)
 const mobileSearchOpen = ref(false)
-const activeTab = computed<'home' | 'publish' | 'status' | 'tags' | 'hub'>(() => {
+const activeTab = computed<'home' | 'publish' | 'status' | 'tags'>(() => {
   if (route.query.tab === 'publish' && isLogin.value) return 'publish'
   if (route.query.tab === 'status') return 'status'
   if (route.query.tab === 'tags') return 'tags'
-  if (route.query.tab === 'hub') return 'hub'
   return 'home'
 })
 const shouldHideBannerOnMobile = computed(

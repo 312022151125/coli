@@ -11,13 +11,13 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/gin-gonic/gin"
 	res "github.com/312022151125/coli/internal/handler/response"
 	commonModel "github.com/312022151125/coli/internal/model/common"
 	service "github.com/312022151125/coli/internal/service/common"
 	errorUtil "github.com/312022151125/coli/internal/util/err"
 	timezoneUtil "github.com/312022151125/coli/internal/util/timezone"
 	versionPkg "github.com/312022151125/coli/internal/version"
+	"github.com/gin-gonic/gin"
 )
 
 type (
@@ -31,8 +31,7 @@ type (
 
 	// HelloResponse 扁平化 version 信息到顶层，与前端 About 页契约一致。
 	HelloResponse struct {
-		Hello     string `json:"hello"`
-		Copyright string `json:"copyright"`
+		Hello string `json:"hello"`
 		versionPkg.Info
 	}
 )
@@ -99,9 +98,8 @@ func (commonHandler *CommonHandler) GetRss(ctx *gin.Context) {
 
 func (commonHandler *CommonHandler) HelloEch0(ctx context.Context, _ *HelloInput) (HelloOutput, error) {
 	hello := HelloResponse{
-		Hello:     "Hello! 👋",
-		Copyright: versionPkg.Copyright(),
-		Info:      versionPkg.Get(),
+		Hello: "Hello! 👋",
+		Info:  versionPkg.Get(),
 	}
 	return commonModel.OK(hello, commonModel.GET_HELLO_SUCCESS), nil
 }

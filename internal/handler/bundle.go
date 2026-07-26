@@ -7,7 +7,6 @@ import (
 	authHandler "github.com/312022151125/coli/internal/handler/auth"
 	commentHandler "github.com/312022151125/coli/internal/handler/comment"
 	commonHandler "github.com/312022151125/coli/internal/handler/common"
-	connectHandler "github.com/312022151125/coli/internal/handler/connect"
 	copilotHandler "github.com/312022151125/coli/internal/handler/copilot"
 	dashboardHandler "github.com/312022151125/coli/internal/handler/dashboard"
 	echoHandler "github.com/312022151125/coli/internal/handler/echo"
@@ -31,7 +30,6 @@ type Bundle struct {
 	InitHandler      *initHandler.InitHandler
 	CommonHandler    *commonHandler.CommonHandler
 	SettingHandler   *settingHandler.SettingHandler
-	ConnectHandler   *connectHandler.ConnectHandler
 	MigrationHandler *migratorHandler.MigrationHandler
 	DashboardHandler *dashboardHandler.DashboardHandler
 	CopilotHandler   *copilotHandler.CopilotHandler
@@ -49,7 +47,6 @@ func NewBundle(
 	initHandler *initHandler.InitHandler,
 	commonHandler *commonHandler.CommonHandler,
 	settingHandler *settingHandler.SettingHandler,
-	connectHandler *connectHandler.ConnectHandler,
 	migratorHandler *migratorHandler.MigrationHandler,
 	dashboardHandler *dashboardHandler.DashboardHandler,
 	copilotHandler *copilotHandler.CopilotHandler,
@@ -66,7 +63,6 @@ func NewBundle(
 		InitHandler:      initHandler,
 		CommonHandler:    commonHandler,
 		SettingHandler:   settingHandler,
-		ConnectHandler:   connectHandler,
 		MigrationHandler: migratorHandler,
 		DashboardHandler: dashboardHandler,
 		CopilotHandler:   copilotHandler,

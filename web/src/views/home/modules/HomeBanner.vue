@@ -8,13 +8,6 @@
     <div class="home-banner__meta">
       <RouterLink
         :to="{ name: 'about' }"
-        class="home-banner__powered"
-        :aria-label="t('about.linkAriaLabel')"
-      >
-        Powered by Ech0
-      </RouterLink>
-      <RouterLink
-        :to="{ name: 'about' }"
         class="home-banner__about"
         :aria-label="t('about.linkAriaLabel')"
         :title="t('about.linkAriaLabel')"
@@ -75,22 +68,6 @@ const { t } = useI18n()
   font-size: 0.9375rem;
   line-height: 1.55;
   color: var(--color-text-secondary);
-}
-
-.home-banner__powered {
-  margin: 0;
-  font-family: var(--font-family-display);
-  font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 1.35;
-  color: var(--color-text-secondary);
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.15s ease;
-}
-
-.home-banner__powered:hover {
-  color: var(--color-text-primary);
 }
 
 .home-banner__about {

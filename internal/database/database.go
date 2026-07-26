@@ -16,7 +16,6 @@ import (
 	authModel "github.com/312022151125/coli/internal/model/auth"
 	commentModel "github.com/312022151125/coli/internal/model/comment"
 	commonModel "github.com/312022151125/coli/internal/model/common"
-	connectModel "github.com/312022151125/coli/internal/model/connect"
 	echoModel "github.com/312022151125/coli/internal/model/echo"
 	embeddingModel "github.com/312022151125/coli/internal/model/embedding"
 	fileModel "github.com/312022151125/coli/internal/model/file"
@@ -178,7 +177,6 @@ func MigrateDB() error {
 		&fileModel.EchoFile{},
 		&fileModel.TempFile{},
 		&commonModel.KeyValue{},
-		&connectModel.Connected{},
 		&echoModel.Tag{},
 		&echoModel.EchoTag{},
 		&commentModel.Comment{},

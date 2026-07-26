@@ -23,10 +23,7 @@ declare namespace App {
         version: string
         commit: string
         build_time: string
-        license: string
-        author: string
         source_url: string
-        copyright: string
       }
       type ParamsByPagination = EchoQueryParams
       type EchoQueryParams = {
@@ -165,12 +162,9 @@ declare namespace App {
       }
       type HelloEch0 = {
         hello: string
-        copyright: string
         version: string
         commit: string
         build_time: string
-        license: string
-        author: string
         source_url: string
       }
 

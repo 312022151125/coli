@@ -8,8 +8,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/charmbracelet/lipgloss"
 	versionPkg "github.com/312022151125/coli/internal/version"
+	"github.com/charmbracelet/lipgloss"
 )
 
 const (
@@ -65,7 +65,6 @@ func PrintGreetings(port string) {
 			"📦 "+titleStyle.Render("Version")+": "+highlight.Render(versionPkg.Version),
 		),
 		infoStyle.Render("🎈 "+titleStyle.Render("Port")+": "+highlight.Render(port)),
-		infoStyle.Render("🧙 "+titleStyle.Render("Author")+": "+highlight.Render(versionPkg.Author)),
 		infoStyle.Render(
 			"🌐 "+titleStyle.Render("Website")+": "+highlight.Render("https://coli.dev/"),
 		),

@@ -126,11 +126,6 @@ const (
 	NO_PERMISSION_BINDING_CUSTOM = "没有权限绑定自定义 OAuth2 账号"
 )
 
-// Connect 错误相关常量
-const (
-	INVALID_CONNECTION_URL = "connect url不能为空"
-	CONNECT_HAS_EXISTS     = "connect 已经存在"
-)
 
 // Setting 错误相关常量
 const (

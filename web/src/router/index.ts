@@ -140,15 +140,6 @@ const router = createRouter({
       },
     },
     {
-      path: '/hub',
-      name: 'hub',
-      component: () => import('../views/hub/HubView.vue'),
-      meta: {
-        title: 'Hub',
-        description: 'Discover and explore curated content in Ech0 hub.',
-      },
-    },
-    {
       path: '/chat',
       name: 'chat',
       component: () => import('../views/chat/ChatView.vue'),

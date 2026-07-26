@@ -291,10 +291,10 @@ func defaultConfig() *AppConfig {
 			RateLimitPerSec: 20,
 		},
 		Setting: SettingConfig{
-			SiteTitle:     "Personal Timeline",
+			SiteTitle:     "coli.dev",
 			ServerLogo:    "/timeline-mark.svg",
-			Servername:    "Personal Timeline",
-			Serverurl:     "https://example.com",
+			Servername:    "coli.dev",
+			Serverurl:     "https://coli.dev/",
 			AllowRegister: true,
 			Icpnumber:     "",
 			FooterContent: "",

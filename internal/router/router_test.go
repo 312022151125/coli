@@ -16,7 +16,6 @@ import (
 	authHandler "github.com/312022151125/coli/internal/handler/auth"
 	commentHandler "github.com/312022151125/coli/internal/handler/comment"
 	commonHandler "github.com/312022151125/coli/internal/handler/common"
-	connectHandler "github.com/312022151125/coli/internal/handler/connect"
 	copilotHandler "github.com/312022151125/coli/internal/handler/copilot"
 	dashboardHandler "github.com/312022151125/coli/internal/handler/dashboard"
 	echoHandler "github.com/312022151125/coli/internal/handler/echo"
@@ -55,9 +54,6 @@ func TestSetupRouter_RegistersKeyRoutes(t *testing.T) {
 		{method: http.MethodGet, path: "/api/init/status"},
 		{method: http.MethodGet, path: "/api/settings"},
 		{method: http.MethodGet, path: "/api/agent/recent"},
-		{method: http.MethodPost, path: "/api/connects"},
-		{method: http.MethodDelete, path: "/api/connects/:id"},
-		{method: http.MethodGet, path: "/api/connects/health"},
 		{method: http.MethodGet, path: "/api/system/logs"},
 		{method: http.MethodGet, path: "/api/system/logs/stream"},
 		{method: http.MethodGet, path: "/ws/system/logs"},
@@ -347,12 +343,11 @@ func buildTestHandlers() *handler.Bundle {
 		initHandler.NewInitHandler(nil),
 		commonHandler.NewCommonHandler(nil),
 		settingHandler.NewSettingHandler(nil),
-		connectHandler.NewConnectHandler(nil),
 		migratorHandler.NewMigrationHandler(nil),
 		dashboardHandler.NewDashboardHandler(nil),
 		copilotHandler.NewCopilotHandler(nil, nil),
 		embeddingHandler.NewEmbeddingHandler(nil),
-		mcp.NewHandler(nil, nil, nil, nil, nil, nil, nil, nil, nil),
+		mcp.NewHandler(nil, nil, nil, nil, nil, nil, nil, nil),
 	)
 }
 

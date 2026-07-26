@@ -12,12 +12,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gin-gonic/gin"
 	commonHandler "github.com/312022151125/coli/internal/handler/common"
 	commonModel "github.com/312022151125/coli/internal/model/common"
 	"github.com/312022151125/coli/internal/test/helpers"
 	commonmock "github.com/312022151125/coli/internal/test/mocks/commonmock"
 	versionPkg "github.com/312022151125/coli/internal/version"
+	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
@@ -80,12 +80,10 @@ func TestHelloEch0(t *testing.T) {
 	require.NoError(t, err)
 	assert.Equal(t, commonModel.DEFAULT_SUCCESS_CODE, out.Code)
 	assert.Equal(t, commonModel.GET_HELLO_SUCCESS, out.Message)
-	assert.Equal(t, "Hello, Ech0! 👋", out.Data.Hello)
-	assert.Equal(t, versionPkg.Copyright(), out.Data.Copyright)
+	assert.Equal(t, "Hello! 👋", out.Data.Hello)
 	// version.Info 被扁平化到顶层，应与 version.Get 一致。
 	assert.Equal(t, versionPkg.Version, out.Data.Version)
 	assert.Equal(t, versionPkg.SourceURL, out.Data.SourceURL)
-	assert.Equal(t, versionPkg.License, out.Data.License)
 }
 
 func TestGetWebsiteTitle(t *testing.T) {

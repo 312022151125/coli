@@ -5,11 +5,10 @@ import { usePreferredReducedMotion, useTransition } from '@vueuse/core'
 import { computed, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { fetchGetEchosByPage, fetchGetTodayEchos } from '@/service/api'
-import { useConnectStore, useSettingStore } from '@/stores'
+import { useSettingStore } from '@/stores'
 import { theToast } from '@/utils/toast'
 import { TheActivityLog, TheVisitorStatsWidget } from '@/components/advanced/widget'
 import Box from '@/components/icons/box.vue'
-import ConnectedIcon from '@/components/icons/connected-icon.vue'
 import DateIcon from '@/components/icons/date-icon.vue'
 import TotalIcon from '@/components/icons/total.vue'
 
@@ -21,28 +20,22 @@ type StatCard = {
 }
 
 const settingStore = useSettingStore()
-const connectStore = useConnectStore()
 const { t, locale } = useI18n()
 
 const loading = ref(true)
 const echoTotal = ref<number | null>(null)
 const todayEchoCount = ref<number | null>(null)
-const connectCount = ref<number | null>(null)
 
 const prefersReducedMotion = usePreferredReducedMotion()
 const statAnimDuration = computed(() => (prefersReducedMotion.value === 'reduce' ? 0 : 820))
 
 const echoAnimTarget = ref(0)
 const todayAnimTarget = ref(0)
-const connectAnimTarget = ref(0)
 
 const echoAnimated = useTransition(echoAnimTarget, {
   duration: statAnimDuration,
 })
 const todayAnimated = useTransition(todayAnimTarget, {
-  duration: statAnimDuration,
-})
-const connectAnimated = useTransition(connectAnimTarget, {
   duration: statAnimDuration,
 })
 
@@ -55,11 +48,9 @@ const formatAnimatedMetric = (key: string) => {
   if (loading.value) return '--'
   if (key === 'echos' && echoTotal.value === null) return '--'
   if (key === 'today-echo' && todayEchoCount.value === null) return '--'
-  if (key === 'connect' && connectCount.value === null) return '--'
   let n = 0
   if (key === 'echos') n = Math.round(echoAnimated.value)
   else if (key === 'today-echo') n = Math.round(todayAnimated.value)
-  else if (key === 'connect') n = Math.round(connectAnimated.value)
   return new Intl.NumberFormat(locale.value).format(n)
 }
 
@@ -75,12 +66,6 @@ const dashboardStats = computed<StatCard[]>(() => [
     label: String(t('dashboard.todayEchoCount')),
     value: formatMetric(todayEchoCount.value),
     icon: 'today',
-  },
-  {
-    key: 'connect',
-    label: String(t('dashboard.connectedNodes')),
-    value: formatMetric(connectCount.value),
-    icon: 'connect',
   },
   {
     key: 'version',
@@ -107,7 +92,6 @@ const loadDashboardStats = async () => {
   loading.value = true
   const [echoRes, , todayRes] = await Promise.allSettled([
     fetchGetEchosByPage({ page: 1, pageSize: 1, search: '' }),
-    connectStore.getConnect(),
     fetchGetTodayEchos(),
   ])
 
@@ -122,11 +106,8 @@ const loadDashboardStats = async () => {
     todayAnimTarget.value = todayEchoCount.value
   }
 
-  connectCount.value = connectStore.connects.length
-  connectAnimTarget.value = connectCount.value
   loading.value = false
 }
-
 
 const handleStatCardClick = (_key: string) => {}
 
@@ -154,10 +135,6 @@ onMounted(() => {
         <div class="stat-icon-wrap">
           <TotalIcon v-if="item.icon === 'echos'" class="stat-card-icon stat-card-icon--fill" />
           <DateIcon v-else-if="item.icon === 'today'" class="stat-card-icon stat-card-icon--fill" />
-          <ConnectedIcon
-            v-else-if="item.icon === 'connect'"
-            class="stat-card-icon stat-card-icon--stroke"
-          />
           <Box v-else-if="item.icon === 'version'" class="stat-card-icon stat-card-icon--stroke" />
         </div>
         <div class="stat-body">

@@ -10,7 +10,6 @@ import (
 	authRepository "github.com/312022151125/coli/internal/repository/auth"
 	commentRepository "github.com/312022151125/coli/internal/repository/comment"
 	commonRepository "github.com/312022151125/coli/internal/repository/common"
-	connectRepository "github.com/312022151125/coli/internal/repository/connect"
 	echoRepository "github.com/312022151125/coli/internal/repository/echo"
 	embeddingRepository "github.com/312022151125/coli/internal/repository/embedding"
 	fileRepository "github.com/312022151125/coli/internal/repository/file"
@@ -24,7 +23,6 @@ import (
 	authService "github.com/312022151125/coli/internal/service/auth"
 	commentService "github.com/312022151125/coli/internal/service/comment"
 	commonService "github.com/312022151125/coli/internal/service/common"
-	connectService "github.com/312022151125/coli/internal/service/connect"
 	echoService "github.com/312022151125/coli/internal/service/echo"
 	embeddingService "github.com/312022151125/coli/internal/service/embedding"
 	fileService "github.com/312022151125/coli/internal/service/file"
@@ -51,7 +49,6 @@ var (
 	EchoSet = wire.NewSet(
 		echoRepository.NewEchoRepository,
 		wire.Bind(new(echoService.Repository), new(*echoRepository.EchoRepository)),
-		wire.Bind(new(connectService.EchoRepository), new(*echoRepository.EchoRepository)),
 		wire.Bind(new(embeddingService.EchoReader), new(*echoRepository.EchoRepository)),
 	)
 	EmbeddingSet = wire.NewSet(
@@ -86,10 +83,6 @@ var (
 	SettingSet = wire.NewSet(
 		settingRepository.NewSettingRepository,
 		wire.Bind(new(settingService.SettingRepository), new(*settingRepository.SettingRepository)),
-	)
-	ConnectSet = wire.NewSet(
-		connectRepository.NewConnectRepository,
-		wire.Bind(new(connectService.Repository), new(*connectRepository.ConnectRepository)),
 	)
 	WebhookSet = wire.NewSet(
 		webhookRepository.NewWebhookRepository,

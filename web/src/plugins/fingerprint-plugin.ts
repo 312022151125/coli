@@ -4,10 +4,10 @@
 import type { Plugin } from 'vite'
 
 export function fingerprintPlugin(): Plugin {
-  const banner = `/*! Powered by Ech0 — https://github.com/lin-snow/Ech0 | AGPL-3.0-or-later */`
+  const banner = `/*! coli.dev | AGPL-3.0-or-later */`
 
   return {
-    name: 'ech0-fingerprint',
+    name: 'coli-fingerprint',
     apply: 'build',
     generateBundle(_, bundle) {
       for (const chunk of Object.values(bundle)) {

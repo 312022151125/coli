@@ -29,7 +29,7 @@
         </span>
 
         <div class="about-colophon__body">
-          <h1 class="about-colophon__name">Ech0</h1>
+          <h1 class="about-colophon__name">coli.dev</h1>
           <p class="about-colophon__build">
             v{{ version
             }}<template v-if="hasCommit">
@@ -57,19 +57,7 @@
             >
               {{ t('about.fieldSource') }}<span class="about-link__ext" aria-hidden="true">↗</span>
             </a>
-            <span class="about-colophon__sep" aria-hidden="true">·</span>
-            <a
-              :href="`${sourceURL}#license`"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="about-link"
-            >
-              {{ license }}<span class="about-link__ext" aria-hidden="true">↗</span>
-            </a>
           </p>
-
-          <p class="about-colophon__copyright">{{ copyright }}</p>
-          <p class="about-colophon__powered">{{ t('about.poweredBy') }}</p>
         </div>
       </div>
     </div>
@@ -121,21 +109,10 @@ const onPointerUp = (e: PointerEvent) => {
   }
 }
 
-const FALLBACK_REPO = 'https://github.com/lin-snow/Ech0'
-const FALLBACK_AUTHOR = 'L1nSn0w'
-const FALLBACK_LICENSE = 'AGPL-3.0-or-later'
-
 const version = computed(() => settingStore.hello?.version || '--')
 const commit = computed(() => settingStore.hello?.commit || '')
 const hasCommit = computed(() => commit.value !== '' && commit.value !== 'unknown')
-const author = computed(() => settingStore.hello?.author || FALLBACK_AUTHOR)
-const license = computed(() => settingStore.hello?.license || FALLBACK_LICENSE)
 const sourceURL = computed(() => settingStore.hello?.source_url || 'https://coli.dev/source')
-
-const copyright = computed(
-  () =>
-    settingStore.hello?.copyright || `Copyright (C) ${new Date().getFullYear()} ${author.value}`,
-)
 
 const commitURL = computed(() => sourceURL.value)
 </script>
@@ -301,19 +278,6 @@ const commitURL = computed(() => sourceURL.value)
 
 .about-link:hover .about-link__ext {
   color: var(--color-accent);
-}
-
-.about-colophon__copyright {
-  margin: 1.75rem 0 0;
-  font-size: 0.75rem;
-  line-height: 1.6;
-  color: var(--color-text-muted);
-}
-
-.about-colophon__powered {
-  margin: 0.3rem 0 0;
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
 }
 
 @media (width <= 480px) {

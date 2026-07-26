@@ -3,6 +3,7 @@
 
 package mcp
 
+
 import (
 	"encoding/json"
 	"fmt"
@@ -10,7 +11,6 @@ import (
 	echoModel "github.com/312022151125/coli/internal/model/echo"
 	commentService "github.com/312022151125/coli/internal/service/comment"
 	commonService "github.com/312022151125/coli/internal/service/common"
-	connectService "github.com/312022151125/coli/internal/service/connect"
 	copilotService "github.com/312022151125/coli/internal/service/copilot"
 	dashboardService "github.com/312022151125/coli/internal/service/dashboard"
 	echoService "github.com/312022151125/coli/internal/service/echo"
@@ -25,7 +25,6 @@ type Adapter struct {
 	commentSvc   commentService.Service
 	fileSvc      fileService.Service
 	commonSvc    commonService.Service
-	connectSvc   connectService.Service
 	agentSvc     copilotService.SummaryService
 	settingSvc   settingService.Service
 	dashboardSvc dashboardService.Service
@@ -37,7 +36,6 @@ func NewAdapter(
 	commentSvc commentService.Service,
 	fileSvc fileService.Service,
 	commonSvc commonService.Service,
-	connectSvc connectService.Service,
 	agentSvc copilotService.SummaryService,
 	settingSvc settingService.Service,
 	dashboardSvc dashboardService.Service,
@@ -48,7 +46,6 @@ func NewAdapter(
 		commentSvc:   commentSvc,
 		fileSvc:      fileSvc,
 		commonSvc:    commonSvc,
-		connectSvc:   connectSvc,
 		agentSvc:     agentSvc,
 		settingSvc:   settingSvc,
 		dashboardSvc: dashboardSvc,
@@ -64,8 +61,6 @@ func (a *Adapter) RegisterAll(reg *Registry) {
 	a.registerFileTools(reg)
 	a.registerFileResources(reg)
 	a.registerCommonResources(reg)
-	a.registerConnectTools(reg)
-	a.registerConnectResources(reg)
 	a.registerAgentTools(reg)
 	a.registerWebhookTools(reg)
 	a.registerDashboardResources(reg)

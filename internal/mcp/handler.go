@@ -7,7 +7,6 @@ import (
 	"github.com/gin-gonic/gin"
 	commentService "github.com/312022151125/coli/internal/service/comment"
 	commonService "github.com/312022151125/coli/internal/service/common"
-	connectService "github.com/312022151125/coli/internal/service/connect"
 	copilotService "github.com/312022151125/coli/internal/service/copilot"
 	dashboardService "github.com/312022151125/coli/internal/service/dashboard"
 	echoService "github.com/312022151125/coli/internal/service/echo"
@@ -26,13 +25,12 @@ func NewHandler(
 	commentSvc commentService.Service,
 	fileSvc fileService.Service,
 	commonSvc commonService.Service,
-	connectSvc connectService.Service,
 	agentSvc copilotService.SummaryService,
 	settingSvc settingService.Service,
 	dashboardSvc dashboardService.Service,
 ) *Handler {
 	registry := NewRegistry()
-	adapter := NewAdapter(echoSvc, userSvc, commentSvc, fileSvc, commonSvc, connectSvc, agentSvc, settingSvc, dashboardSvc)
+	adapter := NewAdapter(echoSvc, userSvc, commentSvc, fileSvc, commonSvc, agentSvc, settingSvc, dashboardSvc)
 	adapter.RegisterAll(registry)
 	return &Handler{server: NewServer(registry)}
 }
