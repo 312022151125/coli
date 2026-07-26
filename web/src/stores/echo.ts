@@ -41,6 +41,9 @@ export const useEchoStore = defineStore('echoStore', () => {
   const selectedTagIds = ref<string[]>([])
   const isTagSelectionActive = computed(() => selectedTagIds.value.length > 0)
 
+  const selectedKinds = ref<App.Api.Ech0.EchoKind[]>([])
+  const isKindSelectionActive = computed(() => selectedKinds.value.length > 0)
+
   // ─────────────────────────────────────────────
   //  watchers
   // ─────────────────────────────────────────────
@@ -69,6 +72,9 @@ export const useEchoStore = defineStore('echoStore', () => {
     if (tagIds.size > 0) {
       params.tagIds = Array.from(tagIds)
     }
+    if (selectedKinds.value.length > 0) {
+      params.kinds = [...selectedKinds.value]
+    }
     if (dateFrom.value !== null) {
       params.dateFrom = dateFrom.value
     }
@@ -87,6 +93,10 @@ export const useEchoStore = defineStore('echoStore', () => {
     selectedTagIds.value = []
   }
 
+
+  const resetSelectedKinds = () => {
+    selectedKinds.value = []
+  }
   const removeSelectedTag = (tagId: string) => {
     selectedTagIds.value = selectedTagIds.value.filter((id) => id !== tagId)
     if (filteredTag.value?.id === tagId && isFilteringMode.value) {
@@ -268,6 +278,8 @@ export const useEchoStore = defineStore('echoStore', () => {
     selectedTagIds,
     isTagSelectionActive,
 
+    selectedKinds,
+    isKindSelectionActive,
     // actions
     fetchCurrentPage,
     goToPage,
@@ -280,6 +292,7 @@ export const useEchoStore = defineStore('echoStore', () => {
     updateEcho,
     updateLikeCount,
     prefetchEcho,
+    resetSelectedKinds,
     getTags,
     ensureTagsLoaded,
     createTag,

@@ -25,7 +25,7 @@ export type TweetToAdd = {
 
 export type EditorDraft = {
   savedAt: number
-  echoToAdd: Pick<App.Api.Ech0.EchoToAdd, 'content' | 'private' | 'layout' | 'extension'>
+  echoToAdd: Pick<App.Api.Ech0.EchoToAdd, 'content' | 'kind' | 'private' | 'layout' | 'extension'>
   filesToAdd: App.Api.Ech0.FileToAdd[]
   websiteToAdd: WebsiteToAdd
   videoURL: string

@@ -56,6 +56,21 @@
         </div>
       </div>
 
+      <div class="home-filter__kind-row" :aria-label="t('homeTop.kindFilter')">
+        <button
+          v-for="kind in Object.values(EchoKind)"
+          :key="kind"
+          type="button"
+          class="home-filter__kind-chip"
+          :class="{ 'home-filter__kind-chip--active': selectedKinds.includes(kind) }"
+          :aria-pressed="selectedKinds.includes(kind)"
+          @click="handleToggleKind(kind)"
+        >
+          {{ t(`editor.kind.${kind}`) }}
+        </button>
+      </div>
+
+
       <div v-if="isDateRangeActive || selectedTagChips.length > 0" class="flex flex-wrap gap-1.5">
         <div
           v-if="isDateRangeActive"
@@ -90,6 +105,7 @@ import { storeToRefs } from 'pinia'
 import { computed, onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Close from '@/components/icons/close.vue'
+import { EchoKind } from '@/enums/enums'
 import Filter from '@/components/icons/filter.vue'
 import Chat from '@/components/icons/chat.vue'
 
@@ -128,10 +144,10 @@ const {
   dateTo,
   isDateRangeActive,
   selectedTagIds,
+  selectedKinds,
   tagList,
 } = storeToRefs(echoStore)
 const { t } = useI18n()
-
 const searchContent = ref<string>(searchValue.value)
 
 const isMac =
@@ -191,6 +207,12 @@ watch(searchValue, (value) => {
   }
 })
 
+const handleToggleKind = (kind: App.Api.Ech0.EchoKind) => {
+  echoStore.selectedKinds = selectedKinds.value.includes(kind)
+    ? selectedKinds.value.filter((item) => item !== kind)
+    : [...selectedKinds.value, kind]
+  refreshEchos()
+}
 // 有 selectedTagIds 时确保 tag 元数据已载入（用于显示 chip 名字）
 onMounted(() => {
   if (selectedTagIds.value.length > 0) {
@@ -270,6 +292,28 @@ watch(selectedTagIds, (ids) => {
     border-color 0.15s ease,
     background 0.15s ease,
     transform 0.08s ease;
+}
+
+.home-filter__kind-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.home-filter__kind-chip {
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.25rem 0.55rem;
+  color: var(--color-text-muted);
+  background: transparent;
+  font-size: 0.72rem;
+  cursor: pointer;
+}
+
+.home-filter__kind-chip--active {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
 }
 
 .home-filter__kbd-hint:hover {

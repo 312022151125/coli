@@ -7,6 +7,8 @@
     </div>
 
     <div class="echo-meta-line">
+      <span class="echo-meta-kind">{{ kindLabel }}</span>
+      <span class="echo-meta-dot" aria-hidden="true">·</span>
       <time class="echo-meta-item" :datetime="String(props.echo.created_at)">
         {{ formatDateTime(props.echo.created_at) }}
       </time>
@@ -14,6 +16,7 @@
       <span class="echo-meta-item">
         {{ t('echoDetail.metaWordCountValue', { count: wordCount }) }}
       </span>
+
       <span v-if="props.echo.private" class="echo-meta-dot" aria-hidden="true">·</span>
       <span v-if="props.echo.private" class="echo-meta-item echo-meta-item--lock">
         <Lock class="w-3 h-3" />
@@ -47,6 +50,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { EchoKind } from '@/enums/enums'
 import Lock from '@/components/icons/lock.vue'
 import GrayLike from '@/components/icons/graylike.vue'
 import TheShareEchoPanel from '@/components/advanced/echo/cards/TheShareEchoPanel.vue'
@@ -62,12 +66,26 @@ const props = defineProps<{
   echo: App.Api.Ech0.Echo
 }>()
 
+const wordCount = computed(() => countWords(props.echo.content))
+const tags = computed(() => props.echo.tags ?? [])
+
 const emit = defineEmits<{
   (e: 'updateLikeCount', echoId: string): void
 }>()
 
-const wordCount = computed(() => countWords(props.echo.content))
-const tags = computed(() => props.echo.tags ?? [])
+const kindLabel = computed(() => {
+  const rawKind = props.echo.kind || EchoKind.NOTE
+  const kind = (Object.values(EchoKind) as string[]).includes(rawKind)
+    ? (rawKind as EchoKind)
+    : EchoKind.NOTE
+  const labels: Record<EchoKind, string> = {
+    [EchoKind.NOTE]: t('editor.kind.note'),
+    [EchoKind.PROJECT]: t('editor.kind.project'),
+    [EchoKind.STARTUP]: t('editor.kind.startup'),
+    [EchoKind.IDEA]: t('editor.kind.idea'),
+  }
+  return labels[kind] || t('editor.kind.note')
+})
 
 const isLikeAnimating = ref(false)
 
@@ -124,6 +142,14 @@ const handleLikeEcho = (echoId: string) => {
 
 .echo-meta-item--lock {
   color: var(--color-text-secondary);
+}
+
+.echo-meta-kind {
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.08rem 0.35rem;
+  color: var(--color-accent);
+  font-size: 0.68rem;
 }
 
 .echo-meta-dot {

@@ -19,6 +19,14 @@ export enum ExtensionType {
   TWEET = 'TWEET',
 }
 
+// Echo categories
+export enum EchoKind {
+  NOTE = 'note',
+  PROJECT = 'project',
+  STARTUP = 'startup',
+  IDEA = 'idea',
+}
+
 // 图片布局
 export enum ImageLayout {
   WATERFALL = 'waterfall', // 瀑布流布局

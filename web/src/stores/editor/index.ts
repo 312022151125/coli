@@ -5,7 +5,7 @@ import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
 import { theToast } from '@/utils/toast'
 import { fetchAddEcho, fetchUpdateEcho } from '@/service/api'
-import { Mode, ExtensionType, ImageLayout, VideoLayout, AudioLayout } from '@/enums/enums'
+import { Mode, ExtensionType, EchoKind, ImageLayout, VideoLayout, AudioLayout } from '@/enums/enums'
 import { FILE_CATEGORY, FILE_STORAGE_TYPE } from '@/constants/file'
 import { useEchoStore } from '@/stores'
 import { localStg } from '@/utils/storage'
@@ -37,6 +37,7 @@ export const useEditorStore = defineStore('editorStore', () => {
     echo_files: [],
     private: false,
     layout: ImageLayout.WATERFALL,
+    kind: EchoKind.NOTE,
     extension: null,
   })
   const tagToAdd = ref<string[]>([])
@@ -73,6 +74,7 @@ export const useEditorStore = defineStore('editorStore', () => {
   const resetHomeTimelineState = () => {
     echoStore.searchValue = ''
     echoStore.filteredTag = null
+    echoStore.resetSelectedKinds()
     echoStore.isFilteringMode = false
     if (typeof window !== 'undefined') {
       sessionStorage.removeItem(HOME_TIMELINE_SCROLL_KEY)
@@ -110,6 +112,7 @@ export const useEditorStore = defineStore('editorStore', () => {
       echo_files: [],
       private: false,
       layout: ImageLayout.WATERFALL,
+      kind: EchoKind.NOTE,
       extension: null,
       tags: [],
     }
@@ -253,6 +256,7 @@ export const useEditorStore = defineStore('editorStore', () => {
         echoStore.echoToUpdate.content = echoToAdd.value.content
         echoStore.echoToUpdate.private = echoToAdd.value.private
         echoStore.echoToUpdate.layout = echoToAdd.value.layout
+        echoStore.echoToUpdate.kind = echoToAdd.value.kind
         echoStore.echoToUpdate.echo_files = echoToAdd.value.echo_files
         echoStore.echoToUpdate.extension = echoToAdd.value.extension
         echoStore.echoToUpdate.tags = echoToAdd.value.tags

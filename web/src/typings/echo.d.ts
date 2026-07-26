@@ -25,12 +25,14 @@ declare namespace App {
         build_time: string
         source_url: string
       }
+      type EchoKind = 'note' | 'project' | 'startup' | 'idea'
       type ParamsByPagination = EchoQueryParams
       type EchoQueryParams = {
         page: number
         pageSize: number
         search?: string
         tagIds?: string[]
+        kinds?: EchoKind[]
         sortBy?: string
         sortOrder?: string
         /** 按 created_at 过滤的闭区间，单位 Unix 秒 */
@@ -42,6 +44,7 @@ declare namespace App {
         id: string
         content: string
         username: string
+        kind: EchoKind
         echo_files?: EchoFile[]
         layout?: string
         private: boolean
@@ -119,6 +122,7 @@ declare namespace App {
         content: string
         echo_files?: Array<{ file_id: string; sort_order: number }> | null
         tags?: TagToAdd[] | null
+        kind: EchoKind
         layout?: string | null
         extension?: EchoExtension | null
         private: boolean
@@ -129,6 +133,7 @@ declare namespace App {
         content: string
         username: string
         echo_files?: Array<{ file_id: string; sort_order: number }> | null
+        kind: EchoKind
         tags?: TagToAdd[] | null
         layout?: string | null
         private: boolean

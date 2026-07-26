@@ -121,6 +121,13 @@
     "extText": "Text",
     "extImage": "Image",
     "extGeneric": "Extension",
+    "kindLabel": "Post type",
+    "kind": {
+      "note": "Note",
+      "project": "Project",
+      "startup": "Startup",
+      "idea": "Idea"
+    },
     "removeImage": "Remove attachment",
     "invalidImageIndex": "Invalid current attachment index; cannot remove",
     "removeImageConfirmTitle": "Remove this attachment?",
@@ -352,6 +359,7 @@
   "homeTop": {
     "searchTitle": "Search",
     "searchPlaceholder": "Search...",
+    "kindFilter": "Filter by post type",
     "rssTitle": "RSS"
   },
   "zenMode": {

@@ -4,6 +4,15 @@
   <div v-if="ShowEditor" class="editor-shell">
     <div class="editor-shell__inner">
       <div class="editor-shell__body">
+      <div class="editor-kind-row">
+        <label for="editor-kind" class="editor-kind-label">{{ t('editor.kindLabel') }}</label>
+        <select id="editor-kind" v-model="echoToAdd.kind" class="editor-kind-select">
+          <option v-for="kind in echoKinds" :key="kind" :value="kind">
+            {{ t(`editor.kind.${kind}`) }}
+          </option>
+        </select>
+      </div>
+
         <TheMdEditor v-if="currentMode === Mode.ECH0" class="rounded-[var(--radius-xs)]" />
         <TheMediaEditor v-if="currentMode === Mode.Media" />
         <TheModePanel v-if="currentMode === Mode.Panel" />
@@ -25,7 +34,7 @@ import { theToast } from '@/utils/toast'
 import { defineAsyncComponent, onMounted, watch } from 'vue'
 import { useEchoStore, useEditorStore } from '@/stores'
 import { storeToRefs } from 'pinia'
-import { Mode, ExtensionType, ImageLayout } from '@/enums/enums'
+import { EchoKind, Mode, ExtensionType, ImageLayout } from '@/enums/enums'
 import { getEchoFiles } from '@/utils/echo'
 import { useI18n } from 'vue-i18n'
 
@@ -52,6 +61,7 @@ const {
   currentExtensionType,
 } = storeToRefs(editorStore)
 const { t } = useI18n()
+const echoKinds = Object.values(EchoKind)
 
 watch(
   () => videoURL.value,
@@ -146,6 +156,7 @@ const fillEditorFromEchoToUpdate = () => {
     ? tags.map((tag) => tag?.name).filter((name): name is string => !!name)
     : []
   echoToAdd.value.private = echoToUpdate.value?.private || false
+  echoToAdd.value.kind = echoToUpdate.value?.kind || EchoKind.NOTE
   echoToAdd.value.layout = echoToUpdate.value?.layout || ImageLayout.WATERFALL
   window.scrollTo({ top: 0, behavior: 'smooth' })
   theToast.info(String(t('editor.enteredUpdateMode')))
@@ -190,6 +201,28 @@ onMounted(() => {
   margin-bottom: 0.15rem;
   border-radius: var(--radius-xs);
   padding: 0.15rem;
+}
+
+.editor-kind-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0.15rem 0.4rem;
+}
+
+.editor-kind-label {
+  color: var(--color-text-muted);
+  font-family: var(--font-family-mono);
+  font-size: 0.72rem;
+}
+
+.editor-kind-select {
+  min-width: 8rem;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.3rem 0.5rem;
+  color: var(--color-text-secondary);
+  background: var(--color-bg-muted);
 }
 
 @media (width >= 640px) {

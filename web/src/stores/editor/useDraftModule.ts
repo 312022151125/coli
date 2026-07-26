@@ -102,6 +102,7 @@ export function useDraftModule(deps: DraftModuleDeps) {
       echoToAdd: {
         content: echoToAdd.value.content || '',
         private: !!echoToAdd.value.private,
+        kind: echoToAdd.value.kind,
         layout: echoToAdd.value.layout || ImageLayout.WATERFALL,
         extension: echoToAdd.value.extension || null,
       },
@@ -173,6 +174,7 @@ export function useDraftModule(deps: DraftModuleDeps) {
             private: !!draft.echoToAdd?.private,
             layout: draft.echoToAdd?.layout || ImageLayout.WATERFALL,
             extension: draft.echoToAdd?.extension || null,
+            kind: draft.echoToAdd?.kind || 'note',
             tags: [],
           }
           resetAttachments(draft.filesToAdd || [])
