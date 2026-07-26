@@ -7,7 +7,6 @@
 package di
 
 import (
-	"github.com/google/wire"
 	"github.com/312022151125/coli/internal/app"
 	"github.com/312022151125/coli/internal/cache"
 	"github.com/312022151125/coli/internal/database"
@@ -17,14 +16,13 @@ import (
 	handler4 "github.com/312022151125/coli/internal/handler/auth"
 	handler7 "github.com/312022151125/coli/internal/handler/comment"
 	handler9 "github.com/312022151125/coli/internal/handler/common"
-	handler11 "github.com/312022151125/coli/internal/handler/connect"
-	handler14 "github.com/312022151125/coli/internal/handler/copilot"
-	handler13 "github.com/312022151125/coli/internal/handler/dashboard"
+	handler13 "github.com/312022151125/coli/internal/handler/copilot"
+	handler12 "github.com/312022151125/coli/internal/handler/dashboard"
 	handler5 "github.com/312022151125/coli/internal/handler/echo"
-	handler15 "github.com/312022151125/coli/internal/handler/embedding"
+	handler14 "github.com/312022151125/coli/internal/handler/embedding"
 	handler6 "github.com/312022151125/coli/internal/handler/file"
 	handler8 "github.com/312022151125/coli/internal/handler/init"
-	handler12 "github.com/312022151125/coli/internal/handler/migrator"
+	handler11 "github.com/312022151125/coli/internal/handler/migrator"
 	handler10 "github.com/312022151125/coli/internal/handler/setting"
 	handler3 "github.com/312022151125/coli/internal/handler/user"
 	handler2 "github.com/312022151125/coli/internal/handler/web"
@@ -35,34 +33,32 @@ import (
 	"github.com/312022151125/coli/internal/middleware"
 	"github.com/312022151125/coli/internal/migrator"
 	"github.com/312022151125/coli/internal/model/job"
-	repository14 "github.com/312022151125/coli/internal/repository"
+	repository13 "github.com/312022151125/coli/internal/repository"
 	repository7 "github.com/312022151125/coli/internal/repository/auth"
 	repository8 "github.com/312022151125/coli/internal/repository/comment"
 	repository5 "github.com/312022151125/coli/internal/repository/common"
-	repository11 "github.com/312022151125/coli/internal/repository/connect"
 	repository2 "github.com/312022151125/coli/internal/repository/echo"
 	"github.com/312022151125/coli/internal/repository/embedding"
 	repository6 "github.com/312022151125/coli/internal/repository/file"
 	repository9 "github.com/312022151125/coli/internal/repository/init"
-	repository12 "github.com/312022151125/coli/internal/repository/job"
+	repository11 "github.com/312022151125/coli/internal/repository/job"
 	"github.com/312022151125/coli/internal/repository/keyvalue"
 	repository10 "github.com/312022151125/coli/internal/repository/setting"
 	repository4 "github.com/312022151125/coli/internal/repository/user"
-	repository13 "github.com/312022151125/coli/internal/repository/visitor"
+	repository12 "github.com/312022151125/coli/internal/repository/visitor"
 	repository3 "github.com/312022151125/coli/internal/repository/webhook"
 	"github.com/312022151125/coli/internal/server"
-	service13 "github.com/312022151125/coli/internal/service"
+	service12 "github.com/312022151125/coli/internal/service"
 	"github.com/312022151125/coli/internal/service/auth"
 	service6 "github.com/312022151125/coli/internal/service/comment"
 	service4 "github.com/312022151125/coli/internal/service/common"
-	service9 "github.com/312022151125/coli/internal/service/connect"
-	service12 "github.com/312022151125/coli/internal/service/copilot"
-	service11 "github.com/312022151125/coli/internal/service/dashboard"
+	service11 "github.com/312022151125/coli/internal/service/copilot"
+	service10 "github.com/312022151125/coli/internal/service/dashboard"
 	service5 "github.com/312022151125/coli/internal/service/echo"
 	"github.com/312022151125/coli/internal/service/embedding"
 	service2 "github.com/312022151125/coli/internal/service/file"
 	service8 "github.com/312022151125/coli/internal/service/init"
-	service10 "github.com/312022151125/coli/internal/service/migrator"
+	service9 "github.com/312022151125/coli/internal/service/migrator"
 	service7 "github.com/312022151125/coli/internal/service/setting"
 	service3 "github.com/312022151125/coli/internal/service/user"
 	"github.com/312022151125/coli/internal/storage"
@@ -72,6 +68,7 @@ import (
 	"github.com/312022151125/coli/internal/visitor"
 	"github.com/312022151125/coli/internal/webhook"
 	"github.com/312022151125/coli/pkg/busen"
+	"github.com/google/wire"
 	"gorm.io/gorm"
 )
 
@@ -165,20 +162,17 @@ func BuildHandlers(dbProvider func() *gorm.DB, appCache cache.ICache[string, any
 	initHandler := handler8.NewInitHandler(initService)
 	commonHandler := handler9.NewCommonHandler(commonService)
 	settingHandler := handler10.NewSettingHandler(settingService)
-	connectRepository := repository11.NewConnectRepository(dbProvider)
-	connectService := service9.NewConnectService(tx, connectRepository, echoRepository, commonService, persistent)
-	connectHandler := handler11.NewConnectHandler(connectService)
-	migratorService := service10.NewMigratorService(commonService, jobManager, ebProvider)
-	migrationHandler := handler12.NewMigrationHandler(migratorService)
-	dashboardService := service11.NewDashboardService(tracker)
-	dashboardHandler := handler13.NewDashboardHandler(dashboardService)
+	migratorService := service9.NewMigratorService(commonService, jobManager, ebProvider)
+	migrationHandler := handler11.NewMigrationHandler(migratorService)
+	dashboardService := service10.NewDashboardService(tracker)
+	dashboardHandler := handler12.NewDashboardHandler(dashboardService)
 	embeddingRepository := repository.NewEmbeddingRepository(dbProvider)
 	embeddingService := service.NewEmbeddingService(embeddingRepository, persistent, echoRepository)
-	copilotService := service12.NewCopilotService(echoService, embeddingService, userService, persistent, storageManager)
-	copilotHandler := handler14.NewCopilotHandler(copilotService, copilotService)
-	embeddingHandler := handler15.NewEmbeddingHandler(jobManager)
-	mcpHandler := mcp.NewHandler(echoService, userService, commentService, fileService, commonService, connectService, copilotService, settingService, dashboardService)
-	bundle := handler.NewBundle(webHandler, userHandler, authHandler, echoHandler, fileHandler, commentHandler, initHandler, commonHandler, settingHandler, connectHandler, migrationHandler, dashboardHandler, copilotHandler, embeddingHandler, mcpHandler)
+	copilotService := service11.NewCopilotService(echoService, embeddingService, userService, persistent, storageManager)
+	copilotHandler := handler13.NewCopilotHandler(copilotService, copilotService)
+	embeddingHandler := handler14.NewEmbeddingHandler(jobManager)
+	mcpHandler := mcp.NewHandler(echoService, userService, commentService, fileService, commonService, copilotService, settingService, dashboardService)
+	bundle := handler.NewBundle(webHandler, userHandler, authHandler, echoHandler, fileHandler, commentHandler, initHandler, commonHandler, settingHandler, migrationHandler, dashboardHandler, copilotHandler, embeddingHandler, mcpHandler)
 	return bundle, nil
 }
 
@@ -187,7 +181,7 @@ func BuildHandlers(dbProvider func() *gorm.DB, appCache cache.ICache[string, any
 // 含 *job.Manager，故无构造环。storageManager 由顶层共享单例注入，确保迁移导入 S3
 // 设置时 reload 的就是文件服务在用的那份 Manager。
 func BuildJobManager(dbProvider func() *gorm.DB, appCache cache.ICache[string, any], storageManager *storage.Manager, ebProvider func() *busen.Bus) (*job.Manager, error) {
-	jobRepository := repository12.NewJobRepository(dbProvider)
+	jobRepository := repository11.NewJobRepository(dbProvider)
 	embeddingRepository := repository.NewEmbeddingRepository(dbProvider)
 	keyValueRepository := keyvalue.NewKeyValueRepository(dbProvider, appCache)
 	persistent := kvstore.NewPersistent(keyValueRepository)
@@ -248,7 +242,7 @@ func BuildTasker(dbProvider func() *gorm.DB, appCache cache.ICache[string, any],
 	persistent := kvstore.NewPersistent(keyValueRepository)
 	exportEngine := migrator.NewExportEngine(storageManager)
 	snapshot := scheduled.NewSnapshot(persistent, exportEngine, ebProvider)
-	visitorRepository := repository13.NewVisitorRepository(dbProvider)
+	visitorRepository := repository12.NewVisitorRepository(dbProvider)
 	visitorSnapshot := scheduled.NewVisitorSnapshot(tracker, visitorRepository)
 	manager, err := ProvideTaskManager(cleanup, snapshot, visitorSnapshot)
 	if err != nil {
@@ -319,13 +313,13 @@ var InfraSet = wire.NewSet(database.ProviderSet, bus.ProvideProvider, cache.Prov
 
 var RuntimeSet = server.ProviderSet
 
-var EventSet = wire.NewSet(repository14.EchoSet, repository14.UserSet, repository14.KeyValueSet, repository14.WebhookSet, repository14.EmbeddingSet, webhook.NewDispatcher, subscriber.NewAgentProcessor, subscriber.NewEmbeddingProcessor, service13.EmbeddingSet, ProvideSubscriptionProviders, bus.NewEventRegistry)
+var EventSet = wire.NewSet(repository13.EchoSet, repository13.UserSet, repository13.KeyValueSet, repository13.WebhookSet, repository13.EmbeddingSet, webhook.NewDispatcher, subscriber.NewAgentProcessor, subscriber.NewEmbeddingProcessor, service12.EmbeddingSet, ProvideSubscriptionProviders, bus.NewEventRegistry)
 
-var HandlerSet = wire.NewSet(repository14.FileSet, handler.WebSet, repository14.UserSet, repository14.AuthSet, service13.UserSet, service13.AuthSet, handler.UserSet, handler.AuthSet, repository14.EchoSet, service13.EchoSet, handler.EchoSet, repository14.CommentSet, service13.CommentSet, handler.CommentSet, repository14.CommonSet, service13.FileSet, handler.FileSet, repository14.InitSet, service13.InitSet, handler.InitSet, service13.CommonSet, handler.CommonSet, repository14.WebhookSet, webhook.NewSender, repository14.KeyValueSet, repository14.SettingSet, service13.SettingSet, handler.SettingSet, repository14.ConnectSet, service13.ConnectSet, handler.ConnectSet, service13.DashboardSet, handler.DashboardSet, repository14.EmbeddingSet, service13.EmbeddingSet, handler.EmbeddingSet, service13.CopilotSet, wire.Bind(new(service12.UserReader), new(*service3.UserService)), handler.CopilotSet, service13.MigratorSet, handler.MigrationSet, handler.MCPSet, handler.NewBundle)
+var HandlerSet = wire.NewSet(repository13.FileSet, handler.WebSet, repository13.UserSet, repository13.AuthSet, service12.UserSet, service12.AuthSet, handler.UserSet, handler.AuthSet, repository13.EchoSet, service12.EchoSet, handler.EchoSet, repository13.CommentSet, service12.CommentSet, handler.CommentSet, repository13.CommonSet, service12.FileSet, handler.FileSet, repository13.InitSet, service12.InitSet, handler.InitSet, service12.CommonSet, handler.CommonSet, repository13.WebhookSet, webhook.NewSender, repository13.KeyValueSet, repository13.SettingSet, service12.SettingSet, handler.SettingSet, service12.DashboardSet, handler.DashboardSet, repository13.EmbeddingSet, service12.EmbeddingSet, handler.EmbeddingSet, service12.CopilotSet, wire.Bind(new(service11.UserReader), new(*service3.UserService)), handler.CopilotSet, service12.MigratorSet, handler.MigrationSet, handler.MCPSet, handler.NewBundle)
 
-var MiddlewareSet = wire.NewSet(repository14.AuthSet, middleware.ProviderSet)
+var MiddlewareSet = wire.NewSet(repository13.AuthSet, middleware.ProviderSet)
 
-var TaskerSet = wire.NewSet(repository14.FileSet, repository14.KeyValueSet, repository14.WebhookSet, repository14.AuthSet, repository14.SettingSet, service13.SettingSet, repository14.EchoSet, service13.EchoSet, repository14.CommonSet, service13.FileSet, service13.CommonSet, repository14.VisitorSet, migrator.NewExportEngine, scheduled.ProviderSet, ProvideTaskManager)
+var TaskerSet = wire.NewSet(repository13.FileSet, repository13.KeyValueSet, repository13.WebhookSet, repository13.AuthSet, repository13.SettingSet, service12.SettingSet, repository13.EchoSet, service12.EchoSet, repository13.CommonSet, service12.FileSet, service12.CommonSet, repository13.VisitorSet, migrator.NewExportEngine, scheduled.ProviderSet, ProvideTaskManager)
 
 func ProvideSubscriptionProviders(
 	ap *subscriber.AgentProcessor,

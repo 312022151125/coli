@@ -147,9 +147,9 @@ func TestAsk_TimezoneNormalizationAndStream(t *testing.T) {
 		t.Run(tc.name, func(t *testing.T) {
 			summary := copilotmock.NewMockSummaryService(t)
 			chat := copilotmock.NewMockChatService(t)
-			// 未跑 i18n 中间件，LocaleFromGin 回退 "zh-CN"。
+			// 未跑 i18n 中间件，LocaleFromGin 回退 FallbackLocale（en-US）。
 			chat.EXPECT().
-				AskStream(mock.Anything, "今天怎么样", "zh-CN", tc.wantNormTZ, mock.Anything).
+				AskStream(mock.Anything, "今天怎么样", "en-US", tc.wantNormTZ, mock.Anything).
 				Return(nil).Once()
 
 			h := NewCopilotHandler(summary, chat)
@@ -176,7 +176,7 @@ func TestAsk_InvalidBodyStillStreamsEmptyQuestion(t *testing.T) {
 	summary := copilotmock.NewMockSummaryService(t)
 	chat := copilotmock.NewMockChatService(t)
 	chat.EXPECT().
-		AskStream(mock.Anything, "", "zh-CN", "UTC", mock.Anything).
+		AskStream(mock.Anything, "", "en-US", "UTC", mock.Anything).
 		Return(nil).Once()
 
 	h := NewCopilotHandler(summary, chat)
