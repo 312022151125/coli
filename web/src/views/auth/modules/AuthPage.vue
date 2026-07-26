@@ -124,7 +124,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import BaseInput from '@/components/common/BaseInput.vue'
 import BaseButton from '@/components/common/BaseButton.vue'
@@ -144,6 +144,13 @@ import { base64urlToUint8Array, uint8ArrayToBase64url } from '@/utils/other'
 import { useI18n } from 'vue-i18n'
 const route = useRoute()
 const AuthMode = ref<'login' | 'register'>(route.name === 'register' ? 'register' : 'login') // login / register
+// 组件在 /auth 与 /register 间导航时会被 Vue Router 复用，需响应式跟随路由名切换模式。
+watch(
+  () => route.name,
+  (name) => {
+    AuthMode.value = name === 'register' ? 'register' : 'login'
+  },
+)
 const username = ref<string>('')
 const password = ref<string>('')
 const userStore = useUserStore()
@@ -285,8 +292,11 @@ const handleRegister = async () => {
       password: password.value,
     })
   ) {
-    // 注册成功，切换到登录模式
+    // 注册成功，切换到登录模式并同步 URL
     AuthMode.value = 'login'
+    if (route.name === 'register') {
+      router.replace({ name: 'auth' })
+    }
   }
 }
 
