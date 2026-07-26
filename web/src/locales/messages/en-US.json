@@ -126,7 +126,8 @@
       "note": "Note",
       "project": "Project",
       "startup": "Startup",
-      "idea": "Idea"
+      "idea": "Idea",
+      "todo": "Todo"
     },
     "removeImage": "Remove attachment",
     "invalidImageIndex": "Invalid current attachment index; cannot remove",

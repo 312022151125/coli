@@ -25,7 +25,7 @@ declare namespace App {
         build_time: string
         source_url: string
       }
-      type EchoKind = 'note' | 'project' | 'startup' | 'idea'
+      type EchoKind = 'note' | 'project' | 'startup' | 'idea' | 'todo'
       type ParamsByPagination = EchoQueryParams
       type EchoQueryParams = {
         page: number

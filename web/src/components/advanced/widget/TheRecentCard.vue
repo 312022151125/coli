@@ -80,7 +80,7 @@ onMounted(() => {
 }
 
 .recent-title {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--font-family-display);
   font-size: 26px;
   font-weight: 600;
   color: var(--color-text-primary);

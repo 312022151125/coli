@@ -6,6 +6,17 @@ This project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html),
 
 For releases prior to v4.6.5, see the [GitHub releases page](https://github.com/lin-snow/Ech0/releases) — earlier release notes are not retroactively imported here.
 
+## [Unreleased]
+
+### Added
+
+- **A new "Todo" post kind** alongside Note / Project / Startup / Idea. It appears in the editor's kind selector, on post card badges, and as a filter chip, with translated labels (en: "Todo", vi: "Việc cần làm"). Also exposed through the MCP `search_posts` / `create_post` kind enums.
+
+### Changed
+
+- **Vietnamese text now renders in Be Vietnam Pro.** Body text uses Be Vietnam Pro (full Vietnamese diacritic support) with Space Grotesk kept for headings and display accents, so the visual identity is unchanged while diacritics render correctly. Six widget titles that hardcoded Georgia/Times New Roman (which render Vietnamese poorly) now use the display font token.
+
+
 
 ## [5.4.6] - 2026-07-18
 

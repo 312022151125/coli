@@ -83,6 +83,7 @@ const kindLabel = computed(() => {
     [EchoKind.PROJECT]: t('editor.kind.project'),
     [EchoKind.STARTUP]: t('editor.kind.startup'),
     [EchoKind.IDEA]: t('editor.kind.idea'),
+    [EchoKind.TODO]: t('editor.kind.todo'),
   }
   return labels[kind] || t('editor.kind.note')
 })

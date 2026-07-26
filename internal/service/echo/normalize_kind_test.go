@@ -20,6 +20,7 @@ func TestNormalizeEchoKind(t *testing.T) {
 		{"mixed case with whitespace", "  Startup  ", "startup", false},
 		{"note passthrough", "note", "note", false},
 		{"idea passthrough", "idea", "idea", false},
+		{"todo passthrough", "todo", "todo", false},
 		{"invalid rejected", "meme", "", true},
 		{"github historical value rejected", "githubproj", "", true},
 	}

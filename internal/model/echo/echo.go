@@ -95,6 +95,7 @@ const (
 	KindProject = "project"
 	KindStartup = "startup"
 	KindIdea    = "idea"
+	KindTodo    = "todo"
 )
 
 // ValidEchoKinds 是所有合法的 kind 取值集合，供 normalize/validate 复用。
@@ -103,4 +104,5 @@ var ValidEchoKinds = map[string]bool{
 	KindProject: true,
 	KindStartup: true,
 	KindIdea:    true,
+	KindTodo:    true,
 }

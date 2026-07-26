@@ -164,7 +164,7 @@ onMounted(() => {
 }
 
 .comment-title {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--font-family-display);
   color: var(--color-text-primary);
   font-size: 26px;
   font-weight: 600;

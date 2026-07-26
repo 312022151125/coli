@@ -25,7 +25,7 @@ func (a *Adapter) registerEchoTools(reg *Registry) {
 			"properties": map[string]any{
 				"query":      map[string]any{"type": "string", "description": "Full-text search keyword (matched against post content)"},
 				"tag_ids":    map[string]any{"type": "array", "items": map[string]any{"type": "string"}, "description": "Filter by one or more tag UUIDs (AND logic)"},
-				"kinds":      map[string]any{"type": "array", "items": map[string]any{"type": "string", "enum": []string{echoModel.KindNote, echoModel.KindProject, echoModel.KindStartup, echoModel.KindIdea}}, "description": "Filter by one or more post categories (OR logic); omit for all categories"},
+				"kinds":      map[string]any{"type": "array", "items": map[string]any{"type": "string", "enum": []string{echoModel.KindNote, echoModel.KindProject, echoModel.KindStartup, echoModel.KindIdea, echoModel.KindTodo}}, "description": "Filter by one or more post categories (OR logic); omit for all categories"},
 				"page":       map[string]any{"type": "integer", "description": "Page number, 1-based", "default": 1},
 				"page_size":  map[string]any{"type": "integer", "description": "Results per page (1–100)", "default": 20},
 				"sort_by":    map[string]any{"type": "string", "enum": []string{"created_at", "fav_count"}, "description": "Field to sort by", "default": "created_at"},
@@ -86,6 +86,7 @@ func (a *Adapter) registerEchoTools(reg *Registry) {
 		echoModel.KindProject,
 		echoModel.KindStartup,
 		echoModel.KindIdea,
+		echoModel.KindTodo,
 	}
 
 	reg.RegisterTool(ToolDefinition{

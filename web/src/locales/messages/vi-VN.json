@@ -126,7 +126,8 @@
       "note": "Ghi chú",
       "project": "Dự án",
       "startup": "Startup",
-      "idea": "Ý tưởng"
+      "idea": "Ý tưởng",
+      "todo": "Việc cần làm"
     },
     "removeImage": "Xóa tệp đính kèm",
     "invalidImageIndex": "Chỉ số tệp đính kèm hiện tại không hợp lệ; không thể xóa",

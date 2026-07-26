@@ -2,6 +2,10 @@
 // Copyright (C) 2025-2026 lin-snow
 
 import '@fontsource-variable/space-grotesk'
+import '@fontsource/be-vietnam-pro/400.css'
+import '@fontsource/be-vietnam-pro/500.css'
+import '@fontsource/be-vietnam-pro/600.css'
+import '@fontsource/be-vietnam-pro/700.css'
 import 'virtual:uno.css'
 import '@/themes/index.scss'
 import 'floating-vue/dist/style.css'

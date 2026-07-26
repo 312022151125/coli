@@ -469,7 +469,7 @@ onBeforeUnmount(() => {
 }
 
 .tag-pile-title {
-  font-family: Georgia, 'Times New Roman', var(--font-family-display);
+  font-family: var(--font-family-display);
   color: var(--color-text-primary);
   font-size: 1.3rem;
   font-weight: 600;

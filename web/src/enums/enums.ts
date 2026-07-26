@@ -25,6 +25,7 @@ export enum EchoKind {
   PROJECT = 'project',
   STARTUP = 'startup',
   IDEA = 'idea',
+  TODO = 'todo',
 }
 
 // 图片布局

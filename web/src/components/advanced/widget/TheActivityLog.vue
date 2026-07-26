@@ -154,7 +154,7 @@ onMounted(async () => {
 }
 
 .activity-title {
-  font-family: Georgia, 'Times New Roman', var(--font-family-display);
+  font-family: var(--font-family-display);
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--color-text-primary);
