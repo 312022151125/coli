@@ -147,7 +147,7 @@ const userInfo = ref<App.Api.User.UserInfo>({
   is_admin: false,
   avatar: '',
   avatar_file_id: '',
-  locale: 'zh-CN',
+  locale: 'vi-VN',
 })
 
 const editMode = ref<boolean>(false)
@@ -155,7 +155,7 @@ const avatarSrc = computed(() => resolveAvatarUrl(user.value?.avatar))
 // 用户界面语言统一用 endonym 选项（与头部切换器、站点默认语言一致）。
 const localeOptions = LOCALE_OPTIONS
 const localeLabel = computed(
-  () => LOCALE_ENDONYMS[userInfo.value.locale as AppLocale] || LOCALE_ENDONYMS['zh-CN'],
+  () => LOCALE_ENDONYMS[userInfo.value.locale as AppLocale] || LOCALE_ENDONYMS['vi-VN'],
 )
 const { enqueueUpload, waitForTask, clearFinishedUploads } = useFileQueue()
 
@@ -222,7 +222,7 @@ onMounted(() => {
       userInfo.value.avatar = res.data.avatar || ''
       userInfo.value.email = res.data.email || ''
       userInfo.value.is_admin = res.data.is_admin
-      userInfo.value.locale = res.data.locale || 'zh-CN'
+      userInfo.value.locale = res.data.locale || 'vi-VN'
     }
   })
 })

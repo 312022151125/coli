@@ -294,7 +294,7 @@ const systemLogoSrc = computed(() => resolveAvatarUrl(SystemSetting.value?.serve
 const localeOptions = LOCALE_OPTIONS
 const defaultLocaleLabel = computed(
   () =>
-    LOCALE_ENDONYMS[SystemSetting.value?.default_locale as AppLocale] || LOCALE_ENDONYMS['zh-CN'],
+    LOCALE_ENDONYMS[SystemSetting.value?.default_locale as AppLocale] || LOCALE_ENDONYMS['vi-VN'],
 )
 const { enqueueUpload, waitForTask, clearFinishedUploads } = useFileQueue()
 

@@ -28,19 +28,17 @@ var localeFS embed.FS
 
 var (
 	supportedLocales = []language.Tag{
-		language.MustParse("zh-CN"),
+		language.MustParse("vi-VN"),
 		language.MustParse("en-US"),
-		language.MustParse("de-DE"),
-		language.MustParse("ja-JP"),
 	}
 	matcher = language.NewMatcher(supportedLocales)
 	bundle  = newBundle()
 )
 
 func newBundle() *goi18n.Bundle {
-	b := goi18n.NewBundle(language.MustParse("zh-CN"))
+	b := goi18n.NewBundle(language.MustParse("vi-VN"))
 	b.RegisterUnmarshalFunc("json", unmarshalJSON)
-	for _, path := range []string{"locales/zh-CN.json", "locales/en-US.json", "locales/de-DE.json", "locales/ja-JP.json"} {
+	for _, path := range []string{"locales/vi-VN.json", "locales/en-US.json"} {
 		_, err := b.LoadMessageFileFS(localeFS, path)
 		if err != nil {
 			panic(fmt.Sprintf("load i18n message file failed: %s: %v", path, err))
@@ -130,14 +128,14 @@ func LocalizerFromGin(ctx *gin.Context) *goi18n.Localizer {
 
 func LocaleFromGin(ctx *gin.Context) string {
 	if ctx == nil {
-		return "zh-CN"
+		return string(commonModel.FallbackLocale)
 	}
 	if v, ok := ctx.Get(ContextLocaleKey); ok {
 		if locale, ok := v.(string); ok && locale != "" {
 			return locale
 		}
 	}
-	return "zh-CN"
+	return string(commonModel.FallbackLocale)
 }
 
 func hasExplicitLocale(ctx *gin.Context) bool {
@@ -248,7 +246,7 @@ func ApplyUserLocaleFromUserID(ctx *gin.Context, userID string) {
 
 func HeaderLocale(req *http.Request) string {
 	if req == nil {
-		return "zh-CN"
+		return string(commonModel.FallbackLocale)
 	}
 	return ResolveLocale(req.Header.Get("X-Locale"), req.Header.Get("Accept-Language"))
 }

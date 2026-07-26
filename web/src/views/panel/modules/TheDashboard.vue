@@ -6,7 +6,6 @@ import { computed, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { fetchGetEchosByPage, fetchGetTodayEchos } from '@/service/api'
 import { useSettingStore } from '@/stores'
-import { theToast } from '@/utils/toast'
 import { TheActivityLog, TheVisitorStatsWidget } from '@/components/advanced/widget'
 import Box from '@/components/icons/box.vue'
 import DateIcon from '@/components/icons/date-icon.vue'
@@ -108,8 +107,6 @@ const loadDashboardStats = async () => {
 
   loading.value = false
 }
-
-const handleStatCardClick = (_key: string) => {}
 
 onMounted(() => {
   void loadDashboardStats()

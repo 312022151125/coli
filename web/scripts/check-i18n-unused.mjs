@@ -3,7 +3,7 @@ import { join, extname } from 'node:path'
 
 const root = process.cwd()
 const sourceDir = join(root, 'src')
-const zhPath = join(root, 'src/locales/messages/zh-CN.json')
+const basePath = join(root, 'src/locales/messages/vi-VN.json')
 
 const SOURCE_EXTENSIONS = new Set(['.vue', '.ts', '.tsx', '.js', '.jsx', '.mjs', '.cjs'])
 const SKIP_DIRS = new Set(['node_modules', 'dist', 'coverage', '.git'])
@@ -71,8 +71,8 @@ const keyAllowed = (key) => {
   return ALLOW_UNUSED_PREFIXES.some((prefix) => key.startsWith(prefix))
 }
 
-const zh = JSON.parse(readFileSync(zhPath, 'utf8'))
-const allKeys = flatten(zh)
+const base = JSON.parse(readFileSync(basePath, 'utf8'))
+const allKeys = flatten(base)
 const files = walkFiles(sourceDir)
 const usedKeys = new Set()
 

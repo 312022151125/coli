@@ -31,7 +31,7 @@ await initStores().catch((e) => {
 
 const settingStore = useSettingStore()
 const initStore = useInitStore()
-// 站点未完成初始化时跳过站点默认语言，让 navigator 检测生效，避免部署者第一次打开就被锁成 zh-CN。
+// 站点未完成初始化时跳过站点默认语言，让 navigator 检测生效，避免部署者第一次打开就被锁成 vi-VN。
 const siteDefaultLocale = initStore.initialized
   ? settingStore.SystemSetting.default_locale
   : undefined

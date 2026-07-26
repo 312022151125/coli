@@ -28,12 +28,12 @@ describe('settingStore.init', () => {
     apiMocks.fetchGetSettings.mockResolvedValue({
       code: 1,
       data: {
-        site_title: 'Ech0',
+        site_title: 'coli.dev',
         server_logo: '/timeline-mark.svg',
-        server_name: 'Ech0',
+        server_name: 'coli.dev',
         server_url: '',
         allow_register: true,
-        default_locale: 'zh-CN',
+        default_locale: 'vi-VN',
         ICP_number: '',
         footer_content: '',
         footer_link: '',
@@ -66,7 +66,7 @@ describe('settingStore.init', () => {
       id: 'admin-1',
       username: 'admin',
       is_admin: true,
-      locale: 'zh-CN',
+      locale: 'vi-VN',
     }
 
     const settingStore = useSettingStore()

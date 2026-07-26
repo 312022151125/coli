@@ -39,7 +39,7 @@ export const useInitStore = defineStore('initStore', () => {
 
   const initOwner = async (payload: App.Api.Auth.SignupParams) => {
     // 把部署者当前页面生效的 locale（来自 navigator 检测或手动切换）一起提交，
-    // 后端会用它作为 owner.locale 与站点 default_locale，避免新部署被锁成 zh-CN。
+    // 后端会用它作为 owner.locale 与站点 default_locale，避免新部署被锁成 vi-VN。
     const enriched: App.Api.Auth.SignupParams = {
       ...payload,
       locale: payload.locale || String(i18n.global.locale.value),

@@ -2,8 +2,8 @@ import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 
 const root = process.cwd()
-const zhPath = join(root, 'src/locales/messages/zh-CN.json')
-const zh = JSON.parse(readFileSync(zhPath, 'utf8'))
+const basePath = join(root, 'src/locales/messages/vi-VN.json')
+const base = JSON.parse(readFileSync(basePath, 'utf8'))
 
 const pseudo = (value) => {
   return `［${String(value)
@@ -22,7 +22,7 @@ const transform = (obj) => {
   return pseudo(obj)
 }
 
-const pseudoLocale = transform(zh)
+const pseudoLocale = transform(base)
 const sample = pseudoLocale?.commentManager?.title
 if (!sample || !sample.startsWith('［') || !sample.endsWith('］')) {
   console.error('Pseudo locale generation failed.')

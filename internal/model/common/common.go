@@ -50,10 +50,9 @@ const (
 )
 
 const (
-	LocaleZhCN     Locale = "zh-CN"
+	LocaleViVN     Locale = "vi-VN"
 	LocaleEnUS     Locale = "en-US"
-	LocaleDeDE     Locale = "de-DE"
-	DefaultLocale         = LocaleZhCN
+	DefaultLocale         = LocaleViVN
 	FallbackLocale        = LocaleEnUS
 )
 

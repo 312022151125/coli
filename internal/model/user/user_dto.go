@@ -36,7 +36,7 @@ type UserInfoDto struct {
 	AvatarFileID string `json:"avatar_file_id"`
 
 	// 语言偏好
-	// example: zh-CN
+	// example: vi-VN
 	Locale string `json:"locale"`
 }
 

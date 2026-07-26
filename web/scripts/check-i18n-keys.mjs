@@ -21,12 +21,8 @@ const readLocale = (name) => {
   return flatten(JSON.parse(content))
 }
 
-const base = readLocale('zh-CN.json')
-const targets = [
-  { name: 'en-US', data: readLocale('en-US.json') },
-  { name: 'de-DE', data: readLocale('de-DE.json') },
-  { name: 'ja-JP', data: readLocale('ja-JP.json') },
-]
+const base = readLocale('vi-VN.json')
+const targets = [{ name: 'en-US', data: readLocale('en-US.json') }]
 
 let hasError = false
 
@@ -49,7 +45,7 @@ for (const { name, data } of targets) {
       missingInTarget.forEach((k) => console.error(`  - ${k}`))
     }
     if (missingInBase.length > 0) {
-      console.error(`- Missing in zh-CN (${missingInBase.length})`)
+      console.error(`- Missing in vi-VN (${missingInBase.length})`)
       missingInBase.forEach((k) => console.error(`  - ${k}`))
     }
   }

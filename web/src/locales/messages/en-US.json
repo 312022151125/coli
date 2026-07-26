@@ -278,14 +278,6 @@
     "alreadyInitializedRedirect": "System already initialized, redirecting to login",
     "initFailed": "Initialization failed"
   },
-  "hub": {
-    "emptyList": "Hub list is empty. Add Connect entries in settings first.",
-    "noAvailableInstance": "No available Hub instances can be connected right now.",
-    "connectedCount": "Connected to {count} instance(s), loading Echos...",
-    "loading": "Loading...",
-    "emptyConnectHint": "No data yet. Add a Connect first.",
-    "noMoreData": "No more data"
-  },
   "systemLog": {
     "level": "Log level",
     "allLevels": "All levels",
@@ -306,7 +298,6 @@
   },
   "dashboard": {
     "echoTotal": "Total Echos",
-    "connectedNodes": "Connected nodes",
     "todayEchoCount": "Today's Echos",
     "currentVersion": "Current version",
     "activityTitle": "Activity",
@@ -404,14 +395,12 @@
     "home": "Feed",
     "panel": "Settings",
     "publish": "Publish",
-    "plaza": "Explore",
     "status": "Status",
     "tags": "Tags"
   },
   "homeBio": {
     "tagline": "Welcome"
   },
-  "homeFooter": {},
   "homeFeed": {
     "noMore": "No more data",
     "noMoreFiltered": "No more data",
@@ -426,12 +415,6 @@
     "daysAgo": "{count}d ago"
   },
   "connectWidget": {
-    "noConnections": "No active connections",
-    "loading": "Loading...",
-    "tooltipOwner": "Owner",
-    "tooltipTotal": "Total",
-    "tooltipToday": "Today",
-    "tooltipVersion": "Version",
     "jumpToEchoDetail": "View related Echo details",
     "randomCommentLoading": "Picking a featured comment...",
     "noFeaturedComment": "No featured comments to show."
@@ -819,10 +802,6 @@
     "tabOAuth2": "OAuth2",
     "tabPasskey": "Passkey"
   },
-  "extensionManagement": {
-    "tabConnect": "Connect",
-    "tabCopilot": "Copilot"
-  },
   "userManagement": {
     "tabAccount": "Account Settings",
     "tabManage": "User Manager"
@@ -880,24 +859,6 @@
     "statusSuccess": "Completed",
     "statusFailed": "Failed",
     "statusCancelled": "Cancelled"
-  },
-  "connectSetting": {
-    "description": "Connect to other Ech0 nodes for federation.",
-    "addConnect": "Create",
-    "urlPlaceholder": "Enter Connect URL (with https/http)",
-    "connectHint": "Only http/https URLs are supported.",
-    "connect": "Connect",
-    "status": "Status",
-    "version": "Version",
-    "statusOnline": "Online",
-    "statusOffline": "Offline",
-    "statusChecking": "Checking",
-    "empty": "No connections...",
-    "connectUrl": "Connect URL",
-    "disconnect": "Disconnect",
-    "enterAddress": "Please enter a Connect URL",
-    "invalidUrl": "Invalid Connect URL format, only http/https is supported",
-    "disconnectConfirmTitle": "Are you sure you want to disconnect?"
   },
   "cronEditor": {
     "frequency": "Frequency",
@@ -991,13 +952,6 @@
   },
   "notFound": {
     "pageNotFound": "Page not found"
-  },
-  "hubEcho": {
-    "jumpToEcho": "Open this Echo",
-    "like": "Like",
-    "alreadyLiked": "You have already liked this",
-    "likeFailed": "Like failed",
-    "likeSuccess": "Liked successfully"
   },
   "imageGallery": {
     "previewImage": "Preview image {index}",

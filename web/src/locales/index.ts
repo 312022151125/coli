@@ -5,21 +5,18 @@ import { createI18n } from 'vue-i18n'
 import { localStg } from '@/utils/storage'
 
 export const LOCALE_STORAGE_KEY = 'locale'
-// DEFAULT_LOCALE 是源语言（项目原文为中文），用作 vue-i18n 翻译缺失时的回退。
-// FALLBACK_LOCALE 是「检测到的语言不在支持列表里」时的兜底，更国际化。
-export const DEFAULT_LOCALE = 'zh-CN'
+// DEFAULT_LOCALE 是首选界面语言。FALLBACK_LOCALE 是「检测到的语言不在支持列表里」时的兜底。
+export const DEFAULT_LOCALE = 'vi-VN'
 export const FALLBACK_LOCALE = 'en-US'
-export const SUPPORTED_LOCALES = ['zh-CN', 'en-US', 'de-DE', 'ja-JP'] as const
+export const SUPPORTED_LOCALES = ['vi-VN', 'en-US'] as const
 
 export type AppLocale = (typeof SUPPORTED_LOCALES)[number]
 
 // 各语言的自称（endonym）：所有语言选择器统一用这份，固定不随界面语言翻译，
 // 这样头部切换器与后台两个设置页（站点默认 / 用户界面语言）展示完全一致。
 export const LOCALE_ENDONYMS: Record<AppLocale, string> = {
-  'zh-CN': '简体中文',
+  'vi-VN': 'Tiếng Việt',
   'en-US': 'English',
-  'de-DE': 'Deutsch',
-  'ja-JP': '日本語',
 }
 
 // 选择器统一选项（顺序同 SUPPORTED_LOCALES）。
@@ -42,9 +39,7 @@ const toSupported = (raw?: string | null): AppLocale | null => {
 
   const langPrefix = value.slice(0, 2).toLowerCase()
   if (langPrefix === 'en') return 'en-US'
-  if (langPrefix === 'zh') return 'zh-CN'
-  if (langPrefix === 'de') return 'de-DE'
-  if (langPrefix === 'ja') return 'ja-JP'
+  if (langPrefix === 'vi') return 'vi-VN'
 
   return null // 不支持 → 交给下一个候选
 }
@@ -62,7 +57,7 @@ export const i18n = createI18n({
   legacy: false,
   globalInjection: true,
   locale: initialLocale,
-  fallbackLocale: DEFAULT_LOCALE,
+  fallbackLocale: FALLBACK_LOCALE,
   messages: {},
 })
 

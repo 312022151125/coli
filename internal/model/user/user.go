@@ -20,7 +20,7 @@ type User struct {
 	IsAdmin  bool   `gorm:"bool"                     json:"is_admin"`
 	IsOwner  bool   `gorm:"bool"                     json:"is_owner"`
 	Avatar   string `gorm:"size:255"                 json:"avatar"`
-	Locale   string `gorm:"size:16;default:zh-CN"    json:"locale"`
+	Locale   string `gorm:"size:16;default:vi-VN"    json:"locale"`
 }
 
 func (u *User) BeforeCreate(_ *gorm.DB) error {

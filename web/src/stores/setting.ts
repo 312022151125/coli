@@ -36,7 +36,7 @@ export const useSettingStore = defineStore('settingStore', () => {
     server_name: import.meta.env.VITE_APP_NAME,
     server_url: '',
     allow_register: true,
-    default_locale: 'zh-CN',
+    default_locale: 'vi-VN',
     ICP_number: '',
     footer_content: '',
     footer_link: '',
